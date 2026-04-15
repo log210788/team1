@@ -438,29 +438,27 @@
     color: var(--blue);
     min-width: 20px;
   }
-  .fill-row input[type="text"] {
-    border: none;
-    border-bottom: 2px solid var(--border);
-    background: transparent;
+  .fill-row select {
     font-family: 'Source Sans 3', sans-serif;
     font-size: 14.5px;
-    padding: 2px 4px;
-    width: 180px;
+    padding: 4px 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: #fff;
     color: var(--text);
-    transition: border-color 0.2s;
+    cursor: pointer;
+    min-width: 180px;
   }
-  .fill-row input[type="text"]:focus {
+  .fill-row select:focus {
     outline: none;
-    border-bottom-color: var(--blue-light);
+    border-color: var(--blue-light);
   }
-  .fill-row input.correct {
-    border-bottom-color: var(--green);
-    color: var(--green);
+  .fill-row select.correct {
+    border-color: var(--green);
     background: #eafaf1;
   }
-  .fill-row input.incorrect {
-    border-bottom-color: var(--red);
-    color: var(--red);
+  .fill-row select.incorrect {
+    border-color: var(--red);
     background: #fdf2f2;
   }
   .fill-row .answer-reveal {
@@ -578,7 +576,7 @@
     .sec-body { padding: 14px 16px 18px; }
     .match-grid { grid-template-columns: 1fr; }
     .match-col + .match-col { border-left: none; border-top: 1px solid var(--border); }
-    .fill-row input[type="text"] { width: 140px; }
+    .fill-row select { min-width: 140px; }
   }
 </style>
 </head>
@@ -780,31 +778,101 @@
         </div>
         <div class="fill-row">
           <span class="qnum">2</span>
-          'What did he say?' 'I don't know. I <input type="text" data-answer="wasn't listening" placeholder="...">.'<span class="answer-reveal"></span>
+          'What did he say?' 'I don't know. I <select data-answer="wasn't listening">
+            <option value="">—</option>
+            <option value="was looking">was looking</option>
+            <option value="was wearing">was wearing</option>
+            <option value="wasn't listening">wasn't listening</option>
+            <option value="weren't looking">weren't looking</option>
+            <option value="was snowing">was snowing</option>
+            <option value="was working">was working</option>
+            <option value="were sitting">were sitting</option>
+            <option value="were you going">were you going</option>
+          </select>.'<span class="answer-reveal"></span>
         </div>
         <div class="fill-row">
           <span class="qnum">3</span>
-          We <input type="text" data-answer="were sitting" placeholder="..."> at the back of the theatre. We couldn't hear very well.<span class="answer-reveal"></span>
+          We <select data-answer="were sitting">
+            <option value="">—</option>
+            <option value="was looking">was looking</option>
+            <option value="was wearing">was wearing</option>
+            <option value="wasn't listening">wasn't listening</option>
+            <option value="weren't looking">weren't looking</option>
+            <option value="was snowing">was snowing</option>
+            <option value="was working">was working</option>
+            <option value="were sitting">were sitting</option>
+            <option value="were you going">were you going</option>
+          </select> at the back of the theatre. We couldn't hear very well.<span class="answer-reveal"></span>
         </div>
         <div class="fill-row">
           <span class="qnum">4</span>
-          This time last year Steve <input type="text" data-answer="was working" placeholder="..."> on a farm.<span class="answer-reveal"></span>
+          This time last year Steve <select data-answer="was working">
+            <option value="">—</option>
+            <option value="was looking">was looking</option>
+            <option value="was wearing">was wearing</option>
+            <option value="wasn't listening">wasn't listening</option>
+            <option value="weren't looking">weren't looking</option>
+            <option value="was snowing">was snowing</option>
+            <option value="was working">was working</option>
+            <option value="were sitting">were sitting</option>
+            <option value="were you going">were you going</option>
+          </select> on a farm.<span class="answer-reveal"></span>
         </div>
         <div class="fill-row">
           <span class="qnum">5</span>
-          They didn't see me. They <input type="text" data-answer="weren't looking" placeholder="..."> in my direction.<span class="answer-reveal"></span>
+          They didn't see me. They <select data-answer="weren't looking">
+            <option value="">—</option>
+            <option value="was looking">was looking</option>
+            <option value="was wearing">was wearing</option>
+            <option value="wasn't listening">wasn't listening</option>
+            <option value="weren't looking">weren't looking</option>
+            <option value="was snowing">was snowing</option>
+            <option value="was working">was working</option>
+            <option value="were sitting">were sitting</option>
+            <option value="were you going">were you going</option>
+          </select> in my direction.<span class="answer-reveal"></span>
         </div>
         <div class="fill-row">
           <span class="qnum">6</span>
-          The weather was bad. It was very cold and it <input type="text" data-answer="was snowing" placeholder="...">.<span class="answer-reveal"></span>
+          The weather was bad. It was very cold and it <select data-answer="was snowing">
+            <option value="">—</option>
+            <option value="was looking">was looking</option>
+            <option value="was wearing">was wearing</option>
+            <option value="wasn't listening">wasn't listening</option>
+            <option value="weren't looking">weren't looking</option>
+            <option value="was snowing">was snowing</option>
+            <option value="was working">was working</option>
+            <option value="were sitting">were sitting</option>
+            <option value="were you going">were you going</option>
+          </select>.<span class="answer-reveal"></span>
         </div>
         <div class="fill-row">
           <span class="qnum">7</span>
-          I saw you in your car. Where <input type="text" data-answer="were you going" placeholder="...">?<span class="answer-reveal"></span>
+          I saw you in your car. Where <select data-answer="were you going">
+            <option value="">—</option>
+            <option value="was looking">was looking</option>
+            <option value="was wearing">was wearing</option>
+            <option value="wasn't listening">wasn't listening</option>
+            <option value="weren't looking">weren't looking</option>
+            <option value="was snowing">was snowing</option>
+            <option value="was working">was working</option>
+            <option value="were sitting">were sitting</option>
+            <option value="were you going">were you going</option>
+          </select>?<span class="answer-reveal"></span>
         </div>
         <div class="fill-row">
           <span class="qnum">8</span>
-          I saw Kate a few minutes ago. She <input type="text" data-answer="was looking" placeholder="..."> for you.<span class="answer-reveal"></span>
+          I saw Kate a few minutes ago. She <select data-answer="was looking">
+            <option value="">—</option>
+            <option value="was looking">was looking</option>
+            <option value="was wearing">was wearing</option>
+            <option value="wasn't listening">wasn't listening</option>
+            <option value="weren't looking">weren't looking</option>
+            <option value="was snowing">was snowing</option>
+            <option value="was working">was working</option>
+            <option value="were sitting">were sitting</option>
+            <option value="were you going">were you going</option>
+          </select> for you.<span class="answer-reveal"></span>
         </div>
       </div>
 
@@ -935,17 +1003,16 @@
   // ── Exercise 6.1: Fill-in-the-blank ──
   function checkEx(id) {
     const container = document.getElementById(id);
-    const inputs = container.querySelectorAll('input[type="text"]');
-    let correct = 0, total = inputs.length;
-    inputs.forEach(inp => {
-      const answer = inp.dataset.answer.trim().toLowerCase();
-      const val = inp.value.trim().toLowerCase();
-      inp.classList.remove('correct', 'incorrect');
-      if (val === answer) {
-        inp.classList.add('correct');
+    const selects = container.querySelectorAll('select');
+    let correct = 0, total = selects.length;
+    selects.forEach(sel => {
+      const answer = sel.dataset.answer;
+      sel.classList.remove('correct', 'incorrect');
+      if (sel.value === answer) {
+        sel.classList.add('correct');
         correct++;
-      } else if (val !== '') {
-        inp.classList.add('incorrect');
+      } else if (sel.value !== '') {
+        sel.classList.add('incorrect');
       }
     });
     showScore(id + '-score', correct, total);
@@ -953,12 +1020,12 @@
 
   function showAnswers(id) {
     const container = document.getElementById(id);
-    const inputs = container.querySelectorAll('input[type="text"]');
-    inputs.forEach(inp => {
-      inp.value = inp.dataset.answer;
-      inp.classList.remove('incorrect');
-      inp.classList.add('correct');
-      const reveal = inp.parentElement.querySelector('.answer-reveal');
+    const selects = container.querySelectorAll('select');
+    selects.forEach(sel => {
+      sel.value = sel.dataset.answer;
+      sel.classList.remove('incorrect');
+      sel.classList.add('correct');
+      const reveal = sel.parentElement.querySelector('.answer-reveal');
       if (reveal) { reveal.textContent = ''; reveal.classList.remove('show'); }
     });
     const score = document.getElementById(id + '-score');
@@ -967,11 +1034,11 @@
 
   function resetEx(id) {
     const container = document.getElementById(id);
-    const inputs = container.querySelectorAll('input[type="text"]');
-    inputs.forEach(inp => {
-      inp.value = '';
-      inp.classList.remove('correct', 'incorrect');
-      const reveal = inp.parentElement.querySelector('.answer-reveal');
+    const selects = container.querySelectorAll('select');
+    selects.forEach(sel => {
+      sel.value = '';
+      sel.classList.remove('correct', 'incorrect');
+      const reveal = sel.parentElement.querySelector('.answer-reveal');
       if (reveal) { reveal.textContent = ''; reveal.classList.remove('show'); }
     });
     const score = document.getElementById(id + '-score');
