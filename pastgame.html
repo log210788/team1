@@ -43,9 +43,11 @@ body{background:var(--bg);color:var(--text);font-family:var(--ff);padding:12px;m
 .badge span{color:var(--accent);}
 #streak-badge span{color:#ff9f43;}
 #round-badge span{color:var(--accent2);}
+#comp-badge span{color:#a29bfe;}
 .btn-sm{font-family:var(--ff);font-weight:700;border:none;border-radius:8px;cursor:pointer;font-size:.76rem;padding:7px 12px;transition:transform .1s,box-shadow .15s;min-height:36px;}
 .btn-sm:active{transform:scale(.95);}
 #timer-toggle{background:#253a5e;color:#ff9f43;border:1px solid #ff9f43;}
+#comp-toggle{background:#1a2a40;color:#a29bfe;border:1px solid #a29bfe;}
 #chain-toggle-btn{background:#1a3040;color:var(--accent2);border:1px solid var(--accent2);}
 #back-btn{background:#1a2030;color:var(--muted);border:1px solid #2a3f5f;}
 #restart-game-btn{background:linear-gradient(135deg,#e74c3c,#c0392b);color:#fff;border:none;box-shadow:0 2px 8px rgba(231,76,60,.3);}
@@ -96,6 +98,48 @@ body{background:var(--bg);color:var(--text);font-family:var(--ff);padding:12px;m
 #thai-btn{background:#1a3040;color:var(--accent2);border:1px solid var(--accent2);font-size:.8rem;margin-top:8px;font-family:var(--ff);font-weight:700;border-radius:8px;cursor:pointer;padding:8px 14px;min-height:38px;}
 .hint-text{color:#ff9f43;font-size:.84rem;margin-top:6px;display:none;}
 
+/* ── COMPREHENSION CARD ── */
+#comp-card{
+  display:none;
+  background:linear-gradient(135deg,#0d1f3a,#132840);
+  border:2px solid #a29bfe;
+  border-radius:var(--radius);
+  padding:20px 18px;
+  margin-bottom:12px;
+  box-shadow:0 4px 20px rgba(162,155,254,.15);
+  animation:fade-in .3s ease;
+}
+#comp-card.comp-correct{border-color:var(--correct);background:linear-gradient(135deg,#0a2a1a,#0d3320);box-shadow:0 0 20px rgba(46,204,113,.2);}
+#comp-card.comp-wrong{border-color:var(--wrong);background:linear-gradient(135deg,#2a0d0d,#3a1010);box-shadow:0 0 20px rgba(231,76,60,.2);}
+.comp-header{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.comp-icon{font-size:1.4rem;}
+.comp-title{font-family:var(--ffh);font-size:1rem;color:#a29bfe;}
+.comp-subtitle{font-size:.72rem;color:var(--muted);margin-left:auto;}
+.comp-sentence{background:#0f1b2d;border:1px solid #2a3f5f;border-radius:10px;padding:12px 14px;margin-bottom:14px;font-size:.92rem;line-height:1.6;}
+.comp-sentence .sentence-label{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;}
+.comp-sentence em{color:var(--accent);font-style:normal;font-weight:700;}
+.comp-question{font-size:.96rem;font-weight:700;color:var(--text);margin-bottom:14px;line-height:1.5;}
+.comp-thai-q{display:none;font-size:.82rem;color:var(--accent2);margin-bottom:12px;background:#0f2030;border-radius:8px;padding:8px 12px;}
+.comp-tf-row{display:flex;gap:10px;margin-bottom:12px;}
+.comp-tf-btn{flex:1;font-family:var(--ffh);font-size:1.1rem;padding:14px 10px;border:2px solid;border-radius:12px;cursor:pointer;transition:transform .1s,box-shadow .2s,background .2s;min-height:52px;}
+.comp-tf-btn:active{transform:scale(.96);}
+.comp-true-btn{background:#0a2a1a;color:var(--correct);border-color:var(--correct);}
+.comp-true-btn:hover{background:#0d3320;box-shadow:0 0 16px rgba(46,204,113,.3);}
+.comp-false-btn{background:#2a0d0d;color:var(--wrong);border-color:var(--wrong);}
+.comp-false-btn:hover{background:#3a1010;box-shadow:0 0 16px rgba(231,76,60,.3);}
+.comp-tf-btn.selected-correct{background:var(--correct);color:#0f1b2d;box-shadow:0 0 20px rgba(46,204,113,.4);animation:pulse-correct .4s ease;}
+.comp-tf-btn.selected-wrong{background:var(--wrong);color:#fff;box-shadow:0 0 20px rgba(231,76,60,.4);animation:shake .3s ease;}
+.comp-tf-btn.reveal-correct{background:var(--correct);color:#0f1b2d;opacity:.7;}
+.comp-tf-btn:disabled{cursor:default;}
+.comp-feedback{display:none;border-radius:10px;padding:10px 14px;font-size:.86rem;line-height:1.6;margin-bottom:10px;}
+.comp-feedback.cf-correct{background:#0d3320;border:1px solid var(--correct);color:var(--correct);}
+.comp-feedback.cf-wrong{background:#3a0d0d;border:1px solid var(--wrong);color:#f5b5b5;}
+#comp-thai-toggle{background:#1a3040;color:var(--accent2);border:1px solid var(--accent2);font-size:.78rem;font-family:var(--ff);font-weight:700;border-radius:8px;cursor:pointer;padding:7px 14px;min-height:36px;}
+#comp-next-btn{background:linear-gradient(135deg,#a29bfe,#7c73e6);color:#fff;font-family:var(--ff);font-weight:900;font-size:.95rem;padding:11px 24px;border:none;border-radius:10px;cursor:pointer;display:none;box-shadow:0 3px 12px rgba(162,155,254,.3);min-height:44px;}
+.comp-skip-btn{background:transparent;color:var(--muted);border:1px solid #2a3f5f;font-family:var(--ff);font-weight:700;font-size:.78rem;padding:7px 16px;border-radius:8px;cursor:pointer;min-height:36px;}
+.comp-skip-btn:hover{color:var(--text);border-color:#4a5f7f;}
+.comp-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+
 .chain-summary{background:var(--panel);border:1px solid #2a3f5f;border-radius:var(--radius);padding:14px 16px;margin-bottom:12px;display:none;box-shadow:var(--shadow);}
 .summary-item{display:flex;gap:8px;align-items:baseline;padding:5px 0;border-bottom:1px solid #1d2d47;font-size:.84rem;flex-wrap:wrap;}
 .summary-item:last-child{border-bottom:none;}
@@ -130,6 +174,15 @@ body{background:var(--bg);color:var(--text);font-family:var(--ff);padding:12px;m
 #menu-btn{background:#1d2d47;color:var(--muted);font-family:var(--ff);font-weight:700;font-size:.9rem;padding:12px 22px;border:1px solid #2a3f5f;border-radius:12px;cursor:pointer;margin-top:10px;margin-left:8px;min-height:44px;}
 #menu-btn:active{transform:scale(.97);}
 .final-chain{text-align:left;margin-top:16px;background:var(--panel);border-radius:var(--radius);padding:16px;font-size:.88rem;line-height:1.9;box-shadow:var(--shadow);}
+.score-breakdown{background:var(--card);border:1px solid #2a3f5f;border-radius:var(--radius);padding:16px;margin:14px 0;box-shadow:var(--shadow);}
+.score-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #1d2d47;font-size:.9rem;}
+.score-row:last-child{border-bottom:none;font-size:1.1rem;font-weight:900;color:var(--accent);}
+.score-row .label{color:var(--muted);}
+.score-row .val{font-weight:700;}
+.score-row .val.green{color:var(--correct);}
+.score-row .val.purple{color:#a29bfe;}
+.score-row .val.orange{color:#ff9f43;}
+.score-row .val.cyan{color:var(--accent2);}
 
 /* ── ANIMATIONS ── */
 @keyframes pulse-correct{
@@ -168,6 +221,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--ff);padding:12px;m
   .summary-item{font-size:.78rem;}
   .s-ex{display:none;}
   #restart-btn,#menu-btn{display:block;width:100%;margin-left:0;margin-top:8px;}
+  .comp-tf-btn{font-size:.95rem;padding:12px 8px;}
 }
 @media(min-width:481px) and (max-width:768px){
   body{padding:10px;}
@@ -181,25 +235,27 @@ body{background:var(--bg);color:var(--text);font-family:var(--ff);padding:12px;m
 
 <!-- MODE SELECT -->
 <div id="mode-screen">
-  <h1> Supermarket Game</h1>
+  <h1>🛒 Supermarket Game</h1>
   <p class="intro">Choose how to play, then press Start</p>
   
   <div class="instructions-section" style="background:var(--card);border:1px solid #2a3f5f;border-radius:14px;padding:18px;margin-bottom:24px;box-shadow:0 4px 20px rgba(0,0,0,.3);">
     <div style="margin-bottom:16px;">
-      <h3 style="color:var(--accent);font-size:1rem;margin-bottom:8px;"> How to Play:</h3>
+      <h3 style="color:var(--accent);font-size:1rem;margin-bottom:8px;">🎮 How to Play:</h3>
       <ul style="color:var(--text);font-size:.88rem;line-height:1.8;margin-left:18px;">
         <li>Change each verb to its past tense form</li>
         <li>Build a shopping chain with your correct answers</li>
+        <li>Answer a quick True/False question after each verb</li>
         <li>Try to get the highest score possible</li>
         <li>Use hints if you need help (costs 5 points)</li>
         <li>Timer mode adds extra challenge</li>
       </ul>
     </div>
     <div style="border-top:1px solid #2a3f5f;padding-top:14px;">
-      <h3 style="color:var(--accent2);font-size:1rem;margin-bottom:8px;"> วิธีเล่น:</h3>
+      <h3 style="color:var(--accent2);font-size:1rem;margin-bottom:8px;">📖 วิธีเล่น:</h3>
       <ul style="color:var(--text);font-size:.88rem;line-height:1.8;margin-left:18px;">
         <li>เปลี่ยนคำกริยาแต่ละคำเป็นรูปอดีตกาล</li>
         <li>สร้างโซ่ช้อปปิ้งด้วยคำตอบที่ถูกต้องของคุณ</li>
+        <li>ตอบคำถาม True/False หลังจากแต่ละคำกริยา</li>
         <li>พยายามทำคะแนนให้ได้สูงที่สุด</li>
         <li>ใช้คำใบ้ถ้าต้องการความช่วยเหลือ (เสีย 5 คะแนน)</li>
         <li>โหมดจับเวลาจะเพิ่มความท้าทาย</li>
@@ -220,10 +276,10 @@ body{background:var(--bg);color:var(--text);font-family:var(--ff);padding:12px;m
       <div class="mode-badge" style="background:#3a1a0a;color:#ff9f43;border:1px solid #ff9f43;">Memory Challenge</div>
     </div>
   </div>
-  <button id="start-btn" onclick="startGame()"> Start Game</button>
+  <button id="start-btn" onclick="startGame()">▶ Start Game</button>
   <br>
   <button id="examples-btn" onclick="showExamples()" style="background:#1a3040;color:var(--accent2);font-family:var(--ff);font-weight:700;font-size:.9rem;padding:10px 22px;border:1px solid var(--accent2);border-radius:10px;cursor:pointer;margin-top:10px;display:none;min-height:44px;">📚 Examples / ตัวอย่าง</button>
-  <button id="app-btn" onclick="showAppInstructions()" style="background:#1d2d47;color:var(--muted);font-family:var(--ff);font-weight:700;font-size:.9rem;padding:10px 22px;border:1px solid #2a3f5f;border-radius:10px;cursor:pointer;margin-top:10px;display:none;min-height:44px;"> Make App </button>
+  <button id="app-btn" onclick="showAppInstructions()" style="background:#1d2d47;color:var(--muted);font-family:var(--ff);font-weight:700;font-size:.9rem;padding:10px 22px;border:1px solid #2a3f5f;border-radius:10px;cursor:pointer;margin-top:10px;display:none;min-height:44px;">📲 Make App</button>
 </div>
 
 <!-- GAME SCREEN -->
@@ -237,7 +293,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--ff);padding:12px;m
       <div class="badge" id="round-badge">Round <span id="round-num">1</span>/<span id="total-num">?</span></div>
       <div class="badge" id="streak-badge">🔥 <span id="streak-num">0</span></div>
       <div class="badge">⭐ <span id="score-num">0</span></div>
+      <div class="badge" id="comp-badge" style="display:none">🧠 <span id="comp-score-num">0</span></div>
       <button class="btn-sm" id="timer-toggle" onclick="toggleTimer()">⏱ Timer: OFF</button>
+      <button class="btn-sm" id="comp-toggle" onclick="toggleComp()">🧠 Comprehension: ON</button>
       <button class="btn-sm" id="chain-toggle-btn" onclick="toggleChain()" style="display:none">👁 Reveal Chain</button>
       <button class="btn-sm" id="restart-game-btn" onclick="restartCurrentGame()">Restart Game</button>
       <button class="btn-sm" id="back-btn" onclick="goToMenu()">Menu</button>
@@ -249,13 +307,11 @@ body{background:var(--bg);color:var(--text);font-family:var(--ff);padding:12px;m
   <div class="progress-dots" id="dots"></div>
   <div class="timer-bar-wrap" id="timer-wrap"><div class="timer-bar" id="timer-bar" style="width:100%"></div></div>
 
-  <!-- Always rendered, blurred in hidden mode -->
   <div class="chain-box" id="chain-box">
     <div class="chain-label">🧺 The shopping chain so far</div>
     <div class="chain-text" id="chain-display"><span style="color:var(--muted)">Start building the chain!</span></div>
   </div>
 
-  <!-- Teacher peek panel (hidden mode only) -->
   <div id="reveal-panel">
     <div class="chain-label">👁 Chain revealed — teacher view</div>
     <div class="chain-text" id="reveal-display"></div>
@@ -272,12 +328,37 @@ body{background:var(--bg);color:var(--text);font-family:var(--ff);padding:12px;m
     <div class="btn-row">
       <button class="action" id="check-btn" onclick="checkAnswer()">✓ Check</button>
       <button class="action" id="hint-btn" onclick="showHint()">💡 Hint</button>
-      <button class="action" id="next-btn" onclick="nextRound()">Next Round →</button>
+      <button class="action" id="next-btn" onclick="handleNext()">Next →</button>
     </div>
     <div class="feedback" id="feedback-box">
       <div id="feedback-text"></div>
       <button id="thai-btn" onclick="toggleThai()">🇹🇭 Show Thai</button>
       <div class="thai-reveal" id="thai-reveal"></div>
+    </div>
+  </div>
+
+  <!-- ── COMPREHENSION CARD ── -->
+  <div id="comp-card">
+    <div class="comp-header">
+      <span class="comp-icon">🧠</span>
+      <span class="comp-title">Comprehension Check</span>
+      <span class="comp-subtitle">Read the sentence carefully!</span>
+    </div>
+    <div class="comp-sentence">
+      <div class="sentence-label">📖 Example sentence:</div>
+      <div id="comp-sentence-text"></div>
+    </div>
+    <div class="comp-question" id="comp-question-text"></div>
+    <div class="comp-thai-q" id="comp-thai-q"></div>
+    <div class="comp-tf-row">
+      <button class="comp-tf-btn comp-true-btn" id="comp-true-btn" onclick="answerComp(true)">✅ TRUE</button>
+      <button class="comp-tf-btn comp-false-btn" id="comp-false-btn" onclick="answerComp(false)">❌ FALSE</button>
+    </div>
+    <div class="comp-feedback" id="comp-feedback"></div>
+    <div class="comp-row">
+      <button id="comp-thai-toggle" onclick="toggleCompThai()">🇹🇭 Show Thai question</button>
+      <button class="comp-skip-btn" id="comp-skip-btn" onclick="skipComp()">Skip →</button>
+      <button id="comp-next-btn" onclick="proceedAfterComp()">Next Round →</button>
     </div>
   </div>
 
@@ -296,9 +377,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--ff);padding:12px;m
 <div id="app-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:1000;overflow:auto;-webkit-overflow-scrolling:touch;">
   <div style="background:var(--card);border:1px solid #2a3f5f;border-radius:16px;padding:20px;margin:20px auto;max-width:500px;width:calc(100% - 24px);position:relative;box-shadow:0 8px 40px rgba(0,0,0,.5);">
     <button onclick="closeAppInstructions()" style="position:absolute;top:10px;right:10px;background:var(--panel);border:1px solid #2a3f5f;color:var(--muted);font-size:1.2rem;cursor:pointer;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;">✕</button>
-
     <h2 style="color:var(--accent);font-family:var(--ffh);font-size:1.3rem;margin-bottom:16px;">📲 Install as App</h2>
-
     <div style="background:var(--panel);border-radius:12px;padding:14px;margin-bottom:14px;">
       <h3 style="color:var(--accent2);font-size:.95rem;margin-bottom:8px;">🍎 iPhone / iPad</h3>
       <ol style="color:var(--text);font-size:.85rem;line-height:1.9;margin-left:18px;">
@@ -308,7 +387,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--ff);padding:12px;m
         <li>Tap <strong>"Add"</strong> to confirm</li>
       </ol>
     </div>
-
     <div style="background:var(--panel);border-radius:12px;padding:14px;margin-bottom:14px;">
       <h3 style="color:var(--accent2);font-size:.95rem;margin-bottom:8px;">🤖 Android</h3>
       <ol style="color:var(--text);font-size:.85rem;line-height:1.9;margin-left:18px;">
@@ -318,38 +396,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--ff);padding:12px;m
         <li>Tap <strong>"Add"</strong> or <strong>"Install"</strong> to confirm</li>
       </ol>
     </div>
-
-    <div style="border-top:1px solid #2a3f5f;padding-top:14px;margin-top:4px;">
-      <h3 style="color:var(--accent);font-size:.95rem;margin-bottom:10px;">🇹🇭 วิธีติดตั้งเป็นแอป</h3>
-
-      <div style="background:var(--panel);border-radius:12px;padding:14px;margin-bottom:10px;">
-        <h4 style="color:var(--accent2);font-size:.88rem;margin-bottom:6px;">🍎 iPhone / iPad</h4>
-        <ol style="color:var(--text);font-size:.85rem;line-height:1.9;margin-left:18px;">
-          <li>เปิดหน้านี้ใน <strong>Safari</strong></li>
-          <li>กดปุ่ม <strong>แชร์</strong> ⬆ ที่ด้านล่าง</li>
-          <li>เลื่อนลงแล้วกด <strong>"เพิ่มลงหน้าจอหลัก"</strong></li>
-          <li>กด <strong>"เพิ่ม"</strong> เพื่อยืนยัน</li>
-        </ol>
-      </div>
-
-      <div style="background:var(--panel);border-radius:12px;padding:14px;">
-        <h4 style="color:var(--accent2);font-size:.88rem;margin-bottom:6px;">🤖 Android</h4>
-        <ol style="color:var(--text);font-size:.85rem;line-height:1.9;margin-left:18px;">
-          <li>เปิดหน้านี้ใน <strong>Chrome</strong></li>
-          <li>กด <strong>เมนูสามจุด ⋮</strong> (มุมบนขวา)</li>
-          <li>กด <strong>"เพิ่มลงหน้าจอหลัก"</strong> หรือ <strong>"ติดตั้งแอป"</strong></li>
-          <li>กด <strong>"เพิ่ม"</strong> หรือ <strong>"ติดตั้ง"</strong> เพื่อยืนยัน</li>
-        </ol>
-      </div>
-    </div>
-
-    <div style="background:#0a1a2e;border-radius:10px;padding:12px;margin-top:14px;">
-      <p style="color:var(--muted);font-size:.82rem;margin:0;text-align:center;">
-        💡 <strong>Tip / เคล็ดลับ:</strong> This creates a shortcut that works like a real app — no download needed!<br>สร้างทางลัดที่ทำงานเหมือนแอปจริง — ไม่ต้องดาวน์โหลด!
-      </p>
-    </div>
-
-    <button onclick="closeAppInstructions()" style="background:linear-gradient(135deg,var(--accent),#ffdb4d);color:#0f1b2d;font-family:var(--ff);font-weight:700;font-size:1rem;padding:12px 24px;border:none;border-radius:12px;cursor:pointer;margin-top:14px;width:100%;min-height:44px;box-shadow:0 4px 16px rgba(245,197,24,.3);">✓ Close / ปิด</button>
+    <button onclick="closeAppInstructions()" style="background:linear-gradient(135deg,var(--accent),#ffdb4d);color:#0f1b2d;font-family:var(--ff);font-weight:700;font-size:1rem;padding:12px 24px;border:none;border-radius:12px;cursor:pointer;margin-top:14px;width:100%;min-height:44px;box-shadow:0 4px 16px rgba(245,197,24,.3);">✓ Close</button>
   </div>
 </div>
 
@@ -357,10 +404,8 @@ body{background:var(--bg);color:var(--text);font-family:var(--ff);padding:12px;m
 <div id="examples-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:1000;overflow:auto;-webkit-overflow-scrolling:touch;">
   <div style="background:var(--card);border:1px solid #2a3f5f;border-radius:16px;padding:20px;margin:20px auto;max-width:600px;width:calc(100% - 24px);position:relative;box-shadow:0 8px 40px rgba(0,0,0,.5);">
     <button onclick="closeExamples()" style="position:absolute;top:10px;right:10px;background:var(--panel);border:1px solid #2a3f5f;color:var(--muted);font-size:1.2rem;cursor:pointer;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;">✕</button>
-
-    <h2 style="color:var(--accent);font-family:var(--ffh);font-size:1.3rem;margin-bottom:6px;">📚 Past Tense Examples / ตัวอย่างอดีตกาล</h2>
-    <p style="color:var(--muted);font-size:.8rem;margin-bottom:16px;">Study these before you play! / เรียนรู้ก่อนเล่น!</p>
-
+    <h2 style="color:var(--accent);font-family:var(--ffh);font-size:1.3rem;margin-bottom:6px;">📚 Past Tense Examples</h2>
+    <p style="color:var(--muted);font-size:.8rem;margin-bottom:16px;">Study these before you play!</p>
     <div id="examples-content"></div>
   </div>
 </div>
@@ -371,27 +416,23 @@ body{background:var(--bg);color:var(--text);font-family:var(--ff);padding:12px;m
   <h2>Memory Recall Test!</h2>
   <p style="color:var(--muted);font-size:.88rem;margin-bottom:4px;">Can you remember every verb in the chain?</p>
   <p style="color:var(--muted);font-size:.82rem;">จำคำกริยาทุกคำในโซ่ได้ไหม? พิมพ์รูปอดีตกาลของแต่ละคำ!</p>
-
   <div class="memory-chain" id="memory-chain-display"></div>
-
   <div class="memory-input-area" id="memory-input-area">
     <div class="memory-progress" id="memory-progress">Word 1 of ?</div>
     <div class="memory-base">Base verb: <span id="memory-base-verb">&mdash;</span></div>
     <div style="display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap;">
       <input type="text" id="memory-input" placeholder="past tense..." autocomplete="off" spellcheck="false"/>
-      <button class="action" id="memory-check-btn" onclick="checkMemoryAnswer()" style="background:linear-gradient(135deg,var(--accent2),#7ee8de);color:#0f1b2d;font-size:.92rem;padding:11px 20px;">&#10003; Submit</button>
+      <button class="action" id="memory-check-btn" onclick="checkMemoryAnswer()" style="background:linear-gradient(135deg,var(--accent2),#7ee8de);color:#0f1b2d;font-size:.92rem;padding:11px 20px;">✓ Submit</button>
     </div>
     <div id="memory-feedback" style="margin-top:10px;font-size:.88rem;min-height:24px;"></div>
   </div>
-
   <div class="memory-score">
     <div class="label">Memory Score</div>
     <div class="value"><span id="memory-correct-count">0</span> / <span id="memory-total-count">?</span></div>
   </div>
-
   <div id="memory-done-area" style="display:none;margin-top:16px;">
     <p style="color:var(--accent);font-size:1rem;font-weight:700;margin-bottom:10px;" id="memory-result-msg"></p>
-    <button onclick="finishMemoryTest()" style="background:linear-gradient(135deg,var(--accent),#ffdb4d);color:#0f1b2d;font-family:var(--ff);font-weight:900;font-size:1rem;padding:12px 28px;border:none;border-radius:12px;cursor:pointer;box-shadow:0 4px 16px rgba(245,197,24,.3);min-height:44px;">&#127942; See Final Results</button>
+    <button onclick="finishMemoryTest()" style="background:linear-gradient(135deg,var(--accent),#ffdb4d);color:#0f1b2d;font-family:var(--ff);font-weight:900;font-size:1rem;padding:12px 28px;border:none;border-radius:12px;cursor:pointer;box-shadow:0 4px 16px rgba(245,197,24,.3);min-height:44px;">🏆 See Final Results</button>
   </div>
 </div>
 
@@ -399,10 +440,17 @@ body{background:var(--bg);color:var(--text);font-family:var(--ff);padding:12px;m
 <div id="winner-screen">
   <div style="font-size:3rem">🏆</div>
   <h2>Excellent work!</h2>
-  <p style="color:var(--muted);margin-bottom:6px;">All <span id="final-rounds"></span> rounds complete!</p>
-  <p>Game score: <span style="color:var(--accent);font-weight:700;font-size:1.2rem" id="final-score"></span></p>
-  <p>Memory bonus: <span style="color:var(--accent2);font-weight:700;font-size:1.2rem" id="memory-bonus-display">0</span></p>
-  <p style="margin-top:6px;font-size:1.1rem;">Total: <span style="color:var(--accent);font-weight:900;font-size:1.4rem" id="total-final-score"></span></p>
+  <p style="color:var(--muted);margin-bottom:14px;">All <span id="final-rounds"></span> rounds complete!</p>
+  <div class="score-breakdown">
+    <div class="score-row"><span class="label">⭐ Game score</span><span class="val green" id="final-score">0</span></div>
+    <div class="score-row"><span class="label">🧠 Comprehension bonus</span><span class="val purple" id="comp-bonus-display">0</span></div>
+    <div class="score-row"><span class="label">🎯 Memory bonus</span><span class="val cyan" id="memory-bonus-display">0</span></div>
+    <div class="score-row"><span class="label">🏆 TOTAL</span><span class="val" id="total-final-score">0</span></div>
+  </div>
+  <div id="comp-result-summary" style="display:none;background:var(--panel);border:1px solid #a29bfe;border-radius:var(--radius);padding:14px;margin-bottom:14px;text-align:left;">
+    <div style="font-size:.72rem;color:#a29bfe;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🧠 Comprehension results</div>
+    <div id="comp-result-list"></div>
+  </div>
   <div class="final-chain" id="winner-chain"></div>
   <div style="margin-top:16px;">
     <button id="restart-btn" onclick="restartSameMode()">🔄 Play Again (same mode)</button>
@@ -411,52 +459,100 @@ body{background:var(--bg);color:var(--text);font-family:var(--ff);padding:12px;m
 </div>
 
 <script>
+// ─────────────────────────────────────────────
+//  WORD DATA  (base → past + comprehension Q)
+// ─────────────────────────────────────────────
 const ALL_WORDS=[
-  {base:"be",past:"was",accept:["was"],thai:"เป็น / คือ / อยู่",example:"I was at the supermarket for an hour.",category:"Essential"},
-  {base:"be",past:"were",accept:["were"],thai:"เป็น / คือ / อยู่ (พหูพจน์)",example:"We were in the snack aisle together.",category:"Essential"},
-  {base:"go",past:"went",accept:["went"],thai:"ไป",example:"I went to the supermarket after work.",category:"Essential"},
-  {base:"eat",past:"ate",accept:["ate"],thai:"กิน",example:"I ate a sample at the bakery counter.",category:"Essential"},
-  {base:"drink",past:"drank",accept:["drank"],thai:"ดื่ม",example:"I drank a free coffee while shopping.",category:"Essential"},
-  {base:"see",past:"saw",accept:["saw"],thai:"เห็น",example:"I saw a friend at the checkout.",category:"Essential"},
-  {base:"have",past:"had",accept:["had"],thai:"มี",example:"I had a long list of things to buy.",category:"Essential"},
-  {base:"do",past:"did",accept:["did"],thai:"ทำ",example:"I did the weekly shopping on Saturday.",category:"Essential"},
-  {base:"make",past:"made",accept:["made"],thai:"ทำ / สร้าง",example:"I made a note of everything I needed.",category:"Essential"},
-  {base:"buy",past:"bought",accept:["bought"],thai:"ซื้อ",example:"I bought fresh vegetables and fruit.",category:"Essential"},
-  {base:"say",past:"said",accept:["said"],thai:"พูด / บอก",example:"I said hello to the cashier.",category:"Essential"},
-  {base:"put",past:"put",accept:["put"],thai:"วาง",example:"I put the heavy items in first.",category:"No-Change"},
-  {base:"cut",past:"cut",accept:["cut"],thai:"ตัด",example:"I cut open the packaging in the store.",category:"No-Change"},
-  {base:"set",past:"set",accept:["set"],thai:"ตั้ง / วาง",example:"I set my basket down to check my list.",category:"No-Change"},
-  {base:"cost",past:"cost",accept:["cost"],thai:"ราคา / มีราคา",example:"It cost more than I expected.",category:"No-Change"},
-  {base:"hit",past:"hit",accept:["hit"],thai:"ตี / ชน",example:"I hit my elbow on the shelf by accident.",category:"No-Change"},
-  {base:"let",past:"let",accept:["let"],thai:"ให้ / อนุญาต",example:"I let someone go ahead of me in the queue.",category:"No-Change"},
-  {base:"shut",past:"shut",accept:["shut"],thai:"ปิด",example:"I shut the fridge door after checking the price.",category:"No-Change"},
-  {base:"sing",past:"sang",accept:["sang"],thai:"ร้องเพลง",example:"I sang along to the music in the store.",category:"Vowel-Swap"},
-  {base:"swim",past:"swam",accept:["swam"],thai:"ว่ายน้ำ",example:"I swam laps before going shopping.",category:"Vowel-Swap"},
-  {base:"begin",past:"began",accept:["began"],thai:"เริ่ม",example:"I began my shopping in the fruit section.",category:"Vowel-Swap"},
-  {base:"sit",past:"sat",accept:["sat"],thai:"นั่ง",example:"I sat down at the café inside the store.",category:"Vowel-Swap"},
-  {base:"think",past:"thought",accept:["thought"],thai:"คิด",example:"I thought about what to cook for dinner.",category:"Ught-Ending"},
-  {base:"catch",past:"caught",accept:["caught"],thai:"จับ / คว้า",example:"I caught a falling bottle before it broke.",category:"Ught-Ending"},
-  {base:"teach",past:"taught",accept:["taught"],thai:"สอน",example:"My mum taught me how to pick ripe fruit.",category:"Ught-Ending"},
-  {base:"bring",past:"brought",accept:["brought"],thai:"นำมา",example:"I brought my reusable bag with me.",category:"Ught-Ending"},
-  {base:"run",past:"ran",accept:["ran"],thai:"วิ่ง",example:"I ran to catch the store before it closed.",category:"Movement"},
-  {base:"fly",past:"flew",accept:["flew"],thai:"บิน",example:"I flew home and went shopping straight away.",category:"Movement"},
-  {base:"drive",past:"drove",accept:["drove"],thai:"ขับรถ",example:"I drove to the big supermarket across town.",category:"Movement"},
-  {base:"find",past:"found",accept:["found"],thai:"พบ / หา",example:"I found a great deal on imported cheese.",category:"Movement"},
-  {base:"leave",past:"left",accept:["left"],thai:"ออกจาก / ลืมทิ้งไว้",example:"I left my shopping bags in the car.",category:"Movement"},
-  {base:"meet",past:"met",accept:["met"],thai:"พบ (คน)",example:"I met my neighbour in the vegetable aisle.",category:"Movement"},
-  {base:"walk",past:"walked",accept:["walked"],thai:"เดิน",example:"I walked to the supermarket this morning.",category:"Regular"},
-  {base:"talk",past:"talked",accept:["talked"],thai:"พูดคุย",example:"I talked to the staff about a missing item.",category:"Regular"},
-  {base:"play",past:"played",accept:["played"],thai:"เล่น",example:"I played a game on my phone while waiting.",category:"Regular"},
-  {base:"watch",past:"watched",accept:["watched"],thai:"ดู / สังเกต",example:"I watched a cooking demo at the supermarket.",category:"Regular"},
-  {base:"work",past:"worked",accept:["worked"],thai:"ทำงาน",example:"I worked late before doing my shopping.",category:"Regular"},
-  {base:"start",past:"started",accept:["started"],thai:"เริ่มต้น",example:"I started my shopping list from scratch.",category:"Regular"},
-  {base:"finish",past:"finished",accept:["finished"],thai:"เสร็จสิ้น",example:"I finished my shopping in under twenty minutes.",category:"Regular"},
-  {base:"call",past:"called",accept:["called"],thai:"โทร / เรียก",example:"I called my wife to ask what brand to buy.",category:"Regular"},
-  {base:"ask",past:"asked",accept:["asked"],thai:"ถาม",example:"I asked a staff member where the soy sauce was.",category:"Regular"},
-  {base:"serve",past:"served",accept:["served"],thai:"เสิร์ฟ / ให้บริการ",example:"The deli counter served me quickly.",category:"Service"},
-  {base:"order",past:"ordered",accept:["ordered"],thai:"สั่ง",example:"I ordered a birthday cake from the bakery.",category:"Service"},
-  {base:"prepare",past:"prepared",accept:["prepared"],thai:"เตรียม",example:"I prepared a shopping list the night before.",category:"Service"},
-  {base:"book",past:"booked",accept:["booked"],thai:"จอง",example:"I booked a delivery slot for the weekend.",category:"Service"},
+  {base:"be",past:"was",accept:["was"],thai:"เป็น / คือ / อยู่",example:"I was at the supermarket for an hour.",category:"Essential",
+   comp:{q:"The person spent a short time at the supermarket.",thaiq:"คนนั้นใช้เวลาสั้นๆ ที่ซูเปอร์มาร์เก็ต",isTrue:false,explain:"An hour is quite a long time — not short!"}},
+  {base:"be",past:"were",accept:["were"],thai:"เป็น / คือ / อยู่ (พหูพจน์)",example:"We were in the snack aisle together.",category:"Essential",
+   comp:{q:"They were shopping alone.",thaiq:"พวกเขาซื้อของคนเดียว",isTrue:false,explain:"'Together' means they were with someone else."}},
+  {base:"go",past:"went",accept:["went"],thai:"ไป",example:"I went to the supermarket after work.",category:"Essential",
+   comp:{q:"The person visited the supermarket before starting their job.",thaiq:"คนนั้นไปซูเปอร์มาร์เก็ตก่อนเริ่มงาน",isTrue:false,explain:"'After work' means they went when work finished."}},
+  {base:"eat",past:"ate",accept:["ate"],thai:"กิน",example:"I ate a sample at the bakery counter.",category:"Essential",
+   comp:{q:"The person tried some food for free at the bakery.",thaiq:"คนนั้นได้ลองชิมอาหารฟรีที่เคาน์เตอร์เบเกอรี่",isTrue:true,explain:"A 'sample' is a free small piece of food to try."}},
+  {base:"drink",past:"drank",accept:["drank"],thai:"ดื่ม",example:"I drank a free coffee while shopping.",category:"Essential",
+   comp:{q:"The person paid for their coffee.",thaiq:"คนนั้นจ่ายเงินสำหรับกาแฟ",isTrue:false,explain:"The coffee was free — they didn't pay for it."}},
+  {base:"see",past:"saw",accept:["saw"],thai:"เห็น",example:"I saw a friend at the checkout.",category:"Essential",
+   comp:{q:"The person met someone they knew while paying.",thaiq:"คนนั้นพบคนที่รู้จักขณะจ่ายเงิน",isTrue:true,explain:"The checkout is where you pay. They saw a friend there."}},
+  {base:"have",past:"had",accept:["had"],thai:"มี",example:"I had a long list of things to buy.",category:"Essential",
+   comp:{q:"The person only needed to buy one or two things.",thaiq:"คนนั้นต้องการซื้อของแค่หนึ่งหรือสองอย่าง",isTrue:false,explain:"A 'long list' means many things to buy."}},
+  {base:"do",past:"did",accept:["did"],thai:"ทำ",example:"I did the weekly shopping on Saturday.",category:"Essential",
+   comp:{q:"The person goes shopping every day.",thaiq:"คนนั้นไปซื้อของทุกวัน",isTrue:false,explain:"'Weekly shopping' means once a week, not every day."}},
+  {base:"make",past:"made",accept:["made"],thai:"ทำ / สร้าง",example:"I made a note of everything I needed.",category:"Essential",
+   comp:{q:"The person wrote down what they needed before shopping.",thaiq:"คนนั้นจดสิ่งที่ต้องการก่อนไปซื้อของ",isTrue:true,explain:"'Made a note' means they wrote it down."}},
+  {base:"buy",past:"bought",accept:["bought"],thai:"ซื้อ",example:"I bought fresh vegetables and fruit.",category:"Essential",
+   comp:{q:"The person purchased frozen food.",thaiq:"คนนั้นซื้ออาหารแช่แข็ง",isTrue:false,explain:"They bought fresh vegetables and fruit — not frozen food."}},
+  {base:"say",past:"said",accept:["said"],thai:"พูด / บอก",example:"I said hello to the cashier.",category:"Essential",
+   comp:{q:"The person spoke to the person at the checkout.",thaiq:"คนนั้นพูดกับพนักงานที่แคชเชียร์",isTrue:true,explain:"A cashier works at the checkout. The person greeted them."}},
+  {base:"put",past:"put",accept:["put"],thai:"วาง",example:"I put the heavy items in first.",category:"No-Change",
+   comp:{q:"The person placed the lightest items into the bag first.",thaiq:"คนนั้นใส่ของที่เบาที่สุดก่อน",isTrue:false,explain:"They put the heavy items in first, not the lightest."}},
+  {base:"cut",past:"cut",accept:["cut"],thai:"ตัด",example:"I cut open the packaging in the store.",category:"No-Change",
+   comp:{q:"The person opened the packaging inside the shop.",thaiq:"คนนั้นเปิดบรรจุภัณฑ์ภายในร้าน",isTrue:true,explain:"'In the store' means inside the shop — correct!"}},
+  {base:"set",past:"set",accept:["set"],thai:"ตั้ง / วาง",example:"I set my basket down to check my list.",category:"No-Change",
+   comp:{q:"The person put their basket down while looking at their list.",thaiq:"คนนั้นวางตะกร้าลงขณะดูรายการ",isTrue:true,explain:"'Set down' means placed it on the ground, then checked the list."}},
+  {base:"cost",past:"cost",accept:["cost"],thai:"ราคา / มีราคา",example:"It cost more than I expected.",category:"No-Change",
+   comp:{q:"The price was cheaper than the person thought it would be.",thaiq:"ราคาถูกกว่าที่คนนั้นคิดไว้",isTrue:false,explain:"'More than expected' means it was more expensive, not cheaper."}},
+  {base:"hit",past:"hit",accept:["hit"],thai:"ตี / ชน",example:"I hit my elbow on the shelf by accident.",category:"No-Change",
+   comp:{q:"The person intentionally knocked the shelf.",thaiq:"คนนั้นตั้งใจชนชั้นวางของ",isTrue:false,explain:"'By accident' means it was not intentional."}},
+  {base:"let",past:"let",accept:["let"],thai:"ให้ / อนุญาต",example:"I let someone go ahead of me in the queue.",category:"No-Change",
+   comp:{q:"The person allowed another customer to go before them.",thaiq:"คนนั้นให้ลูกค้าคนอื่นผ่านไปก่อน",isTrue:true,explain:"'Let someone go ahead' means giving them your place in the queue."}},
+  {base:"shut",past:"shut",accept:["shut"],thai:"ปิด",example:"I shut the fridge door after checking the price.",category:"No-Change",
+   comp:{q:"The person closed the fridge without looking at the price first.",thaiq:"คนนั้นปิดตู้เย็นโดยไม่ดูราคาก่อน",isTrue:false,explain:"They checked the price first, then shut the door."}},
+  {base:"sing",past:"sang",accept:["sang"],thai:"ร้องเพลง",example:"I sang along to the music in the store.",category:"Vowel-Swap",
+   comp:{q:"The supermarket was completely silent.",thaiq:"ซูเปอร์มาร์เก็ตเงียบสนิท",isTrue:false,explain:"There was music playing — that's why they could sing along!"}},
+  {base:"swim",past:"swam",accept:["swam"],thai:"ว่ายน้ำ",example:"I swam laps before going shopping.",category:"Vowel-Swap",
+   comp:{q:"The person exercised before doing their shopping.",thaiq:"คนนั้นออกกำลังกายก่อนไปซื้อของ",isTrue:true,explain:"Swimming laps is exercise. They did this before shopping."}},
+  {base:"begin",past:"began",accept:["began"],thai:"เริ่ม",example:"I began my shopping in the fruit section.",category:"Vowel-Swap",
+   comp:{q:"The first part of the shop the person visited was the fruit section.",thaiq:"ส่วนแรกของร้านที่คนนั้นเยี่ยมชมคือแผนกผลไม้",isTrue:true,explain:"'Began in the fruit section' means that's where they started."}},
+  {base:"sit",past:"sat",accept:["sat"],thai:"นั่ง",example:"I sat down at the café inside the store.",category:"Vowel-Swap",
+   comp:{q:"The person had a rest at a café that was outside the supermarket.",thaiq:"คนนั้นพักที่คาเฟ่นอกซูเปอร์มาร์เก็ต",isTrue:false,explain:"The café was 'inside the store' — not outside."}},
+  {base:"think",past:"thought",accept:["thought"],thai:"คิด",example:"I thought about what to cook for dinner.",category:"Ught-Ending",
+   comp:{q:"The person was planning their evening meal while shopping.",thaiq:"คนนั้นวางแผนมื้อเย็นขณะช้อปปิ้ง",isTrue:true,explain:"Thinking about what to cook for dinner = planning the evening meal."}},
+  {base:"catch",past:"caught",accept:["caught"],thai:"จับ / คว้า",example:"I caught a falling bottle before it broke.",category:"Ught-Ending",
+   comp:{q:"The bottle fell and smashed on the floor.",thaiq:"ขวดตกและแตกบนพื้น",isTrue:false,explain:"They caught the bottle before it broke — so it didn't smash."}},
+  {base:"teach",past:"taught",accept:["taught"],thai:"สอน",example:"My mum taught me how to pick ripe fruit.",category:"Ught-Ending",
+   comp:{q:"The person learned how to choose good fruit from their mother.",thaiq:"คนนั้นเรียนรู้วิธีเลือกผลไม้ดีๆ จากแม่",isTrue:true,explain:"'Taught me how to pick ripe fruit' = their mum showed them."}},
+  {base:"bring",past:"brought",accept:["brought"],thai:"นำมา",example:"I brought my reusable bag with me.",category:"Ught-Ending",
+   comp:{q:"The person used a plastic bag from the supermarket.",thaiq:"คนนั้นใช้ถุงพลาสติกจากซูเปอร์มาร์เก็ต",isTrue:false,explain:"A reusable bag is their own bag — not a shop's plastic bag."}},
+  {base:"run",past:"ran",accept:["ran"],thai:"วิ่ง",example:"I ran to catch the store before it closed.",category:"Movement",
+   comp:{q:"The person arrived at the shop with plenty of time to spare.",thaiq:"คนนั้นมาถึงร้านโดยมีเวลาเหลือมากมาย",isTrue:false,explain:"They had to run — which suggests they were almost too late."}},
+  {base:"fly",past:"flew",accept:["flew"],thai:"บิน",example:"I flew home and went shopping straight away.",category:"Movement",
+   comp:{q:"The person went to the supermarket immediately after their flight.",thaiq:"คนนั้นไปซูเปอร์มาร์เก็ตทันทีหลังจากเที่ยวบิน",isTrue:true,explain:"'Straight away' means immediately — right after landing."}},
+  {base:"drive",past:"drove",accept:["drove"],thai:"ขับรถ",example:"I drove to the big supermarket across town.",category:"Movement",
+   comp:{q:"The supermarket the person visited was nearby.",thaiq:"ซูเปอร์มาร์เก็ตที่คนนั้นไปอยู่ใกล้ๆ",isTrue:false,explain:"'Across town' means on the other side of the city — not nearby."}},
+  {base:"find",past:"found",accept:["found"],thai:"พบ / หา",example:"I found a great deal on imported cheese.",category:"Movement",
+   comp:{q:"The person discovered a good price on local cheese.",thaiq:"คนนั้นพบราคาดีสำหรับชีสท้องถิ่น",isTrue:false,explain:"The cheese was imported (from another country), not local."}},
+  {base:"leave",past:"left",accept:["left"],thai:"ออกจาก / ลืมทิ้งไว้",example:"I left my shopping bags in the car.",category:"Movement",
+   comp:{q:"The person forgot their bags outside the shop.",thaiq:"คนนั้นลืมถุงไว้นอกร้าน",isTrue:false,explain:"They left them in the car, not outside the shop."}},
+  {base:"meet",past:"met",accept:["met"],thai:"พบ (คน)",example:"I met my neighbour in the vegetable aisle.",category:"Movement",
+   comp:{q:"The person bumped into someone from their street while shopping.",thaiq:"คนนั้นพบคนจากถนนเดียวกันขณะช้อปปิ้ง",isTrue:true,explain:"A neighbour lives on the same street. They met them in the shop."}},
+  {base:"walk",past:"walked",accept:["walked"],thai:"เดิน",example:"I walked to the supermarket this morning.",category:"Regular",
+   comp:{q:"The person drove to the supermarket.",thaiq:"คนนั้นขับรถไปซูเปอร์มาร์เก็ต",isTrue:false,explain:"They walked — they didn't drive."}},
+  {base:"talk",past:"talked",accept:["talked"],thai:"พูดคุย",example:"I talked to the staff about a missing item.",category:"Regular",
+   comp:{q:"The person spoke to an employee because something wasn't on the shelf.",thaiq:"คนนั้นพูดกับพนักงานเพราะสินค้าไม่อยู่บนชั้นวาง",isTrue:true,explain:"A 'missing item' means something they couldn't find on the shelf."}},
+  {base:"play",past:"played",accept:["played"],thai:"เล่น",example:"I played a game on my phone while waiting.",category:"Regular",
+   comp:{q:"The person was busy working on their phone in the queue.",thaiq:"คนนั้นยุ่งกับการทำงานบนโทรศัพท์ในคิว",isTrue:false,explain:"They played a game — for fun, not for work."}},
+  {base:"watch",past:"watched",accept:["watched"],thai:"ดู / สังเกต",example:"I watched a cooking demo at the supermarket.",category:"Regular",
+   comp:{q:"The person saw someone prepare food at the store.",thaiq:"คนนั้นเห็นคนเตรียมอาหารที่ร้าน",isTrue:true,explain:"A cooking demo is when someone prepares food to show customers."}},
+  {base:"work",past:"worked",accept:["worked"],thai:"ทำงาน",example:"I worked late before doing my shopping.",category:"Regular",
+   comp:{q:"The person finished work on time that day.",thaiq:"คนนั้นเลิกงานตรงเวลาในวันนั้น",isTrue:false,explain:"'Worked late' means they stayed at work longer than usual."}},
+  {base:"start",past:"started",accept:["started"],thai:"เริ่มต้น",example:"I started my shopping list from scratch.",category:"Regular",
+   comp:{q:"The person used their old shopping list.",thaiq:"คนนั้นใช้รายการช้อปปิ้งเก่า",isTrue:false,explain:"'From scratch' means starting completely new — no old list."}},
+  {base:"finish",past:"finished",accept:["finished"],thai:"เสร็จสิ้น",example:"I finished my shopping in under twenty minutes.",category:"Regular",
+   comp:{q:"The person spent more than half an hour shopping.",thaiq:"คนนั้นใช้เวลาช้อปปิ้งมากกว่าครึ่งชั่วโมง",isTrue:false,explain:"Under twenty minutes is less than half an hour (thirty minutes)."}},
+  {base:"call",past:"called",accept:["called"],thai:"โทร / เรียก",example:"I called my wife to ask what brand to buy.",category:"Regular",
+   comp:{q:"The person knew exactly which brand to buy before phoning.",thaiq:"คนนั้นรู้แน่ชัดว่าต้องซื้อยี่ห้ออะไรก่อนโทร",isTrue:false,explain:"They called to ask — which means they didn't know beforehand."}},
+  {base:"ask",past:"asked",accept:["asked"],thai:"ถาม",example:"I asked a staff member where the soy sauce was.",category:"Regular",
+   comp:{q:"The person couldn't find the soy sauce on their own.",thaiq:"คนนั้นหาซอสถั่วเหลืองเองไม่เจอ",isTrue:true,explain:"They had to ask a staff member — so they couldn't find it alone."}},
+  {base:"serve",past:"served",accept:["served"],thai:"เสิร์ฟ / ให้บริการ",example:"The deli counter served me quickly.",category:"Service",
+   comp:{q:"The person had to wait a long time at the deli counter.",thaiq:"คนนั้นต้องรอนานที่เคาน์เตอร์เดลี่",isTrue:false,explain:"'Served quickly' means there was no long wait."}},
+  {base:"order",past:"ordered",accept:["ordered"],thai:"สั่ง",example:"I ordered a birthday cake from the bakery.",category:"Service",
+   comp:{q:"The person bought a ready-made cake from the shelf.",thaiq:"คนนั้นซื้อเค้กสำเร็จรูปจากชั้นวาง",isTrue:false,explain:"Ordering a cake means requesting a custom one — not grabbing one off the shelf."}},
+  {base:"prepare",past:"prepared",accept:["prepared"],thai:"เตรียม",example:"I prepared a shopping list the night before.",category:"Service",
+   comp:{q:"The person made their list on the same day they went shopping.",thaiq:"คนนั้นทำรายการในวันเดียวกับที่ไปช้อปปิ้ง",isTrue:false,explain:"'The night before' means the previous evening — not the same day."}},
+  {base:"book",past:"booked",accept:["booked"],thai:"จอง",example:"I booked a delivery slot for the weekend.",category:"Service",
+   comp:{q:"The person reserved a time for their groceries to be delivered.",thaiq:"คนนั้นจองเวลาสำหรับการจัดส่งของชำ",isTrue:true,explain:"'Booked a delivery slot' = reserved a time for delivery."}},
 ];
 
 const CAT_COLOR={
@@ -464,13 +560,24 @@ const CAT_COLOR={
   "Ught-Ending":"#a29bfe","Movement":"#fd79a8","Regular":"#55efc4","Service":"#74b9ff"
 };
 
+// ─────────────────────────────────────────────
+//  STATE
+// ─────────────────────────────────────────────
 let gameWords=[],round=0,score=0,streak=0;
 let chainBuilt=[],hintUsed=false,answered=false,dotStates=[];
 let timerOn=false,timerInterval=null;
 let selectedMode=null,chainRevealed=false;
 let failedAnswers=[];
 
-// ── AUDIO FEEDBACK (Web Audio API) ──
+// comprehension state
+let compOn=true;
+let compScore=0, compTotal=0;
+let compResults=[];
+let waitingForComp=false;
+
+// ─────────────────────────────────────────────
+//  AUDIO
+// ─────────────────────────────────────────────
 const AudioCtx=window.AudioContext||window.webkitAudioContext;
 let audioCtx=null;
 function ensureAudio(){if(!audioCtx)audioCtx=new AudioCtx();}
@@ -489,7 +596,12 @@ function sfxClick(){playTone(880,.04,'sine',.08);}
 function sfxSelect(){playTone(440,.06,'sine',.1);setTimeout(()=>playTone(554,.06,'sine',.08),60);}
 function sfxWin(){[523,659,784,1047].forEach((f,i)=>setTimeout(()=>playTone(f,.15,'sine',.13),i*120));}
 function sfxStreak(){playTone(698,.06,'sine',.1);setTimeout(()=>playTone(880,.1,'sine',.1),70);}
+function sfxCompCorrect(){playTone(880,.06,'sine',.1);setTimeout(()=>playTone(1047,.12,'sine',.08),60);}
+function sfxCompWrong(){playTone(300,.1,'triangle',.1);}
 
+// ─────────────────────────────────────────────
+//  MODE SELECT & GAME INIT
+// ─────────────────────────────────────────────
 function selectMode(m){
   selectedMode=m;
   document.querySelectorAll('.mode-card').forEach(c=>c.classList.remove('selected'));
@@ -504,6 +616,7 @@ function startGame(){
   if(!selectedMode)return;
   sfxClick();
   chainRevealed=false;
+  compScore=0;compTotal=0;compResults=[];waitingForComp=false;
   document.getElementById('mode-screen').style.display='none';
   document.getElementById('winner-screen').style.display='none';
   document.getElementById('game-screen').style.display='block';
@@ -525,102 +638,58 @@ function startGame(){
     revealPanel.style.display='none';
   }
 
-  gameWords=shuffle([...ALL_WORDS]);
+  // update comp badge visibility
+  document.getElementById('comp-badge').style.display=compOn?'inline-flex':'none';
+  updateCompToggleBtn();
+
+  // Deduplicate: only one entry per base verb (random pick among variants)
+  const shuffledAll=shuffle([...ALL_WORDS]);
+  const seenBase=new Set();
+  const uniqueWords=[];
+  shuffledAll.forEach(w=>{if(!seenBase.has(w.base)){seenBase.add(w.base);uniqueWords.push(w);}});
+  gameWords=shuffle(uniqueWords);
   round=0;score=0;streak=0;chainBuilt=[];dotStates=[];failedAnswers=[];
   document.getElementById('total-num').textContent=gameWords.length;
   startRound();
 }
 
-function restartSameMode(){
-  document.getElementById('winner-screen').style.display='none';
-  startGame();
-}
-
+function restartSameMode(){document.getElementById('winner-screen').style.display='none';startGame();}
 function restartCurrentGame(){
   round=0;score=0;streak=0;chainBuilt=[];dotStates=[];failedAnswers=[];
+  compScore=0;compTotal=0;compResults=[];waitingForComp=false;
   clearInterval(timerInterval);
+  hideCompCard();
   startRound();
 }
-
 function goToMenu(){
   document.getElementById('game-screen').style.display='none';
   document.getElementById('winner-screen').style.display='none';
   document.getElementById('memory-test').style.display='none';
   document.getElementById('mode-screen').style.display='block';
   clearInterval(timerInterval);
+  hideCompCard();
 }
 
-function showAppInstructions(){
-  document.getElementById('app-modal').style.display='block';
+// ─────────────────────────────────────────────
+//  COMPREHENSION TOGGLE
+// ─────────────────────────────────────────────
+function toggleComp(){
+  sfxClick();
+  compOn=!compOn;
+  updateCompToggleBtn();
+  document.getElementById('comp-badge').style.display=compOn?'inline-flex':'none';
+}
+function updateCompToggleBtn(){
+  const btn=document.getElementById('comp-toggle');
+  btn.textContent=compOn?'🧠 Comprehension: ON':'🧠 Comprehension: OFF';
+  btn.style.background=compOn?'#1a2a40':'#1a2030';
+  btn.style.borderColor=compOn?'#a29bfe':'#2a3f5f';
+  btn.style.color=compOn?'#a29bfe':getComputedStyle(document.documentElement).getPropertyValue('--muted');
 }
 
-function closeAppInstructions(){
-  document.getElementById('app-modal').style.display='none';
-}
-
-function showExamples(){
-  const container=document.getElementById('examples-content');
-  const cats=["Essential","No-Change","Vowel-Swap","Ught-Ending","Movement","Regular","Service"];
-  const catDesc={
-    "Essential":"คำกริยาที่สำคัญที่สุด — เปลี่ยนรูปไม่เหมือนกัน",
-    "No-Change":"คำกริยาที่ไม่เปลี่ยนรูป — present = past!",
-    "Vowel-Swap":"เปลี่ยนสระตรงกลาง เช่น i→a",
-    "Ught-Ending":"ลงท้ายด้วย -ought หรือ -aught",
-    "Movement":"คำกริยาเกี่ยวกับการเคลื่อนไหว",
-    "Regular":"คำกริยาปกติ เติม -ed",
-    "Service":"คำกริยาเกี่ยวกับการบริการ เติม -ed"
-  };
-  let html='';
-  cats.forEach(cat=>{
-    const words=ALL_WORDS.filter(w=>w.category===cat);
-    if(!words.length)return;
-    const seen=new Set();
-    const unique=words.filter(w=>{const k=w.base+w.past;if(seen.has(k))return false;seen.add(k);return true;});
-    const cc=CAT_COLOR[cat]||'#4ecdc4';
-    html+=`<div style="background:var(--panel);border-radius:12px;padding:14px;margin-bottom:12px;border-left:3px solid ${cc};">`;
-    html+=`<h3 style="color:${cc};font-size:.92rem;margin-bottom:4px;">${cat}</h3>`;
-    html+=`<p style="color:var(--muted);font-size:.75rem;margin-bottom:10px;">${catDesc[cat]||''}</p>`;
-    html+=`<table style="width:100%;border-collapse:collapse;">`;
-    html+=`<tr style="border-bottom:1px solid #2a3f5f;">
-      <th style="text-align:left;color:var(--muted);font-size:.72rem;padding:4px 6px;font-weight:700;">Present</th>
-      <th style="text-align:left;color:var(--muted);font-size:.72rem;padding:4px 6px;font-weight:700;">Past</th>
-      <th style="text-align:left;color:var(--muted);font-size:.72rem;padding:4px 6px;font-weight:700;">Thai / ไทย</th>
-      <th style="text-align:left;color:var(--muted);font-size:.72rem;padding:4px 6px;font-weight:700;">Example</th>
-    </tr>`;
-    unique.forEach(w=>{
-      html+=`<tr style="border-bottom:1px solid #1d2d47;">
-        <td style="padding:5px 6px;color:var(--text);font-weight:700;font-size:.84rem;">${w.base}</td>
-        <td style="padding:5px 6px;color:${cc};font-weight:700;font-size:.84rem;">${w.past}</td>
-        <td style="padding:5px 6px;color:var(--accent2);font-size:.8rem;">${w.thai}</td>
-        <td style="padding:5px 6px;color:var(--muted);font-size:.76rem;font-style:italic;">${w.example}</td>
-      </tr>`;
-    });
-    html+=`</table></div>`;
-  });
-  container.innerHTML=html;
-  document.getElementById('examples-modal').style.display='block';
-}
-
-function closeExamples(){
-  document.getElementById('examples-modal').style.display='none';
-}
-
-function toggleChain(){
-  const chainBox=document.getElementById('chain-box');
-  const revealPanel=document.getElementById('reveal-panel');
-  const btn=document.getElementById('chain-toggle-btn');
-  chainRevealed=!chainRevealed;
-  if(chainRevealed){
-    // show reveal panel alongside blurred box
-    document.getElementById('reveal-display').innerHTML=buildChainText();
-    revealPanel.style.display='block';
-    btn.textContent='🙈 Hide Chain';
-  } else {
-    revealPanel.style.display='none';
-    btn.textContent='👁 Reveal Chain';
-  }
-}
-
+// ─────────────────────────────────────────────
+//  ROUND LOGIC
+// ─────────────────────────────────────────────
 function shuffle(a){
   for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
   return a;
@@ -656,13 +725,16 @@ function buildDots(){
 
 function startRound(){
   if(round>=gameWords.length){showWinner();return;}
-  answered=false;hintUsed=false;
+  answered=false;hintUsed=false;waitingForComp=false;
+  hideCompCard();
   const w=gameWords[round];
   document.getElementById('base-verb-display').textContent=w.base;
   document.getElementById('answer-input').value='';
   document.getElementById('answer-input').disabled=false;
   document.getElementById('check-btn').style.display='inline-block';
   document.getElementById('next-btn').style.display='none';
+  document.getElementById('next-btn').textContent=
+    (compOn && w.comp) ? 'Next: Comprehension →' : 'Next Round →';
   document.getElementById('feedback-box').style.display='none';
   document.getElementById('hint-text').style.display='none';
   document.getElementById('thai-reveal').style.display='none';
@@ -671,12 +743,12 @@ function startRound(){
 
   const chainHtml=buildChainText();
   document.getElementById('chain-display').innerHTML=chainHtml;
-  // keep reveal panel updated
   document.getElementById('reveal-display').innerHTML=chainHtml;
 
   document.getElementById('round-num').textContent=round+1;
   document.getElementById('streak-num').textContent=streak;
   document.getElementById('score-num').textContent=score;
+  document.getElementById('comp-score-num').textContent=compScore;
   buildDots();updateSummary();updateFailureReport();
   if(timerOn)startTimer();
   document.getElementById('answer-input').focus();
@@ -693,6 +765,8 @@ function checkAnswer(){
   document.getElementById('answer-input').disabled=true;
   document.getElementById('check-btn').style.display='none';
   document.getElementById('next-btn').style.display='inline-block';
+  document.getElementById('next-btn').textContent=
+    (compOn && w.comp) ? '🧠 Next: Comprehension →' : 'Next Round →';
   document.getElementById('thai-reveal').innerHTML=
     `<div style="margin-bottom:6px;"><strong>🇹🇭 คำแปล:</strong> ${w.base} → ${w.past} = <span style="color:var(--accent)">${w.thai}</span></div>`+
     `<div><strong>📝 ตัวอย่างประโยค:</strong> <em>${w.example}</em></div>`;
@@ -718,14 +792,7 @@ function checkAnswer(){
   } else {
     sfxWrong();
     streak=0;dotStates[round]='wrong';
-    failedAnswers.push({
-      base: w.base,
-      correct: w.past,
-      wrong: val,
-      thai: w.thai,
-      example: w.example,
-      category: w.category
-    });
+    failedAnswers.push({base:w.base,correct:w.past,wrong:val,thai:w.thai,example:w.example,category:w.category});
     document.getElementById('challenge-card').className='challenge-card wrong';
     fb.className='feedback wrong fade-in';
     document.getElementById('feedback-text').innerHTML=
@@ -737,54 +804,180 @@ function checkAnswer(){
   const chainHtml=buildChainText();
   document.getElementById('chain-display').innerHTML=chainHtml;
   document.getElementById('reveal-display').innerHTML=chainHtml;
-
   document.getElementById('streak-num').textContent=streak;
   document.getElementById('score-num').textContent=score;
-  // flash score badge
   const scoreBadge=document.getElementById('score-num');
-  scoreBadge.classList.remove('score-flash');
-  void scoreBadge.offsetWidth;
-  scoreBadge.classList.add('score-flash');
+  scoreBadge.classList.remove('score-flash');void scoreBadge.offsetWidth;scoreBadge.classList.add('score-flash');
   buildDots();updateSummary();updateFailureReport();
 }
 
+// ─────────────────────────────────────────────
+//  NEXT BUTTON → routes to comprehension or next round
+// ─────────────────────────────────────────────
+function handleNext(){
+  sfxClick();
+  const w=gameWords[round];
+  if(compOn && w.comp && !waitingForComp){
+    showCompCard(w);
+  } else {
+    round++;
+    startRound();
+  }
+}
+
+// ─────────────────────────────────────────────
+//  COMPREHENSION CARD
+// ─────────────────────────────────────────────
+function showCompCard(w){
+  waitingForComp=true;
+  const c=w.comp;
+  document.getElementById('comp-sentence-text').innerHTML=highlightVerb(w.example,w.past);
+  document.getElementById('comp-question-text').textContent='True or False? — '+c.q;
+  document.getElementById('comp-thai-q').textContent='จริงหรือเท็จ? — '+c.thaiq;
+  document.getElementById('comp-thai-q').style.display='none';
+  document.getElementById('comp-feedback').style.display='none';
+  document.getElementById('comp-feedback').className='comp-feedback';
+  document.getElementById('comp-next-btn').style.display='none';
+  document.getElementById('comp-true-btn').disabled=false;
+  document.getElementById('comp-false-btn').disabled=false;
+  document.getElementById('comp-true-btn').className='comp-tf-btn comp-true-btn';
+  document.getElementById('comp-false-btn').className='comp-tf-btn comp-false-btn';
+  document.getElementById('comp-skip-btn').style.display='inline-block';
+  document.getElementById('comp-card').className='comp-card';
+  document.getElementById('comp-card').style.display='block';
+  // hide next-round button while comp is showing
+  document.getElementById('next-btn').style.display='none';
+  // scroll to comp card
+  document.getElementById('comp-card').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function highlightVerb(sentence, past){
+  // bold the past tense verb in the example sentence
+  const re=new RegExp('\\b'+past+'\\b','gi');
+  return sentence.replace(re,`<em>${past}</em>`);
+}
+
+function answerComp(userAnswer){
+  const w=gameWords[round];
+  const c=w.comp;
+  compTotal++;
+  const isCorrect=(userAnswer===c.isTrue);
+  const trueBtn=document.getElementById('comp-true-btn');
+  const falseBtn=document.getElementById('comp-false-btn');
+  trueBtn.disabled=true;falseBtn.disabled=true;
+
+  // highlight buttons
+  if(userAnswer===true){
+    trueBtn.className='comp-tf-btn comp-true-btn '+(isCorrect?'selected-correct':'selected-wrong');
+    if(!isCorrect)falseBtn.className='comp-tf-btn comp-false-btn reveal-correct';
+  } else {
+    falseBtn.className='comp-tf-btn comp-false-btn '+(isCorrect?'selected-correct':'selected-wrong');
+    if(!isCorrect)trueBtn.className='comp-tf-btn comp-true-btn reveal-correct';
+  }
+
+  const fb=document.getElementById('comp-feedback');
+  fb.style.display='block';
+  document.getElementById('comp-skip-btn').style.display='none';
+
+  if(isCorrect){
+    sfxCompCorrect();
+    compScore+=5;
+    document.getElementById('comp-score-num').textContent=compScore;
+    document.getElementById('comp-badge').style.display='inline-flex';
+    fb.className='comp-feedback cf-correct';
+    fb.innerHTML=`✅ Correct! +5 comprehension points<div style="margin-top:5px;font-size:.82rem;opacity:.85;">💡 ${c.explain}</div>`;
+    document.getElementById('comp-card').className='comp-card comp-correct';
+    compResults.push({verb:w.base,q:c.q,correct:true});
+  } else {
+    sfxCompWrong();
+    fb.className='comp-feedback cf-wrong';
+    const correctLabel=c.isTrue?'TRUE ✅':'FALSE ❌';
+    fb.innerHTML=`❌ The answer was <strong>${correctLabel}</strong><div style="margin-top:5px;font-size:.82rem;opacity:.85;">💡 ${c.explain}</div>`;
+    document.getElementById('comp-card').className='comp-card comp-wrong';
+    compResults.push({verb:w.base,q:c.q,correct:false});
+  }
+
+  document.getElementById('comp-next-btn').style.display='inline-block';
+  // flash comp score
+  const cb=document.getElementById('comp-score-num');
+  cb.classList.remove('score-flash');void cb.offsetWidth;cb.classList.add('score-flash');
+}
+
+function toggleCompThai(){
+  const el=document.getElementById('comp-thai-q');
+  const btn=document.getElementById('comp-thai-toggle');
+  if(el.style.display==='none'||el.style.display===''){
+    el.style.display='block';btn.textContent='🇹🇭 Hide Thai question';
+  } else {
+    el.style.display='none';btn.textContent='🇹🇭 Show Thai question';
+  }
+}
+
+function skipComp(){
+  sfxClick();
+  hideCompCard();
+  round++;
+  startRound();
+}
+
+function proceedAfterComp(){
+  sfxClick();
+  hideCompCard();
+  round++;
+  startRound();
+}
+
+function hideCompCard(){
+  document.getElementById('comp-card').style.display='none';
+  document.getElementById('comp-card').className='comp-card';
+  waitingForComp=false;
+}
+
+// ─────────────────────────────────────────────
+//  HINTS & EXTRAS
+// ─────────────────────────────────────────────
 function showHint(){
   if(answered||hintUsed)return;
-  sfxClick();
-  hintUsed=true;
+  sfxClick();hintUsed=true;
   const w=gameWords[round];
   const h=document.getElementById('hint-text');
   h.textContent=`💡 Hint: starts with "${w.past[0].toUpperCase()}"... (${w.past.length} letters)`;
   h.style.display='block';
 }
-
 function toggleThai(){
   const r=document.getElementById('thai-reveal'),b=document.getElementById('thai-btn');
   r.style.display=(r.style.display==='none'||r.style.display==='')?'block':'none';
   b.textContent=r.style.display==='block'?'🇹🇭 Hide Thai':'🇹🇭 Show Thai';
 }
-
-function nextRound(){sfxClick();round++;startRound();}
-
 function toggleTimer(){
-  sfxClick();
-  timerOn=!timerOn;
+  sfxClick();timerOn=!timerOn;
   document.getElementById('timer-toggle').textContent=`⏱ Timer: ${timerOn?'ON':'OFF'}`;
   document.getElementById('timer-wrap').style.display=timerOn?'block':'none';
   if(!timerOn)clearInterval(timerInterval);
 }
-
 function startTimer(){
   clearInterval(timerInterval);let t=15;
   const bar=document.getElementById('timer-bar');
   bar.style.transition='none';bar.style.width='100%';
   setTimeout(()=>{bar.style.transition='width 15s linear';bar.style.width='0%';},50);
-  timerInterval=setInterval(()=>{
-    t--;
-    if(t<=0){clearInterval(timerInterval);if(!answered){document.getElementById('answer-input').value='';checkAnswer();}}
-  },1000);
+  timerInterval=setInterval(()=>{t--;if(t<=0){clearInterval(timerInterval);if(!answered){document.getElementById('answer-input').value='';checkAnswer();}}},1000);
+}
+function toggleChain(){
+  const chainBox=document.getElementById('chain-box');
+  const revealPanel=document.getElementById('reveal-panel');
+  const btn=document.getElementById('chain-toggle-btn');
+  chainRevealed=!chainRevealed;
+  if(chainRevealed){
+    document.getElementById('reveal-display').innerHTML=buildChainText();
+    revealPanel.style.display='block';btn.textContent='🙈 Hide Chain';
+  } else {
+    revealPanel.style.display='none';btn.textContent='👁 Reveal Chain';
+  }
 }
 
+// ─────────────────────────────────────────────
+//  SUMMARY & FAILURE REPORT
+// ─────────────────────────────────────────────
 function updateSummary(){
   const s=document.getElementById('chain-summary');
   if(!chainBuilt.length||selectedMode==='hidden'){s.style.display='none';return;}
@@ -798,7 +991,6 @@ function updateSummary(){
     </div>`
   ).join('');
 }
-
 function updateFailureReport(){
   const fr=document.getElementById('failure-report');
   if(!failedAnswers.length){fr.style.display='none';return;}
@@ -815,9 +1007,10 @@ function updateFailureReport(){
   ).join('');
 }
 
-function showWinner(){
-  startMemoryTest();
-}
+// ─────────────────────────────────────────────
+//  MEMORY TEST
+// ─────────────────────────────────────────────
+function showWinner(){startMemoryTest();}
 
 let memoryStep=0,memoryCorrectCount=0,memoryBonus=0;
 
@@ -856,14 +1049,14 @@ function showMemoryStep(){
   document.getElementById('memory-feedback').innerHTML='';
   document.querySelectorAll('.memory-blank').forEach(function(b){b.classList.remove('active');});
   var blank=document.getElementById('mem-blank-'+memoryStep);
-  if(blank) blank.classList.add('active');
+  if(blank)blank.classList.add('active');
   document.getElementById('memory-input').focus();
 }
 
 function checkMemoryAnswer(){
   var w=chainBuilt[memoryStep];
   var val=document.getElementById('memory-input').value.trim().toLowerCase();
-  if(!val) return;
+  if(!val)return;
   document.getElementById('memory-input').disabled=true;
   document.getElementById('memory-check-btn').style.display='none';
   var blank=document.getElementById('mem-blank-'+memoryStep);
@@ -871,11 +1064,11 @@ function checkMemoryAnswer(){
   if(ok){
     sfxCorrect();memoryCorrectCount++;memoryBonus+=5;
     if(blank){blank.classList.remove('active');blank.classList.add('recalled');blank.innerHTML='<strong>'+w.past+'</strong>';}
-    document.getElementById('memory-feedback').innerHTML='<span style="color:var(--correct)">\u2705 Correct! +5 bonus</span>';
+    document.getElementById('memory-feedback').innerHTML='<span style="color:var(--correct)">✅ Correct! +5 bonus</span>';
   } else {
     sfxWrong();
-    if(blank){blank.classList.remove('active');blank.classList.add('missed');blank.innerHTML='<s>'+val+'</s><span class="correct-word">\u2192 '+w.past+'</span>';}
-    document.getElementById('memory-feedback').innerHTML='<span style="color:var(--wrong)">\u274c It was <strong>'+w.past+'</strong></span>';
+    if(blank){blank.classList.remove('active');blank.classList.add('missed');blank.innerHTML='<s>'+val+'</s><span class="correct-word">→ '+w.past+'</span>';}
+    document.getElementById('memory-feedback').innerHTML='<span style="color:var(--wrong)">❌ It was <strong>'+w.past+'</strong></span>';
   }
   document.getElementById('memory-correct-count').textContent=memoryCorrectCount;
   memoryStep++;
@@ -885,13 +1078,13 @@ function checkMemoryAnswer(){
 function endMemoryTest(){
   document.getElementById('memory-input-area').style.display='none';
   document.getElementById('memory-done-area').style.display='block';
-  var pct=Math.round((memoryCorrectCount/chainBuilt.length)*100);
+  var pct=chainBuilt.length?Math.round((memoryCorrectCount/chainBuilt.length)*100):0;
   var msg='';
-  if(pct===100) msg='\ud83c\udf1f PERFECT MEMORY! You remembered everything!';
-  else if(pct>=80) msg='\ud83d\udd25 Amazing recall! Almost perfect!';
-  else if(pct>=60) msg='\ud83d\udc4d Good memory! Keep practicing!';
-  else if(pct>=40) msg='\ud83d\udcaa Not bad! Try to remember more next time.';
-  else msg='\ud83e\udde0 Keep training your memory!';
+  if(pct===100)msg='🌟 PERFECT MEMORY! You remembered everything!';
+  else if(pct>=80)msg='🔥 Amazing recall! Almost perfect!';
+  else if(pct>=60)msg='👍 Good memory! Keep practicing!';
+  else if(pct>=40)msg='💪 Not bad! Try to remember more next time.';
+  else msg='🧠 Keep training your memory!';
   document.getElementById('memory-result-msg').textContent=msg+' ('+memoryCorrectCount+'/'+chainBuilt.length+' = '+pct+'%)';
   sfxWin();
 }
@@ -902,20 +1095,94 @@ function finishMemoryTest(){
   document.getElementById('winner-screen').style.display='block';
   document.getElementById('final-rounds').textContent=gameWords.length;
   document.getElementById('final-score').textContent=score;
+  document.getElementById('comp-bonus-display').textContent=compScore;
   document.getElementById('memory-bonus-display').textContent=memoryBonus;
-  document.getElementById('total-final-score').textContent=score+memoryBonus;
+  document.getElementById('total-final-score').textContent=score+compScore+memoryBonus;
+
+  // comprehension results summary
+  const crs=document.getElementById('comp-result-summary');
+  if(compResults.length>0){
+    crs.style.display='block';
+    const correct=compResults.filter(r=>r.correct).length;
+    const pct=Math.round((correct/compResults.length)*100);
+    document.getElementById('comp-result-list').innerHTML=
+      `<div style="font-size:.88rem;margin-bottom:8px;">Score: <strong style="color:#a29bfe">${correct}/${compResults.length}</strong> (${pct}%)</div>`+
+      compResults.map(r=>
+        `<div style="display:flex;gap:6px;align-items:baseline;padding:4px 0;border-bottom:1px solid #1d2d47;font-size:.78rem;">
+          <span style="min-width:20px">${r.correct?'✅':'❌'}</span>
+          <span style="color:var(--accent);font-weight:700;min-width:55px">${r.verb}</span>
+          <span style="color:var(--muted)">${r.q}</span>
+        </div>`
+      ).join('');
+  } else {
+    crs.style.display='none';
+  }
+
   var ct=dotStates.filter(function(s){return s==='correct';}).length;
   document.getElementById('winner-chain').innerHTML=
-    '<div style="color:var(--muted);font-size:.76rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Full chain \u2014 '+ct+'/'+gameWords.length+' correct:</div>'
+    '<div style="color:var(--muted);font-size:.76rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Full chain — '+ct+'/'+gameWords.length+' correct:</div>'
     +'I went to the supermarket and I '
     +chainBuilt.map(function(w){return '<span style="color:var(--accent);font-weight:700">'+w.past+'</span>';}).join(' and I ');
 }
 
+// ─────────────────────────────────────────────
+//  MODALS
+// ─────────────────────────────────────────────
+function showAppInstructions(){document.getElementById('app-modal').style.display='block';}
+function closeAppInstructions(){document.getElementById('app-modal').style.display='none';}
+
+function showExamples(){
+  const container=document.getElementById('examples-content');
+  const cats=["Essential","No-Change","Vowel-Swap","Ught-Ending","Movement","Regular","Service"];
+  const catDesc={
+    "Essential":"คำกริยาที่สำคัญที่สุด — เปลี่ยนรูปไม่เหมือนกัน",
+    "No-Change":"คำกริยาที่ไม่เปลี่ยนรูป — present = past!",
+    "Vowel-Swap":"เปลี่ยนสระตรงกลาง เช่น i→a",
+    "Ught-Ending":"ลงท้ายด้วย -ought หรือ -aught",
+    "Movement":"คำกริยาเกี่ยวกับการเคลื่อนไหว",
+    "Regular":"คำกริยาปกติ เติม -ed",
+    "Service":"คำกริยาเกี่ยวกับการบริการ เติม -ed"
+  };
+  let html='';
+  cats.forEach(cat=>{
+    const words=ALL_WORDS.filter(w=>w.category===cat);
+    if(!words.length)return;
+    const seen=new Set();
+    const unique=words.filter(w=>{const k=w.base+w.past;if(seen.has(k))return false;seen.add(k);return true;});
+    const cc=CAT_COLOR[cat]||'#4ecdc4';
+    html+=`<div style="background:var(--panel);border-radius:12px;padding:14px;margin-bottom:12px;border-left:3px solid ${cc};">`;
+    html+=`<h3 style="color:${cc};font-size:.92rem;margin-bottom:4px;">${cat}</h3>`;
+    html+=`<p style="color:var(--muted);font-size:.75rem;margin-bottom:10px;">${catDesc[cat]||''}</p>`;
+    html+=`<table style="width:100%;border-collapse:collapse;">`;
+    html+=`<tr style="border-bottom:1px solid #2a3f5f;">
+      <th style="text-align:left;color:var(--muted);font-size:.72rem;padding:4px 6px;font-weight:700;">Present</th>
+      <th style="text-align:left;color:var(--muted);font-size:.72rem;padding:4px 6px;font-weight:700;">Past</th>
+      <th style="text-align:left;color:var(--muted);font-size:.72rem;padding:4px 6px;font-weight:700;">Thai</th>
+      <th style="text-align:left;color:var(--muted);font-size:.72rem;padding:4px 6px;font-weight:700;">Example</th>
+    </tr>`;
+    unique.forEach(w=>{
+      html+=`<tr style="border-bottom:1px solid #1d2d47;">
+        <td style="padding:5px 6px;color:var(--text);font-weight:700;font-size:.84rem;">${w.base}</td>
+        <td style="padding:5px 6px;color:${cc};font-weight:700;font-size:.84rem;">${w.past}</td>
+        <td style="padding:5px 6px;color:var(--accent2);font-size:.8rem;">${w.thai}</td>
+        <td style="padding:5px 6px;color:var(--muted);font-size:.76rem;font-style:italic;">${w.example}</td>
+      </tr>`;
+    });
+    html+=`</table></div>`;
+  });
+  container.innerHTML=html;
+  document.getElementById('examples-modal').style.display='block';
+}
+function closeExamples(){document.getElementById('examples-modal').style.display='none';}
+
+// ─────────────────────────────────────────────
+//  KEYBOARD
+// ─────────────────────────────────────────────
 document.getElementById('answer-input').addEventListener('keydown',function(e){
-  if(e.key==='Enter'){if(!answered)checkAnswer();else nextRound();}
+  if(e.key==='Enter'){if(!answered)checkAnswer();else handleNext();}
 });
 document.getElementById('memory-input').addEventListener('keydown',function(e){
-  if(e.key==='Enter') checkMemoryAnswer();
+  if(e.key==='Enter')checkMemoryAnswer();
 });
 </script>
 </body>
