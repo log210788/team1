@@ -1,0 +1,2366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RP Accent & Connected Speech Masterclass - Preply Teacher Companion</title>
+  
+  <!-- Modern Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      /* Dark Glassmorphic Theme Palette */
+      --bg-dark: #0a0e17;
+      --bg-card: rgba(20, 26, 42, 0.6);
+      --bg-card-hover: rgba(30, 39, 62, 0.85);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-color-glow: rgba(0, 242, 254, 0.25);
+      
+      /* Vibrant Accent Colors */
+      --accent-cyan: #00f2fe;
+      --accent-blue: #4facfe;
+      --accent-purple: #7f00ff;
+      --accent-pink: #ff007f;
+      --accent-green: #39ff14;
+      
+      --text-main: #f8f9fc;
+      --text-muted: #94a3b8;
+      --text-highlight: #00f2fe;
+      
+      --font-outfit: 'Outfit', sans-serif;
+      --font-inter: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-inter);
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(at 10% 20%, rgba(79, 172, 254, 0.1) 0px, transparent 50%),
+        radial-gradient(at 90% 80%, rgba(127, 0, 255, 0.08) 0px, transparent 50%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      overflow-x: hidden;
+    }
+
+    /* Container setup */
+    .master-container {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      flex-grow: 1;
+    }
+
+    /* Premium Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .brand-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .brand-badge {
+      align-self: flex-start;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent-cyan);
+      background: rgba(0, 242, 254, 0.1);
+      border: 1px solid rgba(0, 242, 254, 0.2);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      margin-bottom: 0.25rem;
+    }
+
+    header h1 {
+      font-family: var(--font-outfit);
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--text-main) 30%, var(--accent-blue) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* TTS configuration settings in header */
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .voice-setting-box {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .setting-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .select-wrapper {
+      position: relative;
+    }
+
+    select {
+      background: #0f172a;
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 0.5rem 2rem 0.5rem 1rem;
+      border-radius: 10px;
+      font-family: var(--font-inter);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      appearance: none;
+      outline: none;
+      transition: var(--transition-smooth);
+    }
+
+    select:focus {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 10px rgba(0, 242, 254, 0.15);
+    }
+
+    .select-wrapper::after {
+      content: '▼';
+      font-size: 0.6rem;
+      color: var(--text-muted);
+      position: absolute;
+      right: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    /* Tab Navigation */
+    .tab-nav {
+      display: flex;
+      gap: 0.75rem;
+      padding: 0.4rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      backdrop-filter: blur(12px);
+      align-self: center;
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      padding: 0.65rem 1.5rem;
+      font-family: var(--font-outfit);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-radius: 10px;
+      transition: var(--transition-smooth);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .tab-btn.active {
+      color: var(--accent-cyan);
+      background: rgba(0, 242, 254, 0.08);
+      border: 1px solid rgba(0, 242, 254, 0.15);
+    }
+
+    /* Main Tab Content Panes */
+    .tab-content {
+      position: relative;
+      flex-grow: 1;
+      width: 100%;
+    }
+
+    .tab-pane {
+      display: none;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      width: 100%;
+      height: 100%;
+    }
+
+    .tab-pane.active {
+      display: flex;
+      flex-direction: column;
+      opacity: 1;
+      transform: translateY(0);
+      gap: 1.5rem;
+    }
+
+    /* Card Panels */
+    .glass-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      backdrop-filter: blur(16px);
+      padding: 1.75rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      transition: var(--transition-smooth);
+    }
+
+    .glass-card:hover {
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    /* View 1: Welcome & Roadmap */
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.8fr;
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+
+    .welcome-banner {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(20, 26, 42, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+    }
+
+    .welcome-banner h2 {
+      font-family: var(--font-outfit);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+    }
+
+    .welcome-banner p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .syllabus-roadmap {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .roadmap-step {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 1.15rem;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .roadmap-step:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-color-glow);
+      transform: translateX(5px);
+    }
+
+    .step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-outfit);
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      border: 1px solid var(--border-color);
+      transition: var(--transition-smooth);
+    }
+
+    .roadmap-step:hover .step-num {
+      background: var(--accent-cyan);
+      color: var(--bg-dark);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+    }
+
+    .step-info {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .step-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .step-info h4 {
+      font-family: var(--font-outfit);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .step-duration {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .step-info p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .step-badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .badge-cyan { background: rgba(0, 242, 254, 0.1); color: var(--accent-cyan); }
+    .badge-pink { background: rgba(255, 0, 127, 0.1); color: var(--accent-pink); }
+    .badge-purple { background: rgba(127, 0, 255, 0.1); color: #c084fc; }
+
+    /* View 2: Part 1 - RP Storytelling */
+    .story-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 1.9fr;
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+
+    .rules-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .rules-title {
+      font-family: var(--font-outfit);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      margin-bottom: 0.5rem;
+    }
+
+    .accent-rules-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .accent-rule-card {
+      padding: 1rem;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .accent-rule-card:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(0, 242, 254, 0.2);
+    }
+
+    .rule-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .accent-rule-card h5 {
+      font-family: var(--font-outfit);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .accent-rule-card p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .phonetic-code {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      background: rgba(0, 242, 254, 0.08);
+      color: var(--accent-cyan);
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      align-self: flex-start;
+    }
+
+    /* Fable practice board styling */
+    .story-board {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .board-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.85rem;
+    }
+
+    .board-title-group h3 {
+      font-family: var(--font-outfit);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .board-title-group p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .view-toggles {
+      display: flex;
+      background: #0f172a;
+      padding: 0.25rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+
+    .btn-toggle {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 0.45rem 1rem;
+      font-size: 0.8rem;
+      font-family: var(--font-outfit);
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-toggle.active {
+      background: var(--bg-card);
+      color: var(--accent-cyan);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    /* Intonation & stress markup stylings inside text */
+    .fable-text-area {
+      font-size: 1.15rem;
+      line-height: 1.85;
+      color: var(--text-main);
+      padding: 1.5rem;
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      max-height: 380px;
+      overflow-y: auto;
+      letter-spacing: 0.01em;
+      white-space: pre-wrap;
+    }
+
+    /* Broad A style */
+    .broad-a {
+      color: #38bdf8;
+      font-weight: 600;
+      border-bottom: 2px dotted #38bdf8;
+      position: relative;
+    }
+    
+    .broad-a::after {
+      content: '/ɑː/';
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: #38bdf8;
+      position: absolute;
+      top: -1.2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: var(--transition-smooth);
+    }
+
+    .view-rp .broad-a::after {
+      opacity: 1;
+    }
+
+    /* Silent R in RP */
+    .silent-r {
+      text-decoration: line-through;
+      color: rgba(239, 68, 68, 0.55);
+      font-weight: normal;
+    }
+
+    /* Crisp T */
+    .crisp-t {
+      color: var(--accent-green);
+      font-weight: 600;
+      text-shadow: 0 0 6px rgba(57, 255, 20, 0.1);
+    }
+
+    /* Intonation rises and falls */
+    .rise {
+      position: relative;
+      background: rgba(168, 85, 247, 0.08);
+      border-radius: 3px;
+      padding: 0 0.15rem;
+    }
+    .rise::after {
+      content: '↗';
+      color: #c084fc;
+      font-weight: bold;
+      font-size: 0.95rem;
+      margin-left: 0.1rem;
+    }
+
+    .fall {
+      position: relative;
+      background: rgba(236, 72, 153, 0.08);
+      border-radius: 3px;
+      padding: 0 0.15rem;
+    }
+    .fall::after {
+      content: '↘';
+      color: #f472b6;
+      font-weight: bold;
+      font-size: 0.95rem;
+      margin-left: 0.1rem;
+    }
+
+    .pause-mark {
+      color: var(--accent-cyan);
+      font-weight: 800;
+      font-family: var(--font-mono);
+      margin: 0 0.25rem;
+      padding: 0 0.15rem;
+      background: rgba(0, 242, 254, 0.12);
+      border-radius: 3px;
+      font-size: 0.9rem;
+    }
+
+    /* Toggle visibility depending on layout view state */
+    .view-std .broad-a, .view-std .crisp-t { color: inherit; font-weight: inherit; border: none; text-shadow: none; }
+    .view-std .silent-r { text-decoration: none; color: inherit; }
+    .view-std .rise, .view-std .fall { background: none; }
+    .view-std .rise::after, .view-std .fall::after, .view-std .pause-mark { display: none; }
+
+    .view-rp .rise, .view-rp .fall { background: none; }
+    .view-rp .rise::after, .view-rp .fall::after, .view-rp .pause-mark { display: none; }
+
+    .view-story .broad-a, .view-story .crisp-t { color: inherit; font-weight: inherit; border: none; text-shadow: none; }
+    .view-story .silent-r { text-decoration: none; color: inherit; }
+
+    /* Fable audio controls */
+    .playback-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.15);
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+
+    .control-buttons {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .btn-audio {
+      background: var(--accent-cyan);
+      border: none;
+      color: var(--bg-dark);
+      padding: 0.55rem 1.25rem;
+      font-family: var(--font-outfit);
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: var(--transition-smooth);
+      box-shadow: 0 4px 12px rgba(0, 242, 254, 0.25);
+    }
+
+    .btn-audio:hover {
+      background: var(--accent-blue);
+      box-shadow: 0 6px 16px rgba(79, 172, 254, 0.35);
+      transform: translateY(-1px);
+    }
+
+    .btn-audio.btn-stop {
+      background: transparent;
+      border: 1px solid var(--accent-pink);
+      color: var(--accent-pink);
+      box-shadow: none;
+    }
+
+    .btn-audio.btn-stop:hover {
+      background: rgba(255, 0, 127, 0.05);
+      color: var(--accent-pink);
+      box-shadow: none;
+    }
+
+    .slider-group {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .slider-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .speed-slider {
+      appearance: none;
+      background: #1e293b;
+      height: 6px;
+      border-radius: 3px;
+      width: 120px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .speed-slider::-webkit-slider-thumb {
+      appearance: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent-cyan);
+      box-shadow: 0 0 6px rgba(0, 242, 254, 0.5);
+      transition: background 0.15s;
+    }
+
+    .speed-slider::-webkit-slider-thumb:hover {
+      background: var(--accent-blue);
+    }
+
+    .speed-val {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--accent-cyan);
+      width: 32px;
+    }
+
+    /* Legend display */
+    .markup-legend {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+      padding: 0.75rem;
+      background: rgba(255, 255, 255, 0.01);
+      border-radius: 10px;
+      border: 1px dashed var(--border-color);
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .legend-indicator {
+      padding: 0.1rem 0.35rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.75rem;
+    }
+
+    /* View 3: Connected Speech Laboratory */
+    .lab-layout {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .concepts-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .concept-card {
+      padding: 1.25rem;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-color);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .concept-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--accent-blue);
+      opacity: 0.15;
+    }
+
+    .concept-card:hover {
+      background: var(--bg-card-hover);
+      transform: translateY(-2px);
+      border-color: var(--border-color-glow);
+    }
+
+    .concept-card.active {
+      background: var(--bg-card-hover);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 15px rgba(0, 242, 254, 0.08);
+    }
+
+    .concept-card.active::before {
+      background: var(--accent-cyan);
+      opacity: 1;
+    }
+
+    .concept-card h4 {
+      font-family: var(--font-outfit);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .concept-card p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .concept-ex {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--accent-cyan);
+      background: rgba(0, 242, 254, 0.05);
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      border: 1px solid rgba(0, 242, 254, 0.1);
+      align-self: flex-start;
+      margin-top: auto;
+    }
+
+    /* Dialogue Board */
+    .dialogue-card {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .dialogue-selector-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.85rem;
+    }
+
+    .dialogue-selector-buttons {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .btn-dialogue-sel {
+      background: #0f172a;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-family: var(--font-outfit);
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-dialogue-sel.active {
+      background: var(--accent-blue);
+      color: var(--bg-dark);
+      border-color: var(--accent-blue);
+      box-shadow: 0 4px 10px rgba(79, 172, 254, 0.2);
+    }
+
+    /* Dialogue features controls */
+    .feature-toggles {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-feat-toggle {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 0.4rem 0.85rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-feat-toggle:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .btn-feat-toggle.active {
+      color: var(--bg-dark);
+      font-weight: 800;
+    }
+
+    .btn-feat-toggle.t-link.active { background: var(--accent-cyan); border-color: var(--accent-cyan); }
+    .btn-feat-toggle.t-blend.active { background: var(--accent-pink); border-color: var(--accent-pink); }
+    .btn-feat-toggle.t-weak.active { background: #c084fc; border-color: #c084fc; }
+    .btn-feat-toggle.t-elide.active { background: var(--accent-green); border-color: var(--accent-green); }
+
+    /* Dialogue display text markup */
+    .dialogue-pane-chat {
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    .chat-bubble-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      max-width: 80%;
+    }
+
+    .chat-bubble-row.speaker-a {
+      align-self: flex-start;
+    }
+
+    .chat-bubble-row.speaker-b {
+      align-self: flex-end;
+      align-items: flex-end;
+    }
+
+    .speaker-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .chat-bubble {
+      padding: 0.85rem 1.15rem;
+      border-radius: 14px;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .speaker-a .chat-bubble {
+      background: rgba(30, 41, 59, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-top-left-radius: 3px;
+      color: var(--text-main);
+    }
+
+    .speaker-b .chat-bubble {
+      background: rgba(15, 118, 110, 0.15);
+      border: 1px solid rgba(13, 148, 136, 0.25);
+      border-top-right-radius: 3px;
+      color: var(--text-main);
+    }
+
+    /* Connected speech markings overlays in chat */
+    .mark-link {
+      border-bottom: 2px solid transparent;
+      transition: var(--transition-smooth);
+    }
+    .feat-link-on .mark-link {
+      border-bottom-color: var(--accent-cyan);
+      border-bottom-style: double;
+      cursor: help;
+    }
+
+    .mark-blend {
+      position: relative;
+      transition: var(--transition-smooth);
+    }
+    .feat-blend-on .mark-blend {
+      color: var(--accent-pink);
+      font-weight: 600;
+      text-shadow: 0 0 8px rgba(255, 0, 127, 0.15);
+    }
+    .feat-blend-on .mark-blend::after {
+      content: attr(data-blend);
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--accent-pink);
+      position: absolute;
+      bottom: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: bold;
+    }
+
+    .mark-weak {
+      transition: var(--transition-smooth);
+    }
+    .feat-weak-on .mark-weak {
+      color: #c084fc;
+      opacity: 0.85;
+      font-style: italic;
+    }
+    .feat-weak-on .mark-weak::after {
+      content: ' (ə)';
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: #c084fc;
+      font-style: normal;
+    }
+
+    .mark-elide {
+      transition: var(--transition-smooth);
+    }
+    .feat-elide-on .mark-elide {
+      text-decoration: line-through;
+      color: var(--accent-green);
+      opacity: 0.6;
+    }
+
+    /* Dialogue details card */
+    .dialogue-expl-box {
+      background: rgba(255, 255, 255, 0.01);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 1rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .dialogue-expl-box strong {
+      color: var(--accent-cyan);
+    }
+
+    /* View 4: Teacher's Companion Handbook */
+    .handbook-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+
+    .handbook-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .handbook-tab {
+      padding: 1.15rem;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-color);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      transition: var(--transition-smooth);
+    }
+
+    .handbook-tab:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .handbook-tab.active {
+      background: var(--bg-card-hover);
+      border-color: var(--accent-purple);
+      box-shadow: 0 0 12px rgba(127, 0, 255, 0.1);
+    }
+
+    .handbook-tab.active h4 {
+      color: #c084fc;
+    }
+
+    .handbook-tab h4 {
+      font-family: var(--font-outfit);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      transition: var(--transition-smooth);
+    }
+
+    .handbook-tab p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .handbook-content-pane {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      overflow-y: auto;
+      max-height: 520px;
+      padding-right: 0.5rem;
+    }
+
+    .handbook-content-pane::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .handbook-content-pane::-webkit-scrollbar-thumb {
+      background: var(--border-color);
+      border-radius: 2px;
+    }
+
+    .section-block {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1.25rem;
+    }
+
+    .section-block:last-child {
+      border: none;
+      padding-bottom: 0;
+    }
+
+    .section-block h3 {
+      font-family: var(--font-outfit);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+    }
+
+    .section-block h4 {
+      font-family: var(--font-outfit);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-top: 0.5rem;
+    }
+
+    .section-block p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .bullet-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding-left: 1.25rem;
+    }
+
+    .bullet-list li {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .bullet-list strong {
+      color: var(--text-main);
+    }
+
+    /* Feedback templates */
+    .template-box {
+      font-family: var(--font-inter);
+      font-size: 0.85rem;
+      background: #090d16;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 1.25rem;
+      color: var(--text-main);
+      position: relative;
+      white-space: pre-wrap;
+      line-height: 1.5;
+    }
+
+    .btn-copy {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 0.35rem 0.65rem;
+      border-radius: 6px;
+      font-size: 0.7rem;
+      font-family: var(--font-outfit);
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-copy:hover {
+      color: var(--accent-cyan);
+      border-color: var(--accent-cyan);
+      background: rgba(0, 242, 254, 0.05);
+    }
+
+    /* Interactive animations */
+    @keyframes panelFadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Common Linking Sentences Drill Layout */
+    .sentences-split {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      text-align: left;
+    }
+    
+    .sentences-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    
+    .sentence-item-btn {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.1rem;
+      color: var(--text-main);
+      cursor: pointer;
+      text-align: left;
+      transition: var(--transition-smooth);
+      font-size: 0.95rem;
+      font-weight: 500;
+      font-family: var(--font-inter);
+    }
+    
+    .sentence-item-btn:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--accent-cyan);
+      transform: translateX(3px);
+    }
+    
+    .sentence-item-btn.active {
+      background: rgba(0, 242, 254, 0.05);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 12px rgba(0, 242, 254, 0.12);
+    }
+    
+    .sentence-details-panel {
+      background: rgba(0, 0, 0, 0.15);
+      border-radius: 14px;
+      border: 1px solid var(--border-color);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    
+    .sentence-markup-display {
+      font-size: 1.3rem;
+      font-weight: 600;
+      line-height: 1.8;
+      color: var(--text-main);
+      background: rgba(0,0,0,0.25);
+      padding: 1.25rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.03);
+      text-align: center;
+    }
+    
+    .teacher-notes-box {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      background: rgba(255, 255, 255, 0.01);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+    
+    .teacher-notes-title {
+      font-family: var(--font-outfit);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #c084fc;
+      border-bottom: 1px solid rgba(192, 132, 252, 0.2);
+      padding-bottom: 0.35rem;
+    }
+    
+    .teacher-notes-body {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+    
+    .teacher-notes-section-title {
+      font-weight: 700;
+      color: var(--text-main);
+      margin-top: 0.5rem;
+      margin-bottom: 0.15rem;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="master-container">
+    <!-- Premium Header -->
+    <header>
+      <div class="brand-group">
+        <span class="brand-badge">Preply Tutor Resource</span>
+        <h1>Storytelling & Connected Speech Masterclass</h1>
+        <p>Interactive companion dashboard built for training RP Accent Narratives and Smooth Connected Speech</p>
+      </div>
+
+      <!-- Accent/Voice Selector -->
+      <div class="header-controls">
+        <div class="voice-setting-box">
+          <span class="setting-label">British RP Audio Engine</span>
+          <div class="select-wrapper">
+            <select id="voice-selector">
+              <option value="">Default OS British Voice</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="tab-nav">
+      <button class="tab-btn active" data-tab="dashboard">
+        📅 Lesson Plan Overview
+      </button>
+      <button class="tab-btn" data-tab="storytelling">
+        🗣️ RP Storytelling Trainer
+      </button>
+      <button class="tab-btn" data-tab="connected">
+        🎙️ Connected Speech Lab
+      </button>
+      <button class="tab-btn" data-tab="handbook">
+        📖 Teacher Companion Guide
+      </button>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="tab-content">
+      
+      <!-- TAB 1: Lesson Plan Roadmap Dashboard -->
+      <section class="tab-pane active" id="pane-dashboard">
+        <div class="roadmap-grid">
+          
+          <!-- Left Welcome / Card -->
+          <div class="glass-card welcome-banner">
+            <h2>Conducting This Class</h2>
+            <p>Welcome! This dashboard is designed to help you execute a high-impact, 30-to-45-minute lesson focused on British RP accent narration and connected speech.</p>
+            <p>Your student wants to transition away from choppy, segmented English toward fluid storytelling. Use **Part 1** to practice emotional pacing and correct the broad 'A' and silent 'R' sounds of RP. Use **Part 2** to break down linking, weak forms, elision, and sound blending in daily conversation.</p>
+            <p>Click on any lesson step to open the corresponding training module!</p>
+          </div>
+
+          <!-- Right Interactive Curriculum Roadmap -->
+          <div class="glass-card syllabus-roadmap">
+            <h3 class="rules-title" style="margin-bottom: 1rem;">Lesson Schedule (35–45 minutes)</h3>
+            
+            <div class="roadmap-step" data-target-tab="storytelling" data-sub-action="standard">
+              <div class="step-num">01</div>
+              <div class="step-info">
+                <div class="step-header-row">
+                  <h4>Syllabus Introductions & Warm-Up</h4>
+                  <span class="step-badge badge-cyan">Warm-up (3 min)</span>
+                </div>
+                <p>Discuss the student's speaking goals. Explain how native storytelling differs from everyday reading.</p>
+              </div>
+            </div>
+
+            <div class="roadmap-step" data-target-tab="storytelling" data-sub-action="rp">
+              <div class="step-num">02</div>
+              <div class="step-info">
+                <div class="step-header-row">
+                  <h4>Part 1: RP Accent & Storytelling Mechanics</h4>
+                  <span class="step-badge badge-pink">Practice (15 min)</span>
+                </div>
+                <p>Demonstrate non-rhoticity, broad 'A', and crisp consonants. Practice the story of 'The North Wind and the Sun'.</p>
+              </div>
+            </div>
+
+            <div class="roadmap-step" data-target-tab="connected" data-sub-action="concepts">
+              <div class="step-num">03</div>
+              <div class="step-info">
+                <div class="step-header-row">
+                  <h4>Part 2: Fast Connected Speech Principles</h4>
+                  <span class="step-badge badge-purple">Lab Drill (12 min)</span>
+                </div>
+                <p>Learn rules of consonant-vowel linking, blending (/t/+/j/ and /d/+/j/), weak forms, and consonant elision.</p>
+              </div>
+            </div>
+
+            <div class="roadmap-step" data-target-tab="connected" data-sub-action="dialogue">
+              <div class="step-num">04</div>
+              <div class="step-info">
+                <div class="step-header-row">
+                  <h4>Part 3: Dialogue Practice & Live Review</h4>
+                  <span class="step-badge badge-cyan">Review (10 min)</span>
+                </div>
+                <p>Practice short, natural business/everyday dialogues. Toggle speech markers to see sound links in action.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- TAB 2: Part 1 - RP Storytelling Trainer -->
+      <section class="tab-pane" id="pane-storytelling">
+        <div class="story-layout">
+          
+          <!-- Left Column Accent Rules -->
+          <div class="glass-card rules-panel">
+            <h3 class="rules-title">RP Accent Foundations</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+              Teach these core rules before reading. Click any rule card to hear the sound demonstration.
+            </p>
+            
+            <div class="accent-rules-list">
+              <div class="accent-rule-card" onclick="playAudioDemo('Broad A: Words like ask, path, bath, glass are pronounced with a broad ah sound, not the flat cat sound. /lɑːst/ not /læst/.')">
+                <div class="rule-title-row">
+                  <h5>1. The Broad 'A' Sound</h5>
+                  <span class="phonetic-code">/ɑː/</span>
+                </div>
+                <p>Words like *ask, path, bath, glass, last* are pronounced with a long, back-of-the-throat "ah".</p>
+              </div>
+
+              <div class="accent-rule-card" onclick="playAudioDemo('Non-Rhoticity: Do not pronounce R unless it is immediately followed by a vowel sound. For example, North is pronounced north, warmer is warmer, but agreed is agreed.')">
+                <div class="rule-title-row">
+                  <h5>2. Non-Rhoticity (Silent 'R')</h5>
+                  <span class="phonetic-code">/r/ omission</span>
+                </div>
+                <p>Do NOT pronounce the "R" unless followed by a vowel. e.g. *north* -> /nɔːθ/, *warm* -> /wɔːm/.</p>
+              </div>
+
+              <div class="accent-rule-card" onclick="playAudioDemo('Crisp T: Pronounce letter T clearly. Do not flap it to a D sound like in American English. disputing, traveler, immediately.')">
+                <div class="rule-title-row">
+                  <h5>3. Crisp Consonant /t/</h5>
+                  <span class="phonetic-code">Crisp Plosives</span>
+                </div>
+                <p>Ensure /t/ is pronounced clearly. Do not slide into a flap [d] (e.g. *disputing* not *dispuding*).</p>
+              </div>
+
+              <div class="accent-rule-card" onclick="playAudioDemo('Expressive Storytelling: Use a wide pitch rollercoaster. High pitch peaks for new topics, and low pitch drops for parentheticals. Pause heavily at punctuation.')">
+                <div class="rule-title-row">
+                  <h5>4. Storytelling Pacing</h5>
+                  <span class="phonetic-code">Intonation</span>
+                </div>
+                <p>Use a wide pitch range. Pitch peaks for new information, drops for side notes. Pause at punctuation.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column Reading Board -->
+          <div class="glass-card story-board">
+            <div class="board-header">
+              <div class="board-title-group">
+                <h3>Aesop's Fable Practice Board</h3>
+                <p>Highlight different aspects of delivery using the toggle buttons below.</p>
+              </div>
+
+              <div class="view-toggles">
+                <button class="btn-toggle active" data-view="view-std">Standard</button>
+                <button class="btn-toggle" data-view="view-rp">RP Accents</button>
+                <button class="btn-toggle" data-view="view-story">Story Pacing</button>
+              </div>
+            </div>
+
+            <!-- Fable text container -->
+            <div class="fable-text-area view-std" id="fable-text-container">The <span class="fall">North</span> <span class="silent-r">Wind</span> <span class="rise">and the Sun</span> were <span class="silent-r">disputing</span> which was the <span class="rise">stronger,</span> <span class="pause-mark">||</span> when a <span class="rise">traveler</span> came <span class="fall">along</span> wrapped in a <span class="broad-a">warm</span> <span class="silent-r">cloak.</span> <span class="pause-mark">||</span> They <span class="fall">agreed</span> that the one who <span class="rise">first</span> <span class="silent-r">succeeded</span> in making the traveler <span class="rise">take</span> <span class="fall">his cloak off</span> should be considered <span class="rise">stronger</span> <span class="silent-r">than the other.</span> <span class="pause-mark">|||</span>
+
+Then the <span class="fall">North</span> <span class="silent-r">Wind</span> blew as <span class="broad-a">hard</span> <span class="silent-r">as he could,</span> <span class="pause-mark">||</span> but the <span class="rise">more</span> <span class="silent-r">he blew</span> the more <span class="fall">closely</span> did the traveler <span class="rise">fold</span> <span class="fall">his cloak around him;</span> <span class="pause-mark">||</span> and <span class="broad-a">at last</span> the North <span class="silent-r">Wind</span> <span class="fall">gave up</span> the <span class="crisp-t">attempt.</span> <span class="pause-mark">|||</span>
+
+Then the <span class="rise">Sun</span> shone <span class="fall">out warmly,</span> <span class="pause-mark">||</span> and <span class="crisp-t">immediately</span> <span class="pause-mark">|</span> the traveler <span class="fall">took off</span> <span class="broad-a">his cloak.</span> <span class="pause-mark">||</span> And so the <span class="fall">North</span> <span class="silent-r">Wind</span> was <span class="rise">obliged</span> <span class="fall">to confess</span> that the <span class="rise">Sun</span> <span class="fall">was the stronger</span> <span class="pause-mark">|</span> of the <span class="crisp-t">two.</span></div>
+
+            <!-- Markup legends -->
+            <div class="markup-legend" id="legend-rp-view" style="display: none;">
+              <div class="legend-item">
+                <span class="legend-indicator broad-a">last</span>
+                <span>Broad 'A' sound (/ɑː/)</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-indicator silent-r" style="text-decoration: line-through;">nor**th**</span>
+                <span>Silent 'R' (non-rhotic)</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-indicator crisp-t">attempt</span>
+                <span>Crisp Consonant /t/</span>
+              </div>
+              <div class="legend-item" style="color: var(--accent-cyan); font-weight: bold;">
+                <span>RP Mode Active</span>
+              </div>
+            </div>
+
+            <div class="markup-legend" id="legend-story-view" style="display: none;">
+              <div class="legend-item">
+                <span class="legend-indicator" style="background: rgba(168,85,247,0.15); color: #c084fc;">Word ↗</span>
+                <span>Pitch Rise (Highlighting info)</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-indicator" style="background: rgba(236,72,153,0.15); color: #f472b6;">Word ↘</span>
+                <span>Pitch Fall (Ending idea)</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-indicator" style="background: rgba(0,242,254,0.15); color: var(--accent-cyan);">||</span>
+                <span>Narrative Pause / Breath</span>
+              </div>
+              <div class="legend-item" style="color: var(--accent-pink); font-weight: bold;">
+                <span>Story Mode Active</span>
+              </div>
+            </div>
+
+            <!-- Fable audio control block -->
+            <div class="playback-controls">
+              <div class="control-buttons">
+                <button class="btn-audio" id="btn-play-fable">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 2px;"><path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+                  Read Story (RP Voice)
+                </button>
+                <button class="btn-audio btn-stop" id="btn-stop-fable" style="display: none;">
+                  Stop Playing
+                </button>
+              </div>
+
+              <div class="slider-group">
+                <span class="slider-label">Pacing Speed:</span>
+                <input type="range" class="speed-slider" id="fable-speed" min="0.5" max="1.5" step="0.1" value="0.9">
+                <span class="speed-val" id="fable-speed-val">0.9x</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- TAB 3: Part 2 - Connected Speech Laboratory -->
+      <section class="tab-pane" id="pane-connected">
+        <div class="lab-layout">
+          
+          <!-- Top Row 4 Concepts Selector Grid -->
+          <div class="concepts-grid">
+            <div class="concept-card active" data-concept="linking" onclick="playAudioDemo('Linking occurs when words connect. Consonant-to-vowel links, like build a or how to do it. Intrusive sounds also appear: he is becomes he yis, and go out becomes go wout.')">
+              <h4>1. Linking Sounds</h4>
+              <p>Connect ending consonants to beginning vowels (e.g. *tell~a*). Adds glide sounds: *he[j]is*, *go[w]out*, *law[r]and*.</p>
+              <span class="concept-ex">"build~a~story"</span>
+            </div>
+
+            <div class="concept-card" data-concept="blending" onclick="playAudioDemo('Blending, or coalescence, happens when T, D, S, or Z merges with a Y sound to make ch, j, sh, or zh. Examples inside words include soldier, mature, pressure, treasure, and educate.')">
+              <h4>2. Blending (Coalescence)</h4>
+              <p>When sounds merge, such as /d/+/j/ -> /dʒ/ or /t/+/j/ -> /tʃ/. Seen inside words (soldier, educate, pressure) and across words (would you).</p>
+              <span class="concept-ex">"soldier" • "treasure" • "educate"</span>
+            </div>
+
+            <div class="concept-card" data-concept="weak" onclick="playAudioDemo('Weak Forms: Unstressed grammatical words reduce their vowels to schwa. to becomes tə, can becomes kən, for becomes fə.')">
+              <h4>3. Weak Forms</h4>
+              <p>Grammar words (*to, for, can, and, of*) lose stress. The vowel reduces to the neutral schwa sound.</p>
+              <span class="concept-ex">"can" (/kən/) • "to" (/tə/)</span>
+            </div>
+
+            <div class="concept-card" data-concept="elision" onclick="playAudioDemo('Elision: Deleting sounds in clusters to speak faster and smoother. next class becomes neks class, and fast speech becomes fas speech.')">
+              <h4>4. Elision (Dropping)</h4>
+              <p>The omission of a sound (often /t/ or /d/) when trapped between other consonants. Makes clusters easier.</p>
+              <span class="concept-ex">"nex(t)~class"</span>
+            </div>
+          </div>
+
+          <!-- Interactive Dialogue workspace -->
+          <div class="glass-card dialogue-card">
+            
+            <div class="dialogue-selector-row">
+              <div class="brand-group">
+                <span class="brand-badge" style="color: var(--accent-purple); background: rgba(127,0,255,0.08); border-color: rgba(127,0,255,0.25);">Speaking Exercises</span>
+                <h3>Dialogue Connected Speech Practice</h3>
+              </div>
+
+              <!-- Dialogue Selectors -->
+              <div class="dialogue-selector-buttons">
+                <button class="btn-dialogue-sel active" data-dialogue="1">Dialogue 1: Small Talk Prep</button>
+                <button class="btn-dialogue-sel" data-dialogue="2">Dialogue 2: Coffee & Pacing</button>
+                <button class="btn-dialogue-sel" data-dialogue="3">Dialogue 3: Soldier & Treasure</button>
+              </div>
+            </div>
+
+            <!-- Dialogue Active Feature Toggles -->
+            <div class="feature-toggles">
+              <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); align-self: center; margin-right: 0.5rem;">Visual Overlay Toggles:</span>
+              <button class="btn-feat-toggle t-link" onclick="toggleDialogueFeature('link')">🔗 Linking Lines</button>
+              <button class="btn-feat-toggle t-blend" onclick="toggleDialogueFeature('blend')">⚡ Blending (/tʃ/, /dʒ/)</button>
+              <button class="btn-feat-toggle t-weak" onclick="toggleDialogueFeature('weak')">🌀 Weak Forms (ə)</button>
+              <button class="btn-feat-toggle t-elide" onclick="toggleDialogueFeature('elide')">❌ Elided Letters</button>
+            </div>
+
+            <!-- Chat display pane -->
+            <div class="dialogue-pane-chat" id="active-dialogue-chat-box">
+              <!-- Content injected via JS -->
+            </div>
+
+            <!-- Bottom Explanation box -->
+            <div class="dialogue-expl-box" id="dialogue-help-panel">
+              Hover over colored markings to explain what phonetic phenomena occur there. Practise saying the full bubble in one continuous breath.
+            </div>
+
+            <!-- Fable audio control block -->
+            <div class="playback-controls">
+              <div class="control-buttons">
+                <button class="btn-audio" id="btn-play-dialogue" style="background: var(--accent-purple); color: white; box-shadow: 0 4px 12px rgba(127, 0, 255, 0.25);">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 2px;"><path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+                  Read Full Dialogue
+                </button>
+                <button class="btn-audio btn-stop" id="btn-stop-dialogue" style="display: none;">
+                  Stop Playing
+                </button>
+              </div>
+
+              <div class="slider-group">
+                <span class="slider-label">Speech Speed:</span>
+                <input type="range" class="speed-slider" id="dialogue-speed" min="0.5" max="1.5" step="0.1" value="0.9">
+                <span class="speed-val" id="dialogue-speed-val">0.9x</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Common Linking Sentences Drill Card -->
+          <div class="glass-card" style="margin-top: 1.5rem;">
+            <div class="dialogue-selector-row">
+              <div class="brand-group">
+                <span class="brand-badge" style="color: var(--accent-cyan); background: rgba(0,242,254,0.08); border-color: rgba(0,242,254,0.25);">Linking Sentences Drill</span>
+                <h3>Common Phrases Practice Board</h3>
+              </div>
+            </div>
+            
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; text-align: left;">
+              Select a common everyday sentence below to practice consonant-to-vowel links and glides. Review the <strong>Teacher's Notes</strong> to explain the specific phonetic rules to your student.
+            </p>
+
+            <div class="sentences-split">
+              <!-- Left side list -->
+              <div class="sentences-list" id="linking-sentences-list">
+                <!-- Injected dynamically -->
+              </div>
+              
+              <!-- Right side details -->
+              <div class="sentence-details-panel" id="linking-sentence-details">
+                <!-- Injected dynamically -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- TAB 4: Teacher Companion Guide -->
+      <section class="tab-pane" id="pane-handbook">
+        <div class="handbook-layout">
+          
+          <!-- Left sidebar topics -->
+          <div class="handbook-sidebar">
+            <div class="handbook-tab active" data-chapter="ch-intro">
+              <h4>1. Introduction & Warm-up</h4>
+              <p>Setting the class goals & expectations</p>
+            </div>
+            <div class="handbook-tab" data-chapter="ch-rp">
+              <h4>2. How to Teach RP Storytelling</h4>
+              <p>Visualizing pitch range and RP accents</p>
+            </div>
+            <div class="handbook-tab" data-chapter="ch-connected">
+              <h4>3. Fast Speech Drills</h4>
+              <p>Teaching linking and elision step-by-step</p>
+            </div>
+            <div class="handbook-tab" data-chapter="ch-templates">
+              <h4>4. Feedback Templates</h4>
+              <p>Ready-to-use evaluations for Preply chat</p>
+            </div>
+          </div>
+
+          <!-- Right handbook pane content -->
+          <div class="glass-card handbook-content-pane" id="handbook-content-container">
+            <!-- Dynamic Content loaded depending on active handbook chapter -->
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Global State
+    const state = {
+      activeTab: 'dashboard',
+      selectedVoiceName: '',
+      activeDialogue: '1',
+      dialogueFeatures: {
+        link: false,
+        blend: false,
+        weak: false,
+        elide: false
+      },
+      currentAudioUtterance: null
+    };
+
+    // Dialogues Content Mapping with custom inline markings tags
+    const dialoguesData = {
+      "1": [
+        {
+          speaker: "Teacher (Sarah)",
+          class: "speaker-a",
+          text: `Could <span class="mark-blend" data-blend="joo">you</span> help <span class="mark-weak">me</span> write <span class="mark-weak">a</span> short <span class="mark-link">story~about</span> <span class="mark-weak">an</span> old king?`,
+          rawText: "Could you help me write a short story about an old king?"
+        },
+        {
+          speaker: "Student (Robert)",
+          class: "speaker-b",
+          text: `Sure! <span class="mark-link">Once~upon</span> <span class="mark-weak">a</span> time, <span class="mark-link">in~a</span> <span class="mark-link">far-off</span> land, there lived <span class="mark-weak">a</span> ruler.`,
+          rawText: "Sure! Once upon a time, in a far-off land, there lived a ruler."
+        },
+        {
+          speaker: "Teacher (Sarah)",
+          class: "speaker-a",
+          text: `Did <span class="mark-blend" data-blend="joo">you</span> <span class="mark-link">find~it</span> hard <span class="mark-weak">to</span> read <span class="mark-weak">the</span> <span class="mark-link">next~chapter</span>?`,
+          rawText: "Did you find it hard to read the next chapter?"
+        },
+        {
+          speaker: "Student (Robert)",
+          class: "speaker-b",
+          text: `Yes, I <span class="mark-link">wen(t)~out</span> <span class="mark-link">at~night</span> <span class="mark-weak">and</span> <span class="mark-link">saw~a</span> strange <span class="mark-link">light~in</span> <span class="mark-weak">the</span> wood.`,
+          rawText: "Yes, I went out at night and saw a strange light in the wood."
+        }
+      ],
+      "2": [
+        {
+          speaker: "Student (Robert)",
+          class: "speaker-b",
+          text: `What <span class="mark-link">are~you</span> planning <span class="mark-weak">for</span> <span class="mark-weak">the</span> <span class="mark-link">nex(t)~class</span>? I wan(t) <span class="mark-weak">to</span> speak smoothly.`,
+          rawText: "What are you planning for the next class? I want to speak smoothly."
+        },
+        {
+          speaker: "Teacher (Sarah)",
+          class: "speaker-a",
+          text: `We <span class="mark-weak">can</span> practice <span class="mark-link">fas(t)~speech</span> <span class="mark-weak">and</span> <span class="mark-link">tell~a</span> beautiful <span class="mark-link">story~about</span> your home.`,
+          rawText: "We can practice fast speech and tell a beautiful story about your home."
+        },
+        {
+          speaker: "Student (Robert)",
+          class: "speaker-b",
+          text: `That <span class="mark-link">sounds~awesome</span>. I'd love <span class="mark-weak">to</span> try <span class="mark-link">go[w]~out</span> <span class="mark-weak">for</span> <span class="mark-weak">a</span> coffee afterwards.`,
+          rawText: "That sounds awesome. I'd love to try go out for a coffee afterwards."
+        },
+        {
+          speaker: "Teacher (Sarah)",
+          class: "speaker-a",
+          text: `Me too. Let's meet <span class="mark-link">at~three</span> <span class="mark-link">o'clock~and</span> <span class="mark-link">spill~the</span> beans.`,
+          rawText: "Me too. Let's meet at three o'clock and spill the beans."
+        }
+      ],
+      "3": [
+        {
+          speaker: "Teacher (Sarah)",
+          class: "speaker-a",
+          text: `Did <span class="mark-blend" data-blend="joo">you</span> watch <span class="mark-weak">the</span> movie <span class="mark-link">story~about</span> <span class="mark-weak">the</span> brave <span class="mark-blend" data-blend="j">sol(d)~ier</span>?`,
+          rawText: "Did you watch the movie story about the brave soldier?"
+        },
+        {
+          speaker: "Student (Robert)",
+          class: "speaker-b",
+          text: `Yes! He had <span class="mark-weak">to</span> face high <span class="mark-blend" data-blend="sh">pres(s)~ure</span> <span class="mark-weak">to</span> find <span class="mark-weak">the</span> hidden <span class="mark-blend" data-blend="zh">trea(s)~ure</span>.`,
+          rawText: "Yes! He had to face high pressure to find the hidden treasure."
+        },
+        {
+          speaker: "Teacher (Sarah)",
+          class: "speaker-a",
+          text: `It's <span class="mark-weak">a</span> great story. It helps <span class="mark-weak">to</span> <span class="mark-blend" data-blend="j">edu(c)~ate</span> <span class="mark-link">us~in</span> <span class="mark-weak">a</span> very <span class="mark-blend" data-blend="ch">ma(t)~ure</span> way.`,
+          rawText: "It's a great story. It helps to educate us in a very mature way."
+        },
+        {
+          speaker: "Student (Robert)",
+          class: "speaker-b",
+          text: `I <span class="mark-link">saw~[r]~a</span> similar documentary <span class="mark-weak">and</span> liked <span class="mark-weak">it</span> very much.`,
+          rawText: "I saw a similar documentary and liked it very much."
+        }
+      ]
+    };
+
+    // Linking Sentences Data
+    const linkingSentencesData = [
+      {
+        id: "1",
+        label: "Could you turn off the light?",
+        markedText: `Could <span class="mark-blend" data-blend="joo">you</span> <span class="mark-link">turn~off</span> the light?`,
+        speechText: "Could you turn off the light?",
+        focus: "Consonant-to-Vowel Link (C-V) & Blending",
+        teachingNote: "Focus on <strong>'turn~off'</strong>. Thai and ESL students tend to insert a glottal stop here, making it sound like 'turn... [pause] ...off'. Teach them to shift the 'n' sound to the beginning of the next word: <strong>'tur-noff'</strong>. There is also a Yod-coalescence blend in <strong>'Could you'</strong> (/kʊdʒu/).",
+        pitfall: "Inserting glottal stops between words, breaking flow. Forgetting to pronounce final 'n' before linking."
+      },
+      {
+        id: "2",
+        label: "I saw a movie and ate an apple.",
+        markedText: `I <span class="mark-link">saw~[r]~a</span> movie <span class="mark-link">and~ate</span> <span class="mark-link">an~apple</span>.`,
+        speechText: "I saw a movie and ate an apple.",
+        focus: "Intrusive /r/ (RP Classic) & C-V Links",
+        teachingNote: "In British RP, when a word ends in the vowel /ɔː/ (like <strong>'saw'</strong> or 'law') and the next begins with a vowel, speakers insert an <strong>intrusive /r/</strong>. Have the student practice saying 'saw-ra movie'. Also practice <strong>'an~apple'</strong> as 'a-napple'.",
+        pitfall: "Failing to insert the /r/ glide, resulting in a glottal gap. Pronouncing 'an' as 'a' or dropping final nasal."
+      },
+      {
+        id: "3",
+        label: "Can we go out for a walk?",
+        markedText: `Can we <span class="mark-link">go~[w]~out</span> <span class="mark-link">for~[r]~a</span> walk?`,
+        speechText: "Can we go out for a walk?",
+        focus: "Intrusive /w/ Glide & Linking /r/",
+        teachingNote: "When a word ends in a round vowel (/uː/, /oʊ/, /aʊ/) like <strong>'go'</strong>, and is followed by another vowel, a natural <strong>/w/ glide</strong> bridges them. Model 'go-wout'. Additionally, the silent 'R' in <strong>'for'</strong> is pronounced here because it is followed by a vowel ('a'): <strong>'for[r]a'</strong>.",
+        pitfall: "Pronouncing 'go' and 'out' with a heavy gap; pronouncing 'for a' without the linking 'r' (rhotic-drop error in RP)."
+      },
+      {
+        id: "4",
+        label: "Please call him as soon as possible.",
+        markedText: `Please <span class="mark-link">call~[h]im</span> <span class="mark-link">as~soon~as</span> possible.`,
+        speechText: "Please call him as soon as possible.",
+        focus: "H-Dropping in Weak Pronouns & S-to-S Link",
+        teachingNote: "In natural fast speech, weak pronouns like 'him', 'her', and 'them' often drop their initial consonant (/h/). So <strong>'call~him'</strong> becomes <strong>'call-im'</strong> (/kɔːlɪm/). Also note how the 's' in 'as' and 'soon' link smoothly.",
+        pitfall: "Over-pronouncing the /h/ sound, which sounds stiff and overly formal in fast speech."
+      },
+      {
+        id: "5",
+        label: "He is always on time.",
+        markedText: `<span class="mark-link">He~[j]~is</span> <span class="mark-link">always~on</span> time.`,
+        speechText: "He is always on time.",
+        focus: "Intrusive /j/ Glide & Linking Z-to-O",
+        teachingNote: "When a word ends in a front vowel (/iː/, /ɪ/) like <strong>'he'</strong>, and the next word starts with a vowel, RP speakers insert a <strong>/j/ ('y') glide</strong>: <strong>'he-yis'</strong>. Make sure <strong>'always~on'</strong> has a linked /z/ sound.",
+        pitfall: "Missing the 'y' glide and making a glottal stop. Pronouncing 'always' with a hard /s/ instead of a linked /z/."
+      }
+    ];
+
+    // Teacher Companion Guide Content
+    const handbookData = {
+      "ch-intro": `
+        <div class="section-block">
+          <h3>Syllabus introductions & Warm-up (3–5 minutes)</h3>
+          <p>The goal of this section is to align on requirements and set the vocal benchmark for the lesson.</p>
+          
+          <h4>Warm-up Steps:</h4>
+          <ul class="bullet-list">
+            <li><strong>Step 1: The Goal Check:</strong> Read your student's message back to them. Highlight that they want to combine <em>dramatic delivery (storytelling)</em> with <em>mechanical fluid speed (connected speech)</em>.</li>
+            <li><strong>Step 2: Pacing Baseline:</strong> Ask the student to tell a 1-minute story about their morning. Listen closely without interrupting. Note down where they chop their speech or use hard, flat "flaps" for consonants.</li>
+            <li><strong>Step 3: The Mindset Shift:</strong> Explain that storytelling in English relies on contrast—long vowels vs. short schwas, loud pitch peaks vs. quiet pauses. Segmented reading sounds like a robot; connected speech sounds like music.</li>
+          </ul>
+        </div>
+        <div class="section-block">
+          <h4>Vocal Anatomy Tip for Teachers</h4>
+          <p>Most Eastern European and Asian languages use a high, throat-based resonance. Explain to the student that British RP (Received Pronunciation) requires a relaxed, lower jaw and a deeper chest resonance. Model taking a deep breath and letting the shoulders drop before speaking.</p>
+        </div>
+      `,
+      "ch-rp": `
+        <div class="section-block">
+          <h3>Part 1: RP Accent & Storytelling Mechanics (15 minutes)</h3>
+          <p>Show the student the <strong>RP Storytelling Trainer</strong> tab. Practice the three fundamental rules of RP accentuation:</p>
+          
+          <h4>Core Accent Drill Instructions:</h4>
+          <ul class="bullet-list">
+            <li><strong>The Broad 'A' (/ɑː/):</strong> Contrast the American or flat /æ/ (cat) with the RP /ɑː/ (father). Practice matching pairs: <em>can (flat) vs. can't (broad)</em>, <em>mass (flat) vs. last (broad)</em>. Ensure the tongue lies flat in the mouth.</li>
+            <li><strong>Non-Rhoticity (Silent 'R'):</strong> Teach the student that the letter "R" is silent unless a vowel follows it. Model the word <em>"warmer"</em>: /wɔːm.ə/ (no R sounds!). The ending sounds like a soft exhale (schwa).</li>
+            <li><strong>Crisp 'T' sounds:</strong> Thai and American speakers frequently drop or flap the letter T. In RP, "T" is crisp and aspirated. Practice tapping the tip of the tongue against the alveolar ridge for words like <em>"attempt"</em>.</li>
+          </ul>
+        </div>
+        <div class="section-block">
+          <h3>Intonation: The Pitch Rollercoaster</h3>
+          <p>Narratives use wider intonation sweeps than normal conversations. Have the student repeat sentences using extreme pitch jumps:</p>
+          <ul class="bullet-list">
+            <li><strong>Pitch Rise (↗):</strong> Used to build tension or introduce a new subject. e.g. "The <em>North Wind</em>..."</li>
+            <li><strong>Pitch Fall (↘):</strong> Signals closure or finality. e.g. "...was the <em>stronger</em>."</li>
+            <li><strong>The Dramatic Pause (||):</strong> Emphasize that silence is a sound. Model counting "one" in your head during pauses to build storytelling suspense.</li>
+          </ul>
+        </div>
+      `,
+      "ch-connected": `
+        <div class="section-block">
+          <h3>Part 2: Fast Connected Speech Laboratory (12 minutes)</h3>
+          <p>Connected speech is how native speakers compress sounds to speak quickly. Use the **Connected Speech Lab** tab and toggles to show the student the visual lines of connection.</p>
+          
+          <h4>How to Teach the 4 Techniques:</h4>
+          <ul class="bullet-list">
+            <li><strong>1. Linking (Consonant-to-Vowel):</strong> Show how a word ending in a consonant slides into a word beginning with a vowel. Model it as single words: <em>"once upon a"</em> becomes <em>"wan-suh-po-nuh"</em>.</li>
+            <li><strong>2. Blending (Yod-coalescence):</strong> When /t/ or /d/ meets /j/ ("you/your"), they blend into /tʃ/ (ch) or /dʒ/ (j). Drill the transition: <em>"Could... you"</em> -> <em>"Could-joo"</em>.</li>
+            <li><strong>3. Weak Forms (Schwa /ə/):</strong> Teach the student that grammatical words are "valleys" in the sentence. They must be short and quiet. Pronounce <em>"to"</em> as <em>"tuh"</em>, <em>"and"</em> as <em>"uhn"</em>.</li>
+            <li><strong>4. Elision (Consonant Deletion):</strong> When /t/ or /d/ are at the end of a word and followed by a consonant, we drop them. Model: <em>"next class"</em> becomes <em>"neks class"</em>.</li>
+          </ul>
+        </div>
+        <div class="section-block">
+          <h4>Pedagogical Drill: Backchaining Technique</h4>
+          <p>If the student struggles to connect a sentence, build it backwards from the end. This preserves natural rhythm. For example:</p>
+          <p class="template-box">1. "...class."
+2. "...next class."
+3. "...for the next class."
+4. "...planning for the next class."
+5. "What are you planning for the next class?"</p>
+        </div>
+      `,
+      "ch-templates": `
+        <div class="section-block">
+          <h3>Lesson Summary & Feedback Templates</h3>
+          <p>Copy and customize these templates to send to your student in the Preply chat post-class to lock in their learning.</p>
+          
+          <h4>Storytelling Delivery Summary:</h4>
+          <div class="template-box">
+<button class="btn-copy" onclick="copyTemplate(this)">Copy Text</button>Hi [Student Name]! Excellent work on your storytelling today. 
+
+Key takeaways for your RP Accent:
+- Broad 'A' (/ɑː/): Keep practicing "last" and "ask" with a deep back-of-the-throat /ɑː/ vowel.
+- Non-Rhoticity: Remember, drop the R in "North", "first", and "warmer".
+- Pacing: Your pauses (||) were much better, giving the listener time to follow your story!
+          </div>
+
+          <h4>Connected Speech Summary:</h4>
+          <div class="template-box">
+<button class="btn-copy" onclick="copyTemplate(this)">Copy Text</button>Great job training connected speech! Focus on these 3 items:
+1. Linking: "tell~a~story" (connect the final consonant to the vowel).
+2. Blending: "Could~you" becomes "Could-joo" (/dʒ/).
+3. Weak Forms: Reduce grammar words like "to" (/tə/) and "for" (/fə/) so they stay short and relaxed.
+
+Homework: Record yourself reading Dialogue 2 and focus on dropping the 't' in "nex(t) class".
+          </div>
+        </div>
+      `
+    };
+
+    // UI Element Selectors
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const tabPanes = document.querySelectorAll(".tab-pane");
+    const voiceSelector = document.getElementById("voice-selector");
+    const roadmapSteps = document.querySelectorAll(".roadmap-step");
+    
+    // Tab Switching Logic
+    function switchTab(tabId) {
+      state.activeTab = tabId;
+      
+      tabButtons.forEach(btn => {
+        if (btn.getAttribute("data-tab") === tabId) {
+          btn.classList.add("active");
+        } else {
+          btn.classList.remove("active");
+        }
+      });
+
+      tabPanes.forEach(pane => {
+        if (pane.id === `pane-${tabId}`) {
+          pane.classList.add("active");
+        } else {
+          pane.classList.remove("active");
+        }
+      });
+
+      // Stop speech playback on tab swap
+      cancelSpeech();
+    }
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        switchTab(btn.getAttribute("data-tab"));
+      });
+    });
+
+    // Roadmap dashboard deep links
+    roadmapSteps.forEach(step => {
+      step.addEventListener("click", () => {
+        const target = step.getAttribute("data-target-tab");
+        const sub = step.getAttribute("data-sub-action");
+        switchTab(target);
+
+        if (target === 'storytelling') {
+          const btn = document.querySelector(`.btn-toggle[data-view="view-${sub}"]`);
+          if (btn) btn.click();
+        } else if (target === 'connected') {
+          if (sub === 'concepts') {
+            document.querySelector('.concept-card[data-concept="linking"]').click();
+          } else {
+            // Select dialogue 1 or 2
+            const dBtn = document.querySelector(`.btn-dialogue-sel[data-dialogue="1"]`);
+            if (dBtn) dBtn.click();
+          }
+        }
+      });
+    });
+
+    // ==========================================
+    // SPEECH SYNTHESIS ENGINE
+    // ==========================================
+    let voices = [];
+    function populateVoiceList() {
+      if (typeof speechSynthesis === 'undefined') return;
+      voices = speechSynthesis.getVoices();
+      
+      voiceSelector.innerHTML = '<option value="">Default OS British Voice</option>';
+
+      // Search for British/UK English voices
+      const ukVoices = voices.filter(v => v.lang.toLowerCase().includes('en-gb'));
+      
+      ukVoices.forEach(voice => {
+        const option = document.createElement("option");
+        option.textContent = `${voice.name} (${voice.lang})`;
+        option.value = voice.name;
+        voiceSelector.appendChild(option);
+      });
+    }
+
+    populateVoiceList();
+    if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
+      speechSynthesis.onvoiceschanged = populateVoiceList;
+    }
+
+    // Play text-to-speech
+    function speakText(text, rate = 0.9, onEndCallback = null) {
+      if (typeof speechSynthesis === 'undefined') return;
+      cancelSpeech();
+
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.rate = rate;
+
+      // Assign selected UK Voice if any
+      const selectedName = voiceSelector.value;
+      if (selectedName) {
+        const voice = voices.find(v => v.name === selectedName);
+        if (voice) utterance.voice = voice;
+      } else {
+        // Fallback search for a UK voice in voices array
+        const defaultUK = voices.find(v => v.lang.toLowerCase().includes('en-gb'));
+        if (defaultUK) utterance.voice = defaultUK;
+      }
+
+      utterance.onend = () => {
+        state.currentAudioUtterance = null;
+        if (onEndCallback) onEndCallback();
+      };
+
+      state.currentAudioUtterance = utterance;
+      speechSynthesis.speak(utterance);
+    }
+
+    function cancelSpeech() {
+      if (typeof speechSynthesis !== 'undefined') {
+        speechSynthesis.cancel();
+      }
+      state.currentAudioUtterance = null;
+      
+      // Reset play button overlays
+      document.getElementById("btn-play-fable").style.display = "inline-flex";
+      document.getElementById("btn-stop-fable").style.display = "none";
+      document.getElementById("btn-play-dialogue").style.display = "inline-flex";
+      document.getElementById("btn-stop-dialogue").style.display = "none";
+    }
+
+    // Play demonstration phrase
+    function playAudioDemo(text) {
+      speakText(text, 0.95);
+    }
+
+    // Synthesize quiet click blip (Web Audio API)
+    function playClickSound() {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(550, audioCtx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(120, audioCtx.currentTime + 0.04);
+        gain.gain.setValueAtTime(0.015, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.04);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.04);
+      } catch (e) {}
+    }
+
+    // ==========================================
+    // PART 1: RP STORYTELLING INTERACTION
+    // ==========================================
+    const fableContainer = document.getElementById("fable-text-container");
+    const viewToggles = document.querySelectorAll(".btn-toggle");
+    const rpLegend = document.getElementById("legend-rp-view");
+    const storyLegend = document.getElementById("legend-story-view");
+    const playFableBtn = document.getElementById("btn-play-fable");
+    const stopFableBtn = document.getElementById("btn-stop-fable");
+    const fableSpeedSlider = document.getElementById("fable-speed");
+    const fableSpeedVal = document.getElementById("fable-speed-val");
+
+    // Toggle views (Standard, RP, Storytelling)
+    viewToggles.forEach(btn => {
+      btn.addEventListener("click", () => {
+        viewToggles.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const view = btn.getAttribute("data-view");
+        
+        // Reset container classes
+        fableContainer.className = "fable-text-area " + view;
+
+        // Toggle legends
+        if (view === 'view-rp') {
+          rpLegend.style.display = 'grid';
+          storyLegend.style.display = 'none';
+        } else if (view === 'view-story') {
+          rpLegend.style.display = 'none';
+          storyLegend.style.display = 'grid';
+        } else {
+          rpLegend.style.display = 'none';
+          storyLegend.style.display = 'none';
+        }
+      });
+    });
+
+    // Speed slider syncing
+    fableSpeedSlider.addEventListener("input", (e) => {
+      fableSpeedVal.textContent = e.target.value + "x";
+    });
+
+    // Play fable audio trigger
+    playFableBtn.addEventListener("click", () => {
+      const textToSpeak = fableContainer.textContent;
+      const speed = parseFloat(fableSpeedSlider.value);
+      
+      playFableBtn.style.display = "none";
+      stopFableBtn.style.display = "inline-flex";
+
+      speakText(textToSpeak, speed, () => {
+        playFableBtn.style.display = "inline-flex";
+        stopFableBtn.style.display = "none";
+      });
+    });
+
+    stopFableBtn.addEventListener("click", cancelSpeech);
+
+    // ==========================================
+    // PART 2: CONNECTED SPEECH LAB
+    // ==========================================
+    const conceptCards = document.querySelectorAll(".concept-card");
+    const dialogueSelBtns = document.querySelectorAll(".btn-dialogue-sel");
+    const featToggles = document.querySelectorAll(".btn-feat-toggle");
+    const chatBox = document.getElementById("active-dialogue-chat-box");
+    const helpPanel = document.getElementById("dialogue-help-panel");
+    const playDialogueBtn = document.getElementById("btn-play-dialogue");
+    const stopDialogueBtn = document.getElementById("btn-stop-dialogue");
+    const dialogueSpeedSlider = document.getElementById("dialogue-speed");
+    const dialogueSpeedVal = document.getElementById("dialogue-speed-val");
+
+    // Concept selector tabs
+    conceptCards.forEach(card => {
+      card.addEventListener("click", () => {
+        conceptCards.forEach(c => c.classList.remove("active"));
+        card.classList.add("active");
+        
+        // Auto-enable feature toggle corresponding to click
+        const concept = card.getAttribute("data-concept");
+        let featureKey = '';
+        if (concept === 'linking') featureKey = 'link';
+        else if (concept === 'blending') featureKey = 'blend';
+        else if (concept === 'weak') featureKey = 'weak';
+        else if (concept === 'elision') featureKey = 'elide';
+
+        if (featureKey && !state.dialogueFeatures[featureKey]) {
+          const btn = document.querySelector(`.btn-feat-toggle.t-${featureKey}`);
+          if (btn) btn.click();
+        }
+      });
+    });
+
+    // Dialogue selector tabs
+    dialogueSelBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        dialogueSelBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        state.activeDialogue = btn.getAttribute("data-dialogue");
+        renderDialogue();
+      });
+    });
+
+    // Dialogue feature switches
+    function toggleDialogueFeature(feature) {
+      const btn = document.querySelector(`.btn-feat-toggle.t-${feature}`);
+      state.dialogueFeatures[feature] = !state.dialogueFeatures[feature];
+      
+      if (state.dialogueFeatures[feature]) {
+        btn.classList.add("active");
+        chatBox.classList.add(`feat-${feature}-on`);
+      } else {
+        btn.classList.remove("active");
+        chatBox.classList.remove(`feat-${feature}-on`);
+      }
+    }
+
+    // Dialogue layout builder
+    function renderDialogue() {
+      const dialogueLines = dialoguesData[state.activeDialogue];
+      chatBox.innerHTML = "";
+
+      dialogueLines.forEach(line => {
+        const row = document.createElement("div");
+        row.className = `chat-bubble-row ${line.class}`;
+        row.innerHTML = `
+          <span class="speaker-label">${line.speaker}</span>
+          <div class="chat-bubble">${line.text}</div>
+        `;
+        chatBox.appendChild(row);
+      });
+
+      // Bind help panel explanations on hovering marked segments
+      bindHoverExplainers();
+    }
+
+    // Explain markers details on hover
+    function bindHoverExplainers() {
+      const links = chatBox.querySelectorAll(".mark-link");
+      const blends = chatBox.querySelectorAll(".mark-blend");
+      const weaks = chatBox.querySelectorAll(".mark-weak");
+      const elides = chatBox.querySelectorAll(".mark-elide");
+
+      links.forEach(el => {
+        el.addEventListener("mouseenter", () => {
+          helpPanel.innerHTML = `<strong>Consonant-to-Vowel Link:</strong> The final consonant sound slides continuously into the starting vowel. e.g., <em>"${el.textContent.replace('~', ' ')}"</em> sounds like <em>"${el.textContent.split('~').join('-')}"</em>.`;
+        });
+      });
+
+      blends.forEach(el => {
+        el.addEventListener("mouseenter", () => {
+          helpPanel.innerHTML = `<strong>Blending (Yod-coalescence):</strong> The final /t/ or /d/ merges with the /j/ sound of "you" to create a new affricate sound <strong>/${el.getAttribute('data-blend') === 'joo' ? 'dʒ' : 'tʃ'}/</strong>. Pronounce as <em>"${el.getAttribute('data-blend') === 'joo' ? 'd-joo' : 'ch-oo'}"</em>.`;
+        });
+      });
+
+      weaks.forEach(el => {
+        el.addEventListener("mouseenter", () => {
+          helpPanel.innerHTML = `<strong>Weak Form reduction:</strong> Unstressed grammatical words reduce their vowel to a neutral schwa <strong>/ə/</strong>. Keep it short, soft, and quick.`;
+        });
+      });
+
+      elides.forEach(el => {
+        el.addEventListener("mouseenter", () => {
+          helpPanel.innerHTML = `<strong>Elision (Dropping sound):</strong> The letter in brackets (usually T or D) is dropped because it is trapped in a tricky consonant cluster, allowing speech to flow smoothly.`;
+        });
+      });
+    }
+
+    // Dialogue audio triggers
+    dialogueSpeedSlider.addEventListener("input", (e) => {
+      dialogueSpeedVal.textContent = e.target.value + "x";
+    });
+
+    playDialogueBtn.addEventListener("click", () => {
+      const dialogueLines = dialoguesData[state.activeDialogue];
+      
+      // Assemble full script dialogue text
+      let dialogueScript = "";
+      dialogueLines.forEach(line => {
+        dialogueScript += `${line.speaker} says: ${line.rawText}. `;
+      });
+
+      const speed = parseFloat(dialogueSpeedSlider.value);
+      playDialogueBtn.style.display = "none";
+      stopDialogueBtn.style.display = "inline-flex";
+
+      speakText(dialogueScript, speed, () => {
+        playDialogueBtn.style.display = "inline-flex";
+        stopDialogueBtn.style.display = "none";
+      });
+    });
+
+    stopDialogueBtn.addEventListener("click", cancelSpeech);
+
+    // ==========================================
+    // TAB 4: TEACHER HANDBOOK
+    // ==========================================
+    const handbookTabs = document.querySelectorAll(".handbook-tab");
+    const handbookContainer = document.getElementById("handbook-content-container");
+
+    handbookTabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        handbookTabs.forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        const chapter = tab.getAttribute("data-chapter");
+        renderHandbook(chapter);
+      });
+    });
+
+    function renderHandbook(chapter) {
+      handbookContainer.innerHTML = handbookData[chapter];
+    }
+
+    // Copy summary text to clipboard
+    function copyTemplate(btn) {
+      const codeBox = btn.parentElement;
+      // Extract text content excluding the copy button text
+      const originalText = codeBox.textContent.replace('Copy Text', '').trim();
+      
+      navigator.clipboard.writeText(originalText).then(() => {
+        btn.textContent = "Copied! ✓";
+        btn.style.color = "var(--accent-green)";
+        btn.style.borderColor = "var(--accent-green)";
+        
+        setTimeout(() => {
+          btn.textContent = "Copy Text";
+          btn.style.color = "var(--text-muted)";
+          btn.style.borderColor = "var(--border-color)";
+        }, 2000);
+      });
+    }
+
+    // ==========================================
+    // LINKING SENTENCES DRILL BOARD
+    // ==========================================
+    function initLinkingSentences() {
+      const listContainer = document.getElementById("linking-sentences-list");
+      const detailsContainer = document.getElementById("linking-sentence-details");
+      
+      if (!listContainer || !detailsContainer) return;
+      
+      // Render sentence items on the left list
+      listContainer.innerHTML = "";
+      linkingSentencesData.forEach((item, idx) => {
+        const btn = document.createElement("button");
+        btn.className = `sentence-item-btn ${idx === 0 ? 'active' : ''}`;
+        btn.innerHTML = `${item.id}. ${item.label}`;
+        btn.addEventListener("click", () => {
+          playClickSound();
+          document.querySelectorAll(".sentence-item-btn").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          displayLinkingSentenceDetails(item);
+        });
+        listContainer.appendChild(btn);
+      });
+      
+      // Display first item details
+      if (linkingSentencesData.length > 0) {
+        displayLinkingSentenceDetails(linkingSentencesData[0]);
+      }
+    }
+    
+    function displayLinkingSentenceDetails(item) {
+      const detailsContainer = document.getElementById("linking-sentence-details");
+      if (!detailsContainer) return;
+      
+      detailsContainer.innerHTML = `
+        <div class="sentence-markup-display feat-link-on feat-blend-on">
+          ${item.markedText}
+        </div>
+        
+        <div class="playback-controls" style="margin-top: 0.5rem; justify-content: space-between;">
+          <div class="control-buttons">
+            <button class="btn-audio" id="btn-play-sentence-drill" style="background: var(--accent-cyan); color: var(--bg-dark);">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 4px;"><path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>
+              Listen (British Accent)
+            </button>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); font-weight: 600;">
+            Target: ${item.focus}
+          </div>
+        </div>
+
+        <div class="teacher-notes-box">
+          <span class="teacher-notes-title">📘 Teacher's Lesson Notes</span>
+          <div class="teacher-notes-body">
+            <div class="teacher-notes-section-title">Teaching Directive:</div>
+            <p>${item.teachingNote}</p>
+            <div class="teacher-notes-section-title" style="margin-top: 0.75rem; color: var(--accent-pink);">Common Student Pitfall:</div>
+            <p>${item.pitfall}</p>
+          </div>
+        </div>
+      `;
+      
+      // Bind TTS playback to button
+      const playBtn = document.getElementById("btn-play-sentence-drill");
+      playBtn.addEventListener("click", () => {
+        playClickSound();
+        speakText(item.speechText, 0.9);
+      });
+    }
+
+    // Initialize components on load
+    window.onload = () => {
+      populateVoiceList();
+      renderDialogue();
+      renderHandbook('ch-intro');
+      initLinkingSentences();
+    };
+  </script>
+</body>
+</html>

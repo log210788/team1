@@ -1,0 +1,548 @@
+[
+  {
+    "id": 1,
+    "title": "The D.C. Pitch & Articulator Awareness",
+    "sub": "Roach Chapters 1 & 2 • Focus on physical control and diagnostics",
+    "focus": "Vinh will master physical control and awareness of the vocal tract's key articulators (alveolar ridge, hard palate, velum, lips, tongue). Focus on clear awareness of closing positions.",
+    "dcConnection": "Clear speech structures establish immediate credibility in D.C. finance meetings. Vinh must treat ending consonants with the same precision as the last digits of a financial transaction.",
+    "articulators": ["alveolar", "palate", "velum", "tongue-body"],
+    "warmups": [
+      "The Velvet Yawn: Vinh yawns deeply to lift the soft palate (velum). Creates oral resonance necessary for British RP vowels.",
+      "Alveolar Tap: Tap the tongue tip rapidly on the bumpy ridge behind the upper teeth ('t-t-t-t') to map the alveolar ridge.",
+      "Tongue Protrusion: Stretch the tongue straight out, then pull it back to touch the back of the roof of the mouth."
+    ],
+    "script": "Vinh, in finance, small details in numbers change the entire balance sheet. Pronunciation is the same. Dropping the end of words is like leaving off the last digit of a transaction. Today we are going to map your mouth so you have full control.",
+    "drills": [
+      {
+        "title": "Alveolar Ridge Contact (Tongue Tip touches ridge behind top teeth)",
+        "layout": "grid",
+        "items": [
+          { "label": "net", "ipa": "/net/", "guide": "Listen for clean voiceless release of /t/ at the alveolar ridge.", "cue": "Place tongue tip on the ridge behind your upper teeth. Stop the air, then release it.", "studentCue": "Press your tongue tip firmly on the bumpy ridge behind your top teeth, then release with a soft puff." },
+          { "label": "debt", "ipa": "/det/", "guide": "Ensure the vowel is short (clipped) and /t/ is crisp.", "cue": "Press the tongue tip hard against the ridge, keep vowel short, and release air.", "studentCue": "Clip the vowel short! Touch the tongue tip to the ridge and release." },
+          { "label": "rate", "ipa": "/reɪt/", "guide": "Verify the diphthong finishes with a clean /t/ stop.", "cue": "Glide from 'ay' to 'ee' then immediately seal alveolar ridge.", "studentCue": "Glide 'ray-eet', finishing with a sharp, dry tap behind your teeth." },
+          { "label": "asset", "ipa": "/ˈæset/", "guide": "Listen for the /s/ hiss followed by a clean /t/ release.", "cue": "Hiss /s/ at front, then touch tongue tip to ridge for /t/.", "studentCue": "Hiss 'as', then immediately tap the ridge for 'et'." },
+          { "label": "audit", "ipa": "/ˈɔːdɪt/", "guide": "Ensure RP open /ɔː/ vowel and alveolar stops.", "cue": "Open mouth for long /ɔː/, tap /d/, then tap /t/.", "studentCue": "Make a long 'aw' sound, tap the ridge for 'd', then tap again for 't'." },
+          { "label": "yield", "ipa": "/jiːld/", "guide": "Listen for lateral /l/ followed by voiced /d/ release.", "cue": "Laryngeal voicing must continue through /l/ to /d/.", "studentCue": "Feel the throat vibration continue as you move from 'l' to a soft 'd'." },
+          { "label": "deficit", "ipa": "/ˈdefɪsɪt/", "guide": "Ensure unstressed vowels are schwa/short /ɪ/ and /t/ releases.", "cue": "Say 'deh-fuh-sit'. Touch ridge for final /t/.", "studentCue": "Pronounce as 'deh-fuh-sit', releasing the final /t/ cleanly." },
+          { "label": "credit", "ipa": "/ˈkredɪt/", "guide": "Verify the /t/ ending is not omitted or glottalized.", "cue": "Release /t/ clearly at the alveolar ridge.", "studentCue": "Tap the tongue tip behind your teeth at the very end of 'cre-dit'." },
+          { "label": "deposit", "ipa": "/dɪˈpɒzɪt/", "guide": "Check the voiced /z/ and the final /t/ release.", "cue": "Buzz the /z/ in the middle, tap /t/ at the end.", "studentCue": "Buzz the middle 'pos', then release the final 'it' with a sharp 't'." }
+        ]
+      },
+      {
+        "title": "Soft Palate (Velum) Contact (Back of tongue touches roof of mouth)",
+        "layout": "grid",
+        "items": [
+          { "label": "bank", "ipa": "/bæŋk/", "guide": "Check that the nasal /ŋ/ does not bleed completely into a dropped /k/.", "cue": "Press the back of the tongue against the velum, build air, and release with a puff.", "studentCue": "Vocalize 'ban', then seal the back of your mouth and release with a clean click." },
+          { "label": "risk", "ipa": "/rɪsk/", "guide": "Look for both the /s/ hiss and the final /k/ release.", "cue": "Blow a hiss through front teeth, then snap the back of the tongue against the velum.", "studentCue": "Hiss 'risss', then click the back of your tongue against the roof of your mouth." },
+          { "label": "back", "ipa": "/bæk/", "guide": "Listen for clipped vowel and clear velar stop /k/.", "cue": "Clip the vowel short, seal back of mouth, and release.", "studentCue": "Clip the 'a' short, seal the back of your throat, and release with a puff." },
+          { "label": "equity", "ipa": "/ˈekwɪti/", "guide": "Check the velar stop /k/ transition to /w/.", "cue": "Pronounce /k/ quickly, round lips for /w/, finish with /ti/.", "studentCue": "Make a quick click at the back of the mouth, then instantly round lips for 'wi-ti'." },
+          { "label": "check", "ipa": "/tʃek/", "guide": "Ensure affricate /tʃ/ start and velar stop /k/ end.", "cue": "Start with a push of air, end with a clean click.", "studentCue": "Say 'ch' at the front, then click the 'k' at the back of the throat." },
+          { "label": "stock", "ipa": "/stɒk/", "guide": "Check RP short O vowel /ɒ/ and final /k/ release.", "cue": "Short rounded O, followed by a crisp /k/ release.", "studentCue": "Round your lips for 'sto', then click the 'k' at the back." },
+          { "label": "broker", "ipa": "/ˈbrəʊkə/", "guide": "Check the RP goat vowel /əʊ/ and unstressed schwa ending.", "cue": "Say /əʊ/ then /k/, finish with silent 'r' schwa.", "studentCue": "Say 'bro-uk', then make a lazy 'uh' sound at the end. No 'r'!" }
+        ]
+      },
+      {
+        "title": "Lip Contacts (Lips close fully to block air or create friction)",
+        "layout": "grid",
+        "items": [
+          { "label": "cap", "ipa": "/kæp/", "guide": "Verify that the lips seal completely for /p/ and release.", "cue": "Bring lips together, trap air, then pop them open.", "studentCue": "Bring your lips completely together, build pressure, and pop them open." },
+          { "label": "term", "ipa": "/tɜːm/", "guide": "Ensure RP non-rhotic vowel (no 'r') and complete nasal /m/.", "cue": "Keep tongue relaxed, don't roll 'r'. Close lips fully to sustain 'mmm'.", "studentCue": "Relax your tongue (no 'r' sound!). Close your lips and hum: 'ter-mmm'." },
+          { "label": "firm", "ipa": "/fɜːm/", "guide": "Verify the flat RP /ɜː/ vowel and the lip-teeth transition on /f/.", "cue": "Bite lower lip for /f/, relax tongue for vowel, close lips for /m/.", "studentCue": "Touch top teeth to bottom lip for 'f', hold a flat 'er' sound, then close lips." },
+          { "label": "private", "ipa": "/ˈpraɪvət/", "guide": "Ensure /v/ lip-teeth contact and schwa in second syllable.", "cue": "Bite lip for /v/, make lazy schwa, tap /t/ at end.", "studentCue": "Say 'pri', bite bottom lip for 'v', then tap a short 'uht' at the end." },
+          { "label": "premium", "ipa": "/ˈpriːmiəm/", "guide": "Check the final nasal /m/ and the non-rhotic diphthong.", "cue": "Ensure the final 'um' has a complete lip seal.", "studentCue": "Close your lips fully at the end of 'pre-mi-um' and let the sound hum." },
+          { "label": "prime", "ipa": "/praɪm/", "guide": "Ensure diphthong /aɪ/ finishes with a full /m/ closure.", "cue": "Glide from 'ah' to 'ee' and close lips fully.", "studentCue": "Glide 'pry', then seal your lips for a sustained 'mmm' hum." },
+          { "label": "balance", "ipa": "/ˈbæləns/", "guide": "Verify bilabial /b/ start and alveolar /s/ hiss end.", "cue": "Pop lips for /b/, make schwa, end with a continuous hiss.", "studentCue": "Pop lips for 'ba', then end with a long, continuous hissing 'nss'." }
+        ]
+      },
+      {
+        "title": "Expanded Sentence Drills",
+        "layout": "list",
+        "items": [
+          { "label": "The net debt rate was low.", "ipa": "/ðə net det reɪt wəz ləʊ/", "guide": "Listen for three consecutive final /t/ stops, all released cleanly.", "cue": "Touch tongue tip to ridge at the end of net, debt, and rate.", "studentCue": "Tap the ridge behind your front teeth for net, debt, and rate. Make them three separate taps." },
+          { "label": "He will check the bank risk.", "ipa": "/hiː wɪl tʃek ðə bæŋk rɪsk/", "guide": "Ensure the /k/ is released in check, bank, and risk.", "cue": "Release /k/ at the back of the mouth for check, bank, and risk.", "studentCue": "Click the back of your tongue on check, bank, and risk. Let the air release." },
+          { "label": "Our firm is facing private risk.", "ipa": "/ˈaʊə fɜːm ɪz ˈfeɪsɪŋ ˈpraɪvət rɪsk/", "guide": "Verify non-rhotic firm, private /t/, and risk /sk/.", "cue": "No 'r' in firm. Release /t/ in private, click /k/ in risk.", "studentCue": "Hum 'mmm' in firm (no 'r'). Tap the 't' in private, and click the 'k' in risk." }
+        ]
+      }
+    ],
+    "homework": [
+      "Practice tapping the tongue tip on the alveolar ridge 10 times daily to build muscle memory.",
+      "Record reading: 'The net debt rate was low.' Ensure /t/ releases.",
+      "YouTube: Search 'Geoff Lindsey - Received Pronunciation' to study modern British RP features."
+    ],
+    "videoQuery": "Geoff Lindsey - Received Pronunciation",
+    "mouthCueSummary": "Focus on Alveolar Ridge and Velum contact. Touch the tongue tip to the ridge for /t/ and the back of the tongue to the roof of the mouth for /k/."
+  },
+  {
+    "id": 2,
+    "title": "Stopping the Drop - Final Plosives & Vowel Clipping",
+    "sub": "Roach Chapters 4 & 5 • Fortis (/p, t, k/) vs. Lenis (/b, d, ɡ/)",
+    "focus": "Mastering pre-fortis clipping. Vowels before voiceless stops (/p, t, k/) must be clipped short, while vowels before voiced stops (/b, d, ɡ/) are stretched.",
+    "dcConnection": "Differentiating between 'debt' and 'dead' is vital. Dropping the final plosive or ignoring vowel lengths makes your speech sound vague and unassertive in presentations.",
+    "articulators": ["alveolar", "lips", "velum", "throat"],
+    "warmups": [
+      "The Tissue Blow: Hold a tissue 5cm from your mouth. Say 'p! t! k!' and make the tissue fly with the burst of air.",
+      "Vocal Cord Switch: Say 'ahhh' (voiced), then whisper 'ahhh' (voiceless) to feel the vocal fold vibration."
+    ],
+    "script": "Vinh, in English, we know a consonant is voiceless because the vowel before it is clipped short. Look at debt vs. dead. In debt, the vowel is short. In dead, we stretch the vowel. Let's practice releasing the final consonant.",
+    "drills": [
+      {
+        "title": "Minimal Pairs - Alveolar (/t/ vs /d/)",
+        "layout": "grid",
+        "items": [
+          { "pair": true, "wordA": "debt", "ipaA": "/det/", "guideA": "Clipped vowel, voiceless /t/ release.", "cueA": "Shorten the vowel. Release tongue tip sharply with a puff of air.", "studentCueA": "Say 'deh' very quickly, then snap your tongue down from the ridge.",
+                        "wordB": "dead", "ipaB": "/ded/", "guideB": "Stretched vowel, voiced /d/ release.", "cueB": "Hold the vowel longer. Add a slight voiced hum from the throat at the end.", "studentCueB": "Stretch 'deee', then touch the ridge with a soft, vibrating 'd' sound." },
+          { "pair": true, "wordA": "rate", "ipaA": "/reɪt/", "guideA": "Short diphthong, voiceless /t/.", "cueA": "Shorten the 'ay' sound and snap the tongue tip down.", "studentCueA": "Clip the 'ay' short. Stop the air sharply on the ridge.",
+                        "wordB": "raid", "ipaB": "/reɪd/", "guideB": "Long diphthong, voiced /d/.", "cueB": "Sing the 'ay' sound, then touch alveolar ridge with voiced release.", "studentCueB": "Stretch 'raay-eed', making the vowel long. Soft, voiced landing on 'd'." },
+          { "pair": true, "wordA": "chart", "ipaA": "/tʃɑːt/", "guideA": "Clipped long vowel, voiceless /t/.", "cueA": "Shorten the /ɑː/ vowel. Pop the /t/.", "studentCueA": "Cut 'chah' short. Release tongue tip with a small puff.",
+                        "wordB": "card", "ipaB": "/kɑːd/", "guideB": "Stretched long vowel, voiced /d/.", "cueB": "Stretch the /ɑː/ vowel. No 'r'. Voiced /d/.", "studentCueB": "Stretch 'caaard' (no 'r'). Let the throat rumble at the end." },
+          { "pair": true, "wordA": "spent", "ipaA": "/spent/", "guideA": "Short vowel, voiceless /t/ release.", "cueA": "Shorten the 'e'. Clean /t/ release.", "studentCueA": "Say 'spen', cut it off immediately with a dry tap on the ridge.",
+                        "wordB": "spend", "ipaB": "/spend/", "guideB": "Stretched vowel, voiced /d/ release.", "cueB": "Hold vowel longer. Ensure /d/ is voiced.", "studentCueB": "Stretch 'speeend'. Let the nasal and 'd' hum in your throat." }
+        ]
+      },
+      {
+        "title": "Minimal Pairs - Bilabial (/p/ vs /b/)",
+        "layout": "grid",
+        "items": [
+          { "pair": true, "wordA": "cap", "ipaA": "/kæp/", "guideA": "Short vowel, voiceless /p/ release.", "cueA": "Shorten 'a' vowel, pop lips open.", "studentCueA": "Clip the 'a' short, seal lips, pop them open with a puff of air.",
+                        "wordB": "cab", "ipaB": "/kæb/", "guideB": "Stretched vowel, voiced /b/ release.", "cueB": "Lengthen 'a' vowel, let throat vibrate during lip release.", "studentCueB": "Stretch 'caaab'. Keep the throat vibrating as you open your lips." },
+          { "pair": true, "wordA": "tap", "ipaA": "/tæp/", "guideA": "Voiceless /p/ release, clipped vowel.", "cueA": "Clip vowel, release lips with puff.", "studentCueA": "Clip the vowel short, pop the lips with air.",
+                        "wordB": "tab", "ipaB": "/tæb/", "guideB": "Voiced /b/ release, stretched vowel.", "cueB": "Stretch vowel, voiced release.", "studentCueB": "Stretch 'taaab'. Feel throat voice as lips separate." },
+          { "pair": true, "wordA": "rip", "ipaA": "/rɪp/", "guideA": "Short vowel, voiceless /p/.", "cueA": "Short vowel, release lips with puff.", "studentCueA": "Shorten 'i'. Pop lips open.",
+                        "wordB": "rib", "ipaB": "/rɪb/", "guideB": "Stretched vowel, voiced /b/.", "cueB": "Stretched vowel, hum the /b/.", "studentCueB": "Stretch 'reeeb'. Keep the throat voice buzzing at the end." }
+        ]
+      },
+      {
+        "title": "Minimal Pairs - Velar (/k/ vs /ɡ/)",
+        "layout": "grid",
+        "items": [
+          { "pair": true, "wordA": "back", "ipaA": "/bæk/", "guideA": "Clipped vowel, voiceless /k/ release.", "cueA": "Clip vowel, release tongue back quickly.", "studentCueA": "Clip the 'a' short. Click the back of your tongue sharply.",
+                        "wordB": "bag", "ipaB": "/bæɡ/", "guideB": "Stretched vowel, voiced /ɡ/ release.", "cueB": "Stretch vowel, let throat rumble on the /g/.", "studentCueB": "Stretch 'baaag'. Keep the throat vibrating on the final click." },
+          { "pair": true, "wordA": "lack", "ipaA": "/læk/", "guideA": "Voiceless /k/ ending, clipped vowel.", "cueA": "Clip vowel, snap back of tongue.", "studentCueA": "Clip the 'a' short, release a puff at the back.",
+                        "wordB": "lag", "ipaB": "/læɡ/", "guideB": "Voiced /g/ ending, stretched vowel.", "cueB": "Stretch vowel, rumble throat.", "studentCueB": "Stretch 'laaag'. Keep throat voice on the final click." },
+          { "pair": true, "wordA": "dock", "ipaA": "/dɒk/", "guideA": "RP short rounded O, voiceless /k/.", "cueA": "Short O, snap back of tongue.", "studentCueA": "Short O. Quick click at the back.",
+                        "wordB": "dog", "ipaB": "/dɒɡ/", "guideB": "Stretched short O, voiced /g/.", "cueB": "Stretched O, voiced release.", "studentCueB": "Stretch 'doooog'. Throat voice hums during click." }
+        ]
+      },
+      {
+        "title": "Boardroom Sentence Drills",
+        "layout": "list",
+        "items": [
+          { "label": "The firm's debt is rising.", "ipa": "/ðə fɜːmz det ɪz ˈraɪzɪŋ/", "guide": "Ensure 'debt' vowel is short and /t/ is released cleanly.", "cue": "Don't say 'dep' or 'det' (unreleased). Release the tongue from the ridge.", "studentCue": "Keep the 'e' in 'debt' short, and tap the tongue tip behind your teeth." },
+          { "label": "The project is dead.", "ipa": "/ðə ˈprɒdʒekt ɪz ded/", "guide": "Stretched vowel in 'dead' with voiced release.", "cue": "Stretch 'deeead', feel vibration in the throat at the end.", "studentCue": "Stretch 'dead', make it sound longer than 'debt', feel your throat hum." },
+          { "label": "We spent the cash card.", "ipa": "/wiː spent ðə kæʃ kɑːd/", "guide": "Check clipped 'spent' /t/ and stretched 'card' /d/.", "cue": "Clip spent, stretch card (no 'r'). Release both.", "studentCue": "Say spent quickly. Say caaard slowly (no 'r'), and tap the final 'd'." },
+          { "label": "They lent the money to the cab driver.", "ipa": "/ðeɪ lent ðə ˈmʌni tə ðə kæb ˈdraɪvə/", "guide": "Check clipped 'lent' /t/ and stretched 'cab' /b/.", "cue": "Release /t/ in lent, stretch cab vowel and voice /b/.", "studentCue": "Make 'lent' short. Stretch 'caab' and feel your throat vibrate on the 'b'." },
+          { "label": "Please back the bag of assets.", "ipa": "/pliːz bæk ðə bæɡ əv ˈæsets/", "guide": "Verify clipped 'back' vs stretched 'bag'.", "cue": "Clip back, stretch bag, ensure plural /ts/ in assets.", "studentCue": "Say 'bæk' quickly, then 'bææg' slowly. Make a big contrast!" }
+        ]
+      }
+    ],
+    "homework": [
+      "Sustain voiced stops (/d, b, g/) for 2 seconds in isolation to practice voicing.",
+      "Record minimal pairs above and self-assess using the Tissue Blow test.",
+      "YouTube: Search 'BBC Learning English - Pronunciation Workshops: Plosives'"
+    ],
+    "videoQuery": "BBC Learning English - Pronunciation Workshops: Plosives",
+    "mouthCueSummary": "Use the larynx (throat vibration) to differentiate voiced from voiceless plosives. Keep vowels short before voiceless endings."
+  },
+  {
+    "id": 3,
+    "title": "The Hiss and the Buzz - Final Fricatives /f, v, s, z/",
+    "sub": "Roach Chapter 6 • Continuous Airflow Fricatives",
+    "focus": "Sustaining airflow. Vietnamese has no final fricatives. Vinh will tend to stop the air (making 'bus' sound like 'but') or drop it. We focus on continuous hiss (/s, f/) vs. buzz (/z, v/).",
+    "dcConnection": "In finance, mixing up 'price' and 'prize' causes massive legal confusion. Continuous airflow is the key to clarity.",
+    "articulators": ["lips", "teeth", "alveolar", "throat"],
+    "warmups": [
+      "The Balloon Leak: Deep breath, and hiss like a leaking balloon: 'ssssssss' for 10 full seconds without stopping.",
+      "Lip Buzz: Blow air through teeth and touch lower lip to make 'fffff' then add voice 'vvvvv'."
+    ],
+    "script": "Fricatives are friction sounds. The air must never stop flowing. If you stop the air, it sounds like a plosive. Keep the air leaking out like a tiny balloon tear.",
+    "drills": [
+      {
+        "title": "Minimal Pairs - Alveolar (/s/ vs /z/)",
+        "layout": "grid",
+        "items": [
+          { "pair": true, "wordA": "price", "ipaA": "/praɪs/", "guideA": "Clipped vowel, voiceless hiss /s/.", "cueA": "Shorten 'i', blow air through front teeth without throat voice.", "studentCueA": "Clip 'pry' short, then blow a long hiss: 'pri-sss'. No voice box.",
+                        "wordB": "prize", "ipaB": "/praɪz/", "guideB": "Stretched vowel, voiced buzz /z/.", "cueB": "Lengthen 'i', vibrate vocal cords like a bee while blowing.", "studentCueB": "Stretch 'pryyy', then turn on your throat vibration for a buzzing 'zzz'." },
+          { "pair": true, "wordA": "face", "ipaA": "/feɪs/", "guideA": "Voiceless hiss /s/ ending.", "cueA": "Squeeze teeth close, blow air through the center groove.", "studentCueA": "Shorten 'ay', blow air through closed teeth. Keep throat silent.",
+                        "wordB": "phase", "ipaB": "/feɪz/", "guideB": "Voiced buzz /z/ ending.", "cueB": "Squeeze teeth close, hum with voice while blowing air.", "studentCueB": "Stretch 'phayyy', buzz your vocal cords like a phone vibrating." },
+          { "pair": true, "wordA": "loss", "ipaA": "/lɒs/", "guideA": "RP short O + voiceless hiss /s/.", "cueA": "Open mouth roundly for O, follow with quick hiss.", "studentCueA": "Short rounded O, end with a dry hiss.",
+                        "wordB": "laws", "ipaB": "/lɔːz/", "guideB": "RP long open O + voiced buzz /z/.", "cueB": "Sustain long O, follow with a buzzing z.", "studentCueB": "Say a long 'lawww', then buzz 'zzz' at the end." },
+          { "pair": true, "wordA": "loose", "ipaA": "/luːs/", "guideA": "Voiceless hiss /s/ ending.", "cueA": "Keep vowel clipped, long hiss.", "studentCueA": "Shorten 'oo' slightly, blow air out.",
+                        "wordB": "lose", "ipaB": "/luːz/", "guideB": "Voiced buzz /z/ ending.", "cueB": "Stretch vowel, voice the buzz.", "studentCueB": "Stretch 'looooze', feel throat vibrate at the end." },
+          { "pair": true, "wordA": "glass", "ipaA": "/ɡlɑːs/", "guideA": "RP long open /ɑː/ + voiceless /s/.", "cueA": "Use long 'ah' vowel, end with dry hiss.", "studentCueA": "Open wide for RP 'glahhh', end with a clean hiss.",
+                        "wordB": "glaze", "ipaB": "/ɡleɪz/", "guideB": "Stretched /eɪ/ + voiced /z/.", "cueB": "Glide to 'ee', end with buzz.", "studentCueB": "Glide 'glayyy', buzz the 'zzz' using your throat voice." }
+        ]
+      },
+      {
+        "title": "Minimal Pairs - Labiodental (/f/ vs /v/)",
+        "layout": "grid",
+        "items": [
+          { "pair": true, "wordA": "safe", "ipaA": "/seɪf/", "guideA": "Clipped vowel, voiceless blow /f/.", "cueA": "Bite lower lip, blow air. Vowel is short.", "studentCueA": "Clip the 'ay' short, touch teeth to lip, blow air: 'say-fff'.",
+                        "wordB": "save", "ipaB": "/seɪv/", "guideB": "Stretched vowel, voiced buzz /v/.", "cueB": "Bite lower lip, blow air while vibrating throat. Vowel is long.", "studentCueB": "Stretch 'sayyy', touch teeth to lip, hum in your throat: 'say-vvv'." },
+          { "pair": true, "wordA": "half", "ipaA": "/hɑːf/", "guideA": "RP long /ɑː/ + voiceless /f/.", "cueA": "Say 'hahf', blow air through teeth-lip contact.", "studentCueA": "Open wide for 'hah', blow air through lower lip.",
+                        "wordB": "halve", "ipaB": "/hɑːv/", "guideB": "RP long /ɑː/ + voiced /v/.", "cueB": "Say 'hahv', vibrate throat on /v/.", "studentCueB": "Open wide for 'hah', hum on lower lip for 'vvv'." },
+          { "pair": true, "wordA": "life", "ipaA": "/laɪf/", "guideA": "Clipped /aɪ/, voiceless /f/.", "cueA": "Clip diphthong, blow air.", "studentCueA": "Clip 'lie' short, blow air through lip-teeth contact.",
+                        "wordB": "live", "ipaB": "/laɪv/", "guideB": "Stretched /aɪ/, voiced /v/.", "cueB": "Stretch diphthong, hum throat.", "studentCueB": "Stretch 'lieee', hum 'vvv' at bottom lip." }
+        ]
+      },
+      {
+        "title": "Boardroom Sentence Drills",
+        "layout": "list",
+        "items": [
+          { "label": "What is the price of the asset?", "ipa": "/wɒt ɪz ðə praɪs əv ði ˈæset/", "guide": "Ensure /s/ in price is a long continuous hiss.", "cue": "Do not stop the air in price. Keep it flowing: pri-ssss.", "studentCue": "Blow air continuously at the end of 'price': pri-ssss." },
+          { "label": "They will save on taxes.", "ipa": "/ðeɪ wɪl seɪv ɒn ˈtæksɪz/", "guide": "Verify /v/ in save and plural /z/ ending in taxes.", "cue": "Hold the /v/ in save, and buzz the end of taxes.", "studentCue": "Vibrate your bottom lip for 'save', and buzz the 'z' in 'taxes'." },
+          { "label": "The bank will advise on the glass price.", "ipa": "/ðə bæŋk wɪl ədˈvaɪz ɒn ðə ɡlɑːs praɪs/", "guide": "Check voiced /z/ in advise, voiceless /s/ in glass and price.", "cue": "Buzz advise, hiss glass (long /ɑː/), hiss price.", "studentCue": "Buzz the end of 'advise' (advi-zzz). Hiss the end of 'glass' and 'price'." },
+          { "label": "We must halve our losses this phase.", "ipa": "/wiː mʌst hɑːv ˈaʊə ˈlɒsɪz ðɪs feɪz/", "guide": "Check voiced /v/ in halve, /z/ in losses, voiced /z/ in phase.", "cue": "Voice halve, losses ending, and phase /z/.", "studentCue": "Hum 'halve', make a clear 'iz' in 'losses', and buzz the 'z' in 'phase'." }
+        ]
+      }
+    ],
+    "homework": [
+      "Hold the /z/ sound in 'prize' for 3 seconds while feeling throat vibration.",
+      "Record yourself saying: 'We need to save the laws on prices.'",
+      "YouTube: Search 'Rachel's English - How to Pronounce S and Z'"
+    ],
+    "videoQuery": "Rachel's English - How to Pronounce S and Z",
+    "mouthCueSummary": "Ensure lower lip meets upper teeth for /f, v/. Keep teeth close together and tongue tip up near the alveolar ridge for /s, z/."
+  },
+  {
+    "id": 4,
+    "title": "The Finance Softeners - Advanced Fricatives & Affricates",
+    "sub": "Roach Chapters 6 & 7 • Dental /θ, ð/, Post-Alveolar /ʃ/, and Affricates /tʃ, dʒ/",
+    "focus": "Perfecting complex dental friction (/θ/) and stop-release affricates (/tʃ, dʒ/). Vinh must avoid replacing /θ/ with /t/ or /s/.",
+    "dcConnection": "Finance is about growth and wealth. Pronouncing growth as 'growt' or 'grows' damages executive presence in front of board members.",
+    "articulators": ["teeth", "tongue-tip", "palate", "tongue-body"],
+    "warmups": [
+      "The Lizard Tongue: Stick tongue tip out between teeth. Blow gently to create a soft breeze (/θθθθ/).",
+      "The Shush: Say 'ʃʃʃʃʃʃ' (shushing) to warm up post-alveolar muscle control.",
+      "Affricate Snap: Say 't' then 'sh' very fast: 't-sh... ch!', 'd-zh... j!'"
+    ],
+    "script": "Vinh, in finance, we talk about growth and hedging. These sounds require specific tongue gestures. For growth, the tongue tip must peek out between your teeth. For hedge, we stop the air behind the teeth, then release it with a wet friction sound.",
+    "drills": [
+      {
+        "title": "Dental Fricatives (/θ/ voiceless, /ð/ voiced)",
+        "layout": "grid",
+        "items": [
+          { "label": "growth", "ipa": "/ɡrəʊθ/", "guide": "Look for goat vowel /əʊ/ and tongue tip protrusion.", "cue": "Pinch tongue tip between teeth and blow soft air at the end. No /t/!", "studentCue": "Glide 'gro-uk', then stick your tongue tip out between your teeth and blow. No 't' or 's'!" },
+          { "label": "wealth", "ipa": "/welθ/", "guide": "Check the transition from lateral /l/ to dental /θ/.", "cue": "Say 'well', then immediately push tongue tip out through teeth to blow.", "studentCue": "Say 'well', then push your tongue tip out between your teeth and blow: 'wel-th'." },
+          { "label": "worth", "ipa": "/wɜːθ/", "guide": "Ensure RP vowel /ɜː/ (no 'r') and final /θ/.", "cue": "Relax tongue for vowel, push tip between teeth to blow.", "studentCue": "Flat vowel 'wer' (no 'r'), then push tongue tip between teeth: 'wer-th'." },
+          { "label": "path", "ipa": "/pɑːθ/", "guide": "RP long open bath vowel /ɑː/ + final /θ/.", "cue": "Open wide for 'pah', end with tongue tip between teeth.", "studentCue": "Open wide for 'pahhh', push tongue tip out and blow." },
+          { "label": "breathe", "ipa": "/briːð/", "guide": "Voiced dental fricative /ð/, long vowel.", "cue": "Stretched vowel, vibrate vocal cords while tongue tip touches upper teeth edge.", "studentCue": "Stretch 'breee', then stick tongue tip out slightly and buzz it with voice." }
+        ]
+      },
+      {
+        "title": "Post-Alveolar Fricative (/ʃ/ voiceless)",
+        "layout": "grid",
+        "items": [
+          { "label": "cash", "ipa": "/kæʃ/", "guide": "Ensure a broad post-alveolar /ʃ/ (no hiss).", "cue": "Pull tongue back slightly, flare lips, blow air.", "studentCue": "Pucker your lips, pull tongue back, blow a broad 'shhh'. No hissing." },
+          { "label": "share", "ipa": "/ʃeə/", "guide": "Ensure RP centring diphthong /eə/ (no final 'r').", "cue": "Pronounce /ʃ/, glide 'eh' to 'uh'. No 'r'!", "studentCue": "Start with 'sh', glide 'eh-uh'. Do not pronounce 'r' at the end." },
+          { "label": "sheet", "ipa": "/ʃiːt/", "guide": "Check /ʃ/ start, long vowel, and final /t/ release.", "cue": "Long 'ee', tap /t/ behind top teeth.", "studentCue": "Say 'sh', stretch 'eee', tap 't' behind top teeth." },
+          { "label": "transaction", "ipa": "/trænˈzækʃn̩/", "guide": "Verify nasal /n/ transition to /ʃ/ and syllabic /n̩/.", "cue": "Buzz /z/ in middle, say 'sh' and drop to nasal 'n'.", "studentCue": "Say 'tran-zac-shn', finishing with a syllabic 'n'." }
+        ]
+      },
+      {
+        "title": "Affricates (/tʃ/ voiceless, /dʒ/ voiced)",
+        "layout": "grid",
+        "items": [
+          { "label": "charge", "ipa": "/tʃɑːdʒ/", "guide": "Ensure RP long /ɑː/ and voiced affricate /dʒ/ release.", "cue": "Drop 'r'. Start with a stop, release into a voiced 'j' buzz.", "studentCue": "Say 'chahhh' (no 'r'). Stop the air behind front teeth, release with a voiced 'j' buzz." },
+          { "label": "hedge", "ipa": "/hedʒ/", "guide": "Clear voiced affricate ending /dʒ/.", "cue": "Press tongue against roof, release with friction + throat voice.", "studentCue": "Stop the air on the roof of the mouth, then release it with a voiced 'j' buzz." },
+          { "label": "average", "ipa": "/ˈævərɪdʒ/", "guide": "Three syllables, unstressed middle, voiced affricate end.", "cue": "Say 'av-er-idge'. Release with a voiced friction.", "studentCue": "Say 'av-er-idge', ending with a vibrating 'dzh' sound." },
+          { "label": "each", "ipa": "/iːtʃ/", "guide": "Voiceless affricate /tʃ/ ending.", "cue": "Stop air behind teeth, release with voiceless 'ch' puff.", "studentCue": "Say 'ee', stop air behind teeth, release with a sharp 'ch'." },
+          { "label": "surge", "ipa": "/sɜːdʒ/", "guide": "RP vowel /ɜː/ (no 'r') + voiced affricate /dʒ/.", "cue": "Flat vowel, release voiced /dʒ/.", "studentCue": "Say 'ser' (no 'r'), end with a voiced 'j' buzz: 'ser-dzh'." }
+        ]
+      },
+      {
+        "title": "Boardroom Sentence Drills",
+        "layout": "list",
+        "items": [
+          { "label": "The average growth of the portfolio was strong.", "ipa": "/ði ˈævərɪdʒ ɡrəʊθ əv ðə pɔːtˈfəʊliəʊ wəz strɒŋ/", "guide": "Check /dʒ/ in average, /θ/ in growth, non-rhotic /ɔː/ in portfolio.", "cue": "Focus on dental contact in growth, and voiced affricate in average.", "studentCue": "Vibrate 'dzh' in average, push tongue tip out for growth, say 'poort-fo-li-o' without 'r'." },
+          { "label": "We need cash to charge and hedge.", "ipa": "/wiː niːd kæʃ tə tʃɑːdʒ ənd hedʒ/", "guide": "Verify /ʃ/ in cash, /tʃ/ start /dʒ/ end in charge, and /dʒ/ in hedge.", "cue": "Make cash a continuous shush, charge long vowel, hedge voiced release.", "studentCue": "Shush cash, voice the 'j' at the end of charge and hedge." },
+          { "label": "The wealth of the firm is worth the surge.", "ipa": "/ðə welθ əv ðə fɜːm ɪz wɜːθ ðə sɜːdʒ/", "guide": "Check /θ/ in wealth and worth, non-rhotic vowel in firm, /dʒ/ in surge.", "cue": "Bite tongue tip for wealth and worth. Voice surge ending.", "studentCue": "Stick tongue out for wealth and worth. Voice 'j' at the end of surge." }
+        ]
+      }
+    ],
+    "homework": [
+      "Look in a mirror. Say 'growth' and ensure tongue tip is visible between teeth.",
+      "Practice: 'They charge a fee to hedge our wealth.' Record and self-evaluate.",
+      "YouTube: Search 'Geoff Lindsey - Dental Fricatives (TH)'"
+    ],
+    "videoQuery": "Geoff Lindsey - Dental Fricatives (TH)",
+    "mouthCueSummary": "For /θ/, tongue tip must touch upper teeth edge. For /dʒ/, seal tongue at the alveolar ridge, then pull back into a voiced shush."
+  },
+  {
+    "id": 5,
+    "title": "Suffix Hurdles - Plurals & Third Person /s, z/ Clusters",
+    "sub": "Roach Chapter 8 • Consonant Clusters & Coda Suffix Rules",
+    "focus": "Syllable codas. Suffix rule: Voiceless ending -> /s/ (assets), Voiced ending -> /z/ (bonds), Sibilant -> /ɪz/ (charges). Vinh must avoid omitting suffixes.",
+    "dcConnection": "Dropping plural -s sounds like grammatical errors to native speakers, indicating a lack of detail-orientation.",
+    "articulators": ["alveolar", "tongue-tip", "throat"],
+    "warmups": [
+      "The Chain Exercise: Build clusters sequentially: 'rate' -> 'rates' (alveolar /t/ -> /s/), 'bond' -> 'bonds' (alveolar /d/ -> /z/).",
+      "Sibilant Sizzle: Squeeze teeth close and slide between voiceless 'ssss' and voiced 'zzzz'."
+    ],
+    "script": "Vinh, plurals and verb endings are grammatical. If you drop them, native speakers hear grammatical errors, not just accent issues. We are going to build consonant clusters like blocks. First say the base word: bond. Hold the /d/. Now, add the buzz /z/: bonds.",
+    "drills": [
+      {
+        "title": "Category 1: Voiceless Base (Suffix is /s/)",
+        "layout": "grid",
+        "items": [
+          { "label": "assets", "ipa": "/ˈæsets/", "guide": "Double /ts/ cluster. Release /t/ directly to /s/.", "cue": "Feel tongue touch alveolar ridge for /t/, then squeeze air for /s/.", "studentCue": "Say 'as-et', then snap the tongue tip down into a hissing 's'." },
+          { "label": "stocks", "ipa": "/stɒks/", "guide": "Voiceless stop /k/ directly into hiss /s/.", "cue": "Release /k/ back of mouth, immediately hiss /s/ at front.", "studentCue": "Click the back of mouth for 'k', then hiss a front 's': 'stoc-ks'." },
+          { "label": "costs", "ipa": "/kɒsts/", "guide": "Triple /sts/ cluster. Extremely difficult for Vietnamese speakers.", "cue": "Break it down: cos - t - s. Make sure /t/ is a distinct tap.", "studentCue": "Slow down! Say 'cos', tap the ridge for 't', then hiss 's': 'cos-t-s'." },
+          { "label": "rates", "ipa": "/reɪts/", "guide": "Clipped vowel + /ts/ cluster.", "cue": "Keep diphthong clipped, release /t/ into /s/.", "studentCue": "Clip the 'ay' short, release the tongue tip into a sharp 'ts'." },
+          { "label": "limits", "ipa": "/ˈlɪmɪts/", "guide": "Double /ts/ ending.", "cue": "Ensure the /ts/ cluster is pronounced cleanly.", "studentCue": "Say 'lim-it', then add a sharp 's': 'lim-its'." },
+          { "label": "deficits", "ipa": "/ˈdefɪsɪts/", "guide": "Final /ts/ cluster after unstressed syllable.", "cue": "Ensure /ts/ is heard clearly.", "studentCue": "Say 'def-i-sits', tapping the final 'ts' cluster." },
+          { "label": "receipts", "ipa": "/rɪˈsiːts/", "guide": "Voiceless /ts/ cluster.", "cue": "Diphthong /iː/ to /ts/.", "studentCue": "Say 're-ceets', ending with a sharp, voiceless click-hiss." }
+        ]
+      },
+      {
+        "title": "Category 2: Voiced Base (Suffix is /z/)",
+        "layout": "grid",
+        "items": [
+          { "label": "bonds", "ipa": "/bɒndz/", "guide": "Voiced nasal + stop + buzz /ndz/.", "cue": "Hold nasal 'n', tap 'd', buzz 'z' using larynx voice.", "studentCue": "Hold the 'n' hum, tap 'd', and buzz 'z': 'bon-d-zz'." },
+          { "label": "funds", "ipa": "/fʌndz/", "guide": "Voiced cluster /ndz/.", "cue": "Keep the throat vibrating through 'n', 'd', and 'z'.", "studentCue": "Keep your throat vibrating all the way through the 'ndz' ending." },
+          { "label": "yields", "ipa": "/jiːldz/", "guide": "Voiced /ldz/.", "cue": "Keep tongue tip up for 'l' and 'd', slide to voiced 'z'.", "studentCue": "Hold 'l' on alveolar ridge, tap 'd', then buzz 'z'. All voiced." },
+          { "label": "firms", "ipa": "/fɜːmz/", "guide": "RP non-rhotic vowel + /mz/.", "cue": "No 'r'. Close lips for 'm', then buzz 'z'.", "studentCue": "Say 'fer' (no 'r'), close lips for 'm', then buzz 'z': 'fer-mzz'." },
+          { "label": "shares", "ipa": "/ʃeəz/", "guide": "RP centring diphthong /eə/ + voiced /z/.", "cue": "No 'r'. Glide 'eh-uh', then buzz /z/.", "studentCue": "Say 'sheh-uh' (no 'r'), then add a vibrating 'z' buzz: 'sheh-uh-zz'." },
+          { "label": "loans", "ipa": "/ləʊnz/", "guide": "RP goat vowel /əʊ/ + /nz/.", "cue": "Glide /əʊ/, hum /n/, buzz /z/.", "studentCue": "Say 'lo-un', then hum the 'n' and buzz the 'z'." },
+          { "label": "dividends", "ipa": "/ˈdɪvɪdendz/", "guide": "Voiced /ndz/ cluster at the end.", "cue": "Ensure the /d/ and /z/ are both voiced.", "studentCue": "Say 'div-i-dends', buzzing the 'z' at the very end." }
+        ]
+      },
+      {
+        "title": "Category 3: Sibilant Base (Suffix is /ɪz/ - Adds a syllable)",
+        "layout": "grid",
+        "items": [
+          { "label": "charges", "ipa": "/ˈtʃɑːdʒɪz/", "guide": "Sibilant + extra syllable /ɪz/.", "cue": "Add a clear 'iz' syllable at the end with voiced buzz.", "studentCue": "Add an extra 'iz' syllable at the end of charge: 'char-jiz'." },
+          { "label": "prices", "ipa": "/ˈpraɪsɪz/", "guide": "Sibilant + extra syllable /ɪz/.", "cue": "Say 'pry-siz', buzz final /z/.", "studentCue": "Make sure you add the extra syllable: 'pry-siz' (buzz the ending)." },
+          { "label": "balances", "ipa": "/ˈbælənsɪz/", "guide": "Verify sibilant plural /sɪz/.", "cue": "Ensure 'bal-an-siz' has two distinct sibilants.", "studentCue": "Say 'bal-an-siz', buzzing the last 'z'." },
+          { "label": "hedges", "ipa": "/ˈhedʒɪz/", "guide": "Voiced affricate + /ɪz/.", "cue": "Say 'hedj-iz', buzz the ending.", "studentCue": "Say 'hedj-iz', making sure the final 'z' vibrates." }
+        ]
+      },
+      {
+        "title": "Boardroom Sentence Drills",
+        "layout": "list",
+        "items": [
+          { "label": "The costs of these funds exceed their yields.", "ipa": "/ðə kɒsts əv ðiːz fʌndz ɪkˈsiːd ðeə jiːldz/", "guide": "Validate /sts/, /ndz/, and /ldz/ are all pronounced.", "cue": "Slow down at the end of costs, funds, and yields. Do not rush.", "studentCue": "Slow down and hit every cluster: cos-t-s, fun-d-z, and yi-l-d-z." },
+          { "label": "Our rates and prices are within limits.", "ipa": "/ˈaʊə reɪts ənd ˈpraɪsɪz ɑː wɪˈðɪn ˈlɪmɪts/", "guide": "Check /ts/ in rates, /sɪz/ in prices, and /ts/ in limits.", "cue": "Release /ts/ in rates and limits. Pronounce extra syllable in prices.", "studentCue": "Say 'ray-ts', add extra syllable to 'pry-siz', and tap 'lim-its'." },
+          { "label": "The firms face risks on these loans.", "ipa": "/ðə fɜːmz feɪs rɪsks ɒn ðiːz ləʊnz/", "guide": "Check /mz/ in firms, /sks/ in risks, /nz/ in loans.", "cue": "Voice /z/ in firms, pronounce triple cluster /sks/ in risks, voice /z/ in loans.", "studentCue": "Buzz 'fer-mzz'. Squeeze out 'ris-k-s'. Buzz 'lo-nzz'." }
+        ]
+      }
+    ],
+    "homework": [
+      "Practice building the cluster 'costs' 5 times slowly every morning.",
+      "Record: 'The firm's assets and bonds are in different offices.' Verify all plurals.",
+      "YouTube: Search 'Rachel's English - How to Pronounce Plural nouns'"
+    ],
+    "videoQuery": "Rachel's English - How to Pronounce Plural nouns",
+    "mouthCueSummary": "For voiceless endings, squeeze air through front teeth (/s/). For voiced endings, activate larynx vibration during the hiss (/z/)."
+  },
+  {
+    "id": 6,
+    "title": "Past-Tense Traps - Final /t, d/ Clusters",
+    "sub": "Roach Chapter 8 • Consonant Clusters & Past Suffix Rules",
+    "focus": "Past tense endings (-ed). Voiceless base -> /t/ (worked), Voiced base -> /d/ (hedged), Alveolar stop base -> /ɪd/ (audited). Vinh must avoid dropping endings.",
+    "dcConnection": "Saying 'Yesterday we close the deal' instead of 'closed' sounds grammatically incorrect. Vinh must master past tense clusters to report on financial projects.",
+    "articulators": ["alveolar", "tongue-tip", "throat"],
+    "warmups": [
+      "The Step-Down: Practice sliding from fricative to stop: 'ssss-t' and 'vvvv-d' in isolation.",
+      "Stop-Stop Drill: Tap the tongue tip twice quickly on the alveolar ridge: 't-d, t-d'."
+    ],
+    "script": "Just like plurals, past tense endings are crucial for business reporting. Saying 'Yesterday we close the deal' sounds unprofessional. We must pronounce the /t/ or /d/ at the end of closed or audited.",
+    "drills": [
+      {
+        "title": "Category 1: Voiceless Base (Suffix is /t/)",
+        "layout": "grid",
+        "items": [
+          { "label": "worked", "ipa": "/wɜːkt/", "guide": "RP /ɜː/ + voiceless stop cluster /kt/.", "cue": "No 'r'. Pronounce 'k', then tap 't' immediately without voice.", "studentCue": "Say 'werk' (no 'r'), then tap a sharp, voiceless 't' behind your teeth: 'werk-t'." },
+          { "label": "priced", "ipa": "/praɪst/", "guide": "Voiceless /st/ cluster.", "cue": "Hiss 's', then tap 't' sharply at the alveolar ridge.", "studentCue": "Hiss 's', then immediately tap the 't' behind your teeth: 'pri-st'." },
+          { "label": "risked", "ipa": "/rɪskt/", "guide": "Triple voiceless cluster /skt/.", "cue": "Hiss 's', pop 'k', tap 't'. Keep it light but complete.", "studentCue": "Slow down! Hiss 's', click 'k', tap 't': 'ris-k-t'." },
+          { "label": "decreased", "ipa": "/dɪˈkriːst/", "guide": "Verify /st/ cluster.", "cue": "Pronounce /s/ hiss, then /t/ release.", "studentCue": "End with a sharp hiss-tap: 'de-crees-t'." },
+          { "label": "dropped", "ipa": "/drɒpt/", "guide": "RP short O + voiceless /pt/.", "cue": "Seal lips for /p/, release into voiceless /t/.", "studentCue": "Close lips for 'p', then immediately release into 't': 'drop-t'." },
+          { "label": "checked", "ipa": "/tʃekt/", "guide": "Voiceless /kt/ cluster.", "cue": "Click /k/, tap /t/.", "studentCue": "Click the back of your tongue for 'k', then tap the front for 't'." }
+        ]
+      },
+      {
+        "title": "Category 2: Voiced Base (Suffix is /d/)",
+        "layout": "grid",
+        "items": [
+          { "label": "hedged", "ipa": "/hedʒd/", "guide": "Voiced affricate + stop /dʒd/.", "cue": "Vibrate /dʒ/, release into voiced alveolar stop /d/.", "studentCue": "Say 'hedj', and keep your throat vibrating as you add a soft 'd' tap." },
+          { "label": "saved", "ipa": "/seɪvd/", "guide": "Voiced /vd/ cluster.", "cue": "Continuous /v/ buzzing, release into /d/.", "studentCue": "Buzz your bottom lip for 'v', and release into a voiced 'd'." },
+          { "label": "closed", "ipa": "/kləʊzd/", "guide": "RP goat vowel + voiced /zd/ cluster.", "cue": "Glide /əʊ/, buzz /z/, release voiced /d/.", "studentCue": "Glide 'clo-uz', buzz 'zzz', and tap a voiced 'd': 'clo-uz-d'." },
+          { "label": "valued", "ipa": "/ˈvæljuːd/", "guide": "Stretched final vowel + voiced /d/.", "cue": "Keep vowel long, add soft voiced /d/.", "studentCue": "Stretch the 'u' sound, then tap a soft voiced 'd'." },
+          { "label": "merged", "ipa": "/mɜːdʒd/", "guide": "RP vowel /ɜː/ + voiced /dʒd/.", "cue": "No 'r'. Voice affricate and final /d/.", "studentCue": "Say 'merj' (no 'r'), then add a soft vibrating 'd': 'mer-jd'." },
+          { "label": "leveraged", "ipa": "/ˈliːvərɪdʒd/", "guide": "RP /iː/ vowel + voiced /dʒd/.", "cue": "Three syllables, end with voiced 'jd'.", "studentCue": "Say 'lee-ver-idj', end with a voiced 'd' tap." }
+        ]
+      },
+      {
+        "title": "Category 3: Alveolar Stop Base (Suffix is /ɪd/ - Adds a syllable)",
+        "layout": "grid",
+        "items": [
+          { "label": "audited", "ipa": "/ˈɔːdɪtɪd/", "guide": "Double alveolar stop base + /ɪd/ syllable.", "cue": "Say 'aw-di-tid'. Release final /d/.", "studentCue": "Add the extra syllable clearly: 'aw-di-tid'." },
+          { "label": "yielded", "ipa": "/ˈjiːldɪd/", "guide": "Lateral /l/ + stop + /ɪd/ syllable.", "cue": "Say 'yeel-did'. Release final /d/.", "studentCue": "Ensure the extra syllable is voiced: 'yeel-did'." },
+          { "label": "funded", "ipa": "/ˈfʌndɪd/", "guide": "Nasal /n/ + stop + /ɪd/ syllable.", "cue": "Say 'fun-did'. Release final /d/.", "studentCue": "Ensure you add the extra syllable: 'fun-did'." },
+          { "label": "targeted", "ipa": "/ˈtɑːɡɪtɪd/", "guide": "RP long /ɑː/ + final /tɪd/.", "cue": "Drop 'r'. Say 'tah-gi-tid'.", "studentCue": "Say 'tah-gi-tid' (no 'r' sound in the first syllable)." }
+        ]
+      },
+      {
+        "title": "Boardroom Sentence Drills",
+        "layout": "list",
+        "items": [
+          { "label": "We hedged the risk and saved capital when we closed the deal.", "ipa": "/wiː hedʒd ðə rɪsk ənd seɪvd ˈkæpɪtl̩ wen wiː kləʊzd ðə diːl/", "guide": "Validate /hedʒd/, /seɪvd/, and /kləʊzd/ are voiced correctly.", "cue": "Voice all three past-tense endings. Release the final stops.", "studentCue": "Vibrate your throat on the endings of: hedj-d, save-d, and clo-ze-d." },
+          { "label": "The firm worked hard, but decreased its goals.", "ipa": "/ðə fɜːm wɜːkt hɑːd bʌt dɪˈkriːst ɪts ɡəʊlz/", "guide": "Check voiceless /kt/ in worked, non-rhotic hard /hɑːd/, and /st/ in decreased.", "cue": "Drop 'r' in worked and hard. Tap /t/ in worked and decreased.", "studentCue": "Say 'werk-t' (no 'r'), 'hah-d' (no 'r'), and 'de-crees-t'." },
+          { "label": "They audited the yields and funded the merger.", "ipa": "/ðeɪ ˈɔːdɪtɪd ðə jiːldz ənd ˈfʌndɪd ðə ˈmɜːdʒə/", "guide": "Verify extra syllables in audited and funded. Plural in yields. Non-rhotic merger.", "cue": "Pronounce /ɪd/ in audited and funded. Voice yields /ldz/. Drop 'r' in merger.", "studentCue": "Say 'aw-di-tid' and 'fun-did'. Buzz 'yeel-dzz'. Say 'mer-juh' (no 'r')." }
+        ]
+      }
+    ],
+    "homework": [
+      "Practice building the cluster 'costs' 5 times slowly every morning.",
+      "Record: 'The firm's assets and bonds are in different offices.' Verify all plurals.",
+      "YouTube: Search 'Rachel's English - How to Pronounce Plural nouns'"
+    ],
+    "videoQuery": "Rachel's English - How to Pronounce Plural nouns",
+    "mouthCueSummary": "For voiceless endings, squeeze air through front teeth (/s/). For voiced endings, activate larynx vibration during the hiss (/z/)."
+  },
+  {
+    "id": 7,
+    "title": "The Rhythm of Finance - Weak Syllables & Schwa",
+    "sub": "Roach Chapters 9 & 10 • Stress-Timing, Schwa /ə/, & Syllabic Consonants",
+    "focus": "Transitioning from syllable-timed Vietnamese to stress-timed English. Mastering vowel reduction to the schwa /ə/ and syllabic consonants (/l̩, n̩/) in word endings.",
+    "dcConnection": "Executive presence relies on rhythm. Stressed syllables must be long and clear; unstressed syllables must be reduced. This gives you the time to pronounce complex final clusters.",
+    "articulators": ["tongue-body", "alveolar", "lips"],
+    "warmups": [
+      "The Humming Beat: Hum the rhythm of a financial phrase, humming loudly on stressed syllables and whispering on unstressed ones: 'HUM-hum-hum-HUM-hum'.",
+      "Lazy Jaw: Let the jaw drop open 1cm, relax the tongue, and make a lazy grunt: 'uh, uh, uh' (this is the schwa /ə/)."
+    ],
+    "script": "Vinh, English is a rhythm game. Stressed syllables are like the major beats in music; unstressed syllables are squished. We reduce vowels to a lazy sound: the schwa /ə/. Say /ə/. It’s the most important sound in English. It lets you speak faster and focus on ending sounds.",
+    "drills": [
+      {
+        "title": "The Lazy Vowel: Schwa (/ə/ in Unstressed Syllables)",
+        "layout": "grid",
+        "items": [
+          { "label": "capital", "ipa": "/ˈkæpɪtl̩/", "guide": "Verify first syllable stress, middle /ɪ/, and final syllabic /l̩/.", "cue": "Stress 'CAP', say 'i', end with tongue tip touching ridge for /l/ (no vowel).", "studentCue": "Say 'CAP-i-tl' (no vowel sound in the last syllable, just touch your tongue tip to the ridge)." },
+          { "label": "dividend", "ipa": "/ˈdɪvɪdənd/", "guide": "Check first syllable stress, unstressed middle and end schwas.", "cue": "Stress 'DIV', make the middle 'i' and end 'end' lazy: 'DIV-i-dnd'.", "studentCue": "Say 'DIV-i-dund', making the second and third syllables very short and relaxed." },
+          { "label": "balance", "ipa": "/ˈbæləns/", "guide": "Check first syllable stress, second syllable schwa.", "cue": "Stress 'BAL', reduce second syllable to 'uhns': 'BAL-uhns'.", "studentCue": "Say 'BAL-uhns'. Make the 'uh' very short and end with a long hiss." },
+          { "label": "transaction", "ipa": "/trænˈzækʃn̩/", "guide": "Verify stress on second syllable, final syllabic /n̩/.", "cue": "Stress 'ZAC'. Finish with 'shn' (no vowel before n).", "studentCue": "Stress 'ZAC' in the middle: 'tran-ZAC-shn' (no vowel in the last syllable)." },
+          { "label": "inflation", "ipa": "/ɪnˈfleɪʃn̩/", "guide": "Verify stress on second syllable, final syllabic /n̩/.", "cue": "Stress 'FLAY'. Finish with 'shn'.", "studentCue": "Say 'in-FLAY-shn', squeezing the last syllable directly into the 'n'." }
+        ]
+      },
+      {
+        "title": "Syllabic Consonants (Consonant acts as syllable peak - no vowel)",
+        "layout": "grid",
+        "items": [
+          { "label": "certain", "ipa": "/ˈsɜːtn̩/", "guide": "RP vowel /ɜː/ (no 'r'), final syllabic /n̩/.", "cue": "Say 'ser' (no 'r'), then go straight to 'n' on alveolar ridge: 'ser-tn'.", "studentCue": "Say 'ser' (no 'r'), then hold your tongue tip on the ridge and make an 'n' sound: 'ser-nn'." },
+          { "label": "financial", "ipa": "/faɪˈnænʃl̩/", "guide": "Second syllable stress, final syllabic /l̩/.", "cue": "Stress 'NAN'. Finish with 'shl' (no vowel).", "studentCue": "Stress 'NAN' in the middle: 'fy-NAN-shl' (go straight from 'sh' to 'l')." },
+          { "label": "principal", "ipa": "/ˈprɪnsəpl̩/", "guide": "First syllable stress, middle schwa, final syllabic /l̩/.", "cue": "Stress 'PRIN'. Finish with 'pl' (no vowel).", "studentCue": "Say 'PRIN-su-pl', going straight from 'p' to 'l' at the end." },
+          { "label": "federal", "ipa": "/ˈfedərəl/", "guide": "First syllable stress, middle and final schwas.", "cue": "Stress 'FED', say 'uh-ruhl' quickly.", "studentCue": "Say 'FED-uh-ruhl', making the last two syllables extremely fast." }
+        ]
+      },
+      {
+        "title": "Rhythm and Sentence Drills",
+        "layout": "list",
+        "items": [
+          { "label": "Inflation increased the costs of capital.", "ipa": "/ɪnˈfleɪʃn̩ ɪnˈkriːst ðə kɒsts əv ˈkæpɪtl̩/", "guide": "Verify rhythm: in-FLAY-shn in-CREEST the COSTS of CA-pi-tl.", "cue": "Stress only FLAY, CREEST, COSTS, and CAP. Reduce all other vowels.", "studentCue": "Tap your finger on the stressed parts: in-FLAY-shn in-CREEST the COSTS of CA-pi-tl. Make the rest very fast." },
+          { "label": "The federal deficit balance is certain.", "ipa": "/ðə ˈfedərəl ˈdefɪsɪt ˈbæləns ɪz ˈsɜːtn̩/", "guide": "Verify stress-timed rhythm and syllabic consonants.", "cue": "Stress FED, DEF, BAL, and CER. Reduce the rest.", "studentCue": "Only stress FED-eral, DEF-icit, BAL-ance, and CER-tain. Keep the vowels in between lazy." },
+          { "label": "Our commercial analysis is financial.", "ipa": "/ˈaʊə kəˈmɜːʃl̩ əˈnæləsɪs ɪz faɪˈnænʃl̩/", "guide": "Verify commercial /ʃl̩/, analysis second syllable stress, financial /ʃl̩/.", "cue": "Stress MER, NAL, and NAN. Use syllabic consonants at endings.", "studentCue": "Say 'co-MER-shl a-NAL-y-sis is fy-NAN-shl'. Go straight to 'l' at the end of commercial and financial." }
+        ]
+      }
+    ],
+    "homework": [
+      "Practice tapping the rhythm of financial sentences, emphasizing stressed syllables and rushing unstressed ones.",
+      "Record reading the rhythm sentences above. Check if you reduce unstressed syllables.",
+      "YouTube: Search 'Geoff Lindsey - The Schwa' to learn about vowel reduction."
+    ],
+    "videoQuery": "Geoff Lindsey - The Schwa",
+    "mouthCueSummary": "To speak with English rhythm, shorten and relax unstressed vowels into the schwa /ə/ or syllabic consonants. This gives you time to finish stressed words."
+  },
+  {
+    "id": 8,
+    "title": "The Connected Flow - Linking & Elision",
+    "sub": "Roach Chapters 12 & 14 • Linked Speech, Linking /r/, & Consonant Transitions",
+    "focus": "Mastering smooth word transitions. Vinh will learn to link final consonants to following vowels (e.g., 'cost of' -> 'cos-tov') and elide /t, d/ in difficult clusters before consonants (e.g., 'last month' -> 'las-month').",
+    "dcConnection": "Native speakers glide words together. Linking final consonants to the next word makes them much easier to pronounce, preventing choppy delivery and vocal strain in presentations.",
+    "articulators": ["alveolar", "lips", "throat", "tongue-tip"],
+    "warmups": [
+      "The Slide: Say 'My... name... is... Vinh' as a single continuous sound, connecting the end of each word directly to the next.",
+      "Liaison Drill: Say 'an apple' -> 'a-napple', 'hold on' -> 'hol-don'."
+    ],
+    "script": "Vinh, native speakers don't talk word-by-word. We sing our sentences. The ending consonant of one word hops onto the front of the next word if it starts with a vowel. Look at cost of capital. We say cos-tov-capital.",
+    "drills": [
+      {
+        "title": "Consonant-to-Vowel Linking (Consonant hops to next vowel)",
+        "layout": "grid",
+        "items": [
+          { "label": "cost of", "ipa": "/kɒs tɒv/", "guide": "The /t/ in cost links to of: 'cos-tov'.", "cue": "Do not pause between cost and of. Say 'cos-tov'.", "studentCue": "Do not pause between 'cost' and 'of'. Say it as one word: 'cos-tov'." },
+          { "label": "interest rate", "ipa": "/ˈɪntrəs treɪt/", "guide": "The /t/ in interest links to rate: 'interes-trate'.", "cue": "Link the final /t/ of interest to the 'r' in rate.", "studentCue": "Say 'interes-trate', shifting the 't' to the start of the word 'rate'." },
+          { "label": "balance sheet", "ipa": "/ˈbæləns ʃiːt/", "guide": "Link final /s/ in balance to /ʃ/ in sheet.", "cue": "Slide from alveolar hiss /s/ to post-alveolar /ʃ/ without pausing.", "studentCue": "Slide the hiss of 'balance' directly into the shush of 'sheet': 'balan-sheet'." },
+          { "label": "clear asset", "ipa": "/klɪər ˈæset/", "guide": "RP linking /r/ is pronounced because asset starts with a vowel.", "cue": "Pronounce /r/ as a link: 'clear-rasset'.", "studentCue": "In RP, 'clear' has no 'r'. But when followed by 'asset', we pronounce it: 'clear-rasset'." },
+          { "label": "rate of return", "ipa": "/reɪt əv rɪˈtɜːn/", "guide": "Link final /t/ of rate to of: 'ray-tov-return'.", "cue": "Link /t/ to of, and drop the 'r' in return.", "studentCue": "Say 'ray-tov-return'. Drop the 'r' in 'return' (non-rhotic RP)." }
+        ]
+      },
+      {
+        "title": "Alveolar Elision (Omit final /t/ or /d/ before a consonant - Native shortcut!)",
+        "layout": "grid",
+        "items": [
+          { "label": "last month", "ipa": "/lɑːs mʌnθ/", "guide": "The /t/ in last is elided (dropped) because month starts with /m/.", "cue": "Say 'las-month' without pronouncing /t/. Completely standard in RP.", "studentCue": "You can drop the 't' in 'last' because 'month' starts with a consonant: 'las-month'." },
+          { "label": "standard rate", "ipa": "/ˈstændə reɪt/", "guide": "The final /d/ in standard can be elided before /r/.", "cue": "Say 'standa-rate' without the /d/.", "studentCue": "Drop the 'd' at the end of 'standard' to glide into 'rate': 'standa-rate'." },
+          { "label": "gold standard", "ipa": "/ɡəʊl ˈstændəd/", "guide": "The /d/ in gold can be elided before /s/.", "cue": "Say 'gowl-standard' (no /d/ in gold). Keep goat vowel /əʊ/.", "studentCue": "Drop the 'd' in 'gold' to make it link smoothly: 'gowl-standard'." },
+          { "label": "cost reduction", "ipa": "/kɒs rɪˈdʌkʃn̩/", "guide": "The /t/ in cost can be elided before /r/.", "cue": "Say 'cos-reduction' without pronouncing /t/.", "studentCue": "Drop the 't' in 'cost' to glide smoothly: 'cos-reduction'." }
+        ]
+      },
+      {
+        "title": "Connected Sentence Drills",
+        "layout": "list",
+        "items": [
+          { "label": "The cost of interest on the loan was high.", "ipa": "/ðə kɒs tɒv ˈɪntrəst ɒn ðə ləʊn wəz haɪ/", "guide": "Check linking: cos-tov in-ter-es-ton the loan.", "cue": "Link cost-of-interest-on. Say it as a single breath.", "studentCue": "Link it all together: 'the cos-tov-interes-ton the loan'." },
+          { "label": "We need a clear asset to hold on to.", "ipa": "/wiː niːd ə klɪər ˈæset tə həʊl dɒn tuː/", "guide": "Verify linking /r/ in clear-asset and /d/ link in hold-on.", "cue": "Pronounce linking /r/ in clear-asset, link hold-on: 'hol-don'.", "studentCue": "Say 'clear-rasset' and 'hol-don' as single linked words." },
+          { "label": "Last month, the standard rate of return dropped.", "ipa": "/lɑːs mʌnθ ðə ˈstændə reɪt əv rɪˈtɜːn drɒpt/", "guide": "Verify elision of /t/ in last month, /d/ in standard rate. Link rate-of-return.", "cue": "Omit /t/ in last, /d/ in standard. Link rate-of. Release /t/ in dropped.", "studentCue": "Say 'las-month', 'standa-rate', and 'ray-tov-return'. End with a sharp 't' in dropped." }
+        ]
+      }
+    ],
+    "homework": [
+      "Practice reading financial reports, marking consonant-to-vowel links and consonant-to-consonant elisions.",
+      "Record reading the connected sentences above. Focus on fluid, un-paused word connections.",
+      "YouTube: Search 'BBC Learning English - Connected Speech Linking'"
+    ],
+    "videoQuery": "BBC Learning English - Connected Speech Linking",
+    "mouthCueSummary": "Link final consonants to following vowels (e.g., 'cost of' -> 'cos-tov'). Omit /t/ and /d/ at the end of words if the next word starts with a consonant."
+  },
+  {
+    "id": 9,
+    "title": "The Boardroom Pitch - Professional Accent Integration",
+    "sub": "Roach Chapters 15-20 • Advanced Accent Review & D.C. Boardroom Delivery",
+    "focus": "Synthesizing final consonant releases, vowel clipping, suffix clusters, schwa reduction, and linking in a high-stakes professional presentation context.",
+    "dcConnection": "The capstone project. Presenting complex financial projections to partners in Washington D.C. with perfect phonetic clarity and an executive British RP accent.",
+    "articulators": ["alveolar", "velum", "lips", "teeth", "palate", "throat"],
+    "warmups": [
+      "The RP Vowel Cascade: Say '/ɑː/' (long open ah), '/əʊ/' (goat), '/ɪə/' (near) to tune the mouth for British RP resonances.",
+      "The Executive Breath: Inhale for 4 seconds, exhale for 8 seconds, anchoring your vocal pitch in a resonant, lower register."
+    ],
+    "script": "Vinh, today is your boardroom pitch. We are going to present a financial update to D.C. partners using a premium, clean RP accent. We will focus on every final consonant, every cluster, and our stress rhythm.",
+    "drills": [
+      {
+        "title": "Financial Presentation Keywords (Advanced Accent Review)",
+        "layout": "grid",
+        "items": [
+          { "label": "portfolio", "ipa": "/pɔːtˈfəʊliəʊ/", "guide": "Ensure RP non-rhotic O /ɔː/ and goat vowel /əʊ/.", "cue": "No 'r'. Say 'poort-fo-li-o', keeping vowels rounded.", "studentCue": "Relax your tongue (no 'r' sound!). Rounded vowels: 'poort-fo-li-o'." },
+          { "label": "liquidity", "ipa": "/lɪˈkwɪdɪti/", "guide": "Verify velar stop /k/ and clean /t/ endings.", "cue": "Pronounce /k/, end with clean /ti/ (no flap).", "studentCue": "Say 'li-quid-i-ti', keeping the 't' sounds crisp and sharp." },
+          { "label": "amortization", "ipa": "/əˌmɔːtaɪˈzeɪʃn̩/", "guide": "Check stress on 'za', non-rhotic 'mor', and syllabic /n̩/.", "cue": "No 'r'. Say 'uh-moor-ty-ZAY-shn'.", "studentCue": "Say 'uh-moor-ty-ZAY-shn'. No 'r' sound in the second syllable." },
+          { "label": "derivative", "ipa": "/dɪˈrɪvətɪv/", "guide": "Verify schwa in third syllable, voiced /v/ ending.", "cue": "Say 'de-riv-uh-tiv', buzz final /v/.", "studentCue": "Say 'de-riv-uh-tiv', keeping the third syllable short and buzzing the final 'v'." },
+          { "label": "macroeconomics", "ipa": "/ˌmækraʊˌiːkəˈnɒmɪks/", "guide": "Check goat vowel in macro /rəʊ/ and final /ks/.", "cue": "Say 'mac-ro-ee-co-nom-ics', hiss final /s/.", "studentCue": "Say 'mac-ro-ee-co-nom-ics', finishing with a sharp 'ks' hiss." }
+        ]
+      },
+      {
+        "title": "The Capstone Boardroom Pitch (Read with absolute precision)",
+        "layout": "list",
+        "items": [
+          { "label": "Our portfolio's growth this quarter was driven by strong assets.", "ipa": "/ˈaʊə pɔːtˈfəʊliəʊz ɡrəʊθ ðɪs ˈkwɔːtə wəz ˈdrɪvən baɪ strɒŋ ˈæsets/", "guide": "Check /z/ in portfolio's, /θ/ in growth, non-rhotic /ɔː/ in quarter, and /ts/ in assets.", "cue": "Buzz portfolio's /z/. Push tongue out for growth. Release assets /ts/.", "studentCue": "Buzz 'portfolio-zz'. Stick tongue out for 'growth'. Tap the final 'ts' in 'assets'." },
+          { "label": "We successfully hedged against inflation rates by adjusting our capital allocations.", "ipa": "/wiː səkˈsesfəli hedʒd əˈɡeɪnst ɪnˈfleɪʃn̩ reɪts baɪ əˈdʒʌstɪŋ ˈaʊə ˈkæpɪtl̩ ˌæləˈkeɪʃnz/", "guide": "Check /dʒd/ in hedged, /st/ in against, /ts/ in rates, syllabic /l̩/ in capital, and /nz/ in allocations.", "cue": "Voice hedged /dʒd/, release against /st/, release rates /ts/, say capital /tl̩/, voice allocations /nz/.", "studentCue": "Voice 'hedj-d'. Squeeze 'against' /st/. Release 'rates' /ts/. Go straight to 'l' in 'capital'. Buzz 'allocations-zz'." },
+          { "label": "The board of directors approved our strategy after reviewing the audited accounts.", "ipa": "/ðə bɔːd əv daɪˈrektəz əˈpruːvd ˈaʊə ˈstrætədʒi ˈɑːftə rɪˈvjuːɪŋ ði ˈɔːdɪtɪd əˈkaʊnts/", "guide": "Check non-rhotic board and directors, voiced /vd/ in approved, /ɪd/ in audited, and /nts/ in accounts.", "cue": "No 'r' in board or directors. Voice approved /vd/. Add extra syllable in audited. Release accounts /nts/.", "studentCue": "Say 'boord' and 'directors' without 'r'. Voice 'approve-d'. Say 'aw-di-tid'. Release 'accoun-ts'." }
+        ]
+      }
+    ],
+    "homework": [
+      "Record the entire capstone pitch drill. Play it back side-by-side with your Lesson 1 diagnostic recording to hear the contrast.",
+      "Prepare a 2-minute update on your actual portfolio or project. Present it using the RP accent guidelines.",
+      "YouTube: Search 'Geoff Lindsey - Modern British Pronunciation' to maintain accent markers."
+    ],
+    "videoQuery": "Geoff Lindsey - Modern British Pronunciation",
+    "mouthCueSummary": "Combine all articulatory skills: release final stops, sustain fricatives, voice plurals/past tenses correctly, use schwa reduction, and link words."
+  }
+]
