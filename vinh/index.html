@@ -156,24 +156,14 @@
           </div>
         </div>
 
-        <!-- Timer & Clue Settings -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-          <div>
-            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">2. Round Timer</label>
-            <div class="grid grid-cols-4 gap-2">
-              <button onclick="selectTime(60)" data-time="60" class="time-btn py-2.5 rounded-xl border-2 border-blue-500 bg-blue-600/20 text-white text-xs sm:text-sm font-bold transition">60s</button>
-              <button onclick="selectTime(90)" data-time="90" class="time-btn py-2.5 rounded-xl border-2 border-slate-800 bg-slate-950/60 text-slate-300 text-xs sm:text-sm font-bold transition">90s</button>
-              <button onclick="selectTime(120)" data-time="120" class="time-btn py-2.5 rounded-xl border-2 border-slate-800 bg-slate-950/60 text-slate-300 text-xs sm:text-sm font-bold transition">120s</button>
-              <button onclick="selectTime(0)" data-time="0" class="time-btn py-2.5 rounded-xl border-2 border-slate-800 bg-slate-950/60 text-slate-300 text-xs sm:text-sm font-bold transition">∞ Unlimited</button>
-            </div>
-          </div>
-
-          <div>
-            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">3. Clue Helper on Card</label>
-            <button id="btn-clue-mode" onclick="toggleClueMode()" class="w-full py-2.5 px-4 rounded-xl border-2 border-slate-800 bg-slate-950/60 hover:border-slate-700 text-xs sm:text-sm font-semibold flex items-center justify-between transition">
-              <span class="text-slate-200">💡 Show explanation clue on card</span>
-              <span id="clue-mode-badge" class="px-2.5 py-0.5 rounded-md bg-emerald-500/20 text-emerald-400 font-bold text-xs">SHOWN</span>
-            </button>
+        <!-- Timer Settings -->
+        <div class="pt-2">
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">2. Round Timer</label>
+          <div class="grid grid-cols-4 gap-2">
+            <button onclick="selectTime(60)" data-time="60" class="time-btn py-2.5 rounded-xl border-2 border-blue-500 bg-blue-600/20 text-white text-xs sm:text-sm font-bold transition">60s</button>
+            <button onclick="selectTime(90)" data-time="90" class="time-btn py-2.5 rounded-xl border-2 border-slate-800 bg-slate-950/60 text-slate-300 text-xs sm:text-sm font-bold transition">90s</button>
+            <button onclick="selectTime(120)" data-time="120" class="time-btn py-2.5 rounded-xl border-2 border-slate-800 bg-slate-950/60 text-slate-300 text-xs sm:text-sm font-bold transition">120s</button>
+            <button onclick="selectTime(0)" data-time="0" class="time-btn py-2.5 rounded-xl border-2 border-slate-800 bg-slate-950/60 text-slate-300 text-xs sm:text-sm font-bold transition">∞ Unlimited</button>
           </div>
         </div>
 
@@ -188,7 +178,7 @@
         <div class="text-xs sm:text-sm font-bold uppercase tracking-widest text-blue-400">Get Ready!</div>
         <div id="countdown-number" class="text-7xl sm:text-8xl font-black text-white font-mono-num">3</div>
         <p class="text-xs sm:text-sm text-slate-400 max-w-md mx-auto">
-          Keyboard Shortcuts: Press <kbd>Space</kbd> / <kbd>Enter</kbd> / <kbd>↑</kbd> for <strong>Got It!</strong> or <kbd>↓</kbd> / <kbd>→</kbd> / <kbd>Backspace</kbd> to <strong>Pass</strong>.
+          Shortcuts: <kbd>Space</kbd> / <kbd>↑</kbd> for <strong>Got It!</strong> • <kbd>↓</kbd> / <kbd>→</kbd> to <strong>Pass</strong> • <kbd>C</kbd> to <strong>Show Clue</strong>
         </p>
       </div>
 
@@ -213,7 +203,7 @@
         </div>
 
         <!-- Giant Flashcard -->
-        <div id="card-container" class="bg-slate-900/95 border-2 border-slate-800 rounded-3xl p-8 sm:p-14 text-center flex flex-col items-center justify-center min-h-[290px] sm:min-h-[340px] shadow-2xl transition-all duration-150">
+        <div id="card-container" class="bg-slate-900/95 border-2 border-slate-800 rounded-3xl p-8 sm:p-14 text-center flex flex-col items-center justify-center min-h-[300px] sm:min-h-[350px] shadow-2xl transition-all duration-150">
           <div id="card-subcat" class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">
             MODELING & EXCEL • CARD 1 OF 196
           </div>
@@ -222,8 +212,16 @@
             EBITDA
           </div>
 
-          <div id="card-clue" class="mt-6 text-sm sm:text-base text-slate-300 max-w-xl bg-slate-950/70 border border-slate-800/90 rounded-2xl px-5 py-3.5 leading-relaxed">
-            Clue goes here
+          <!-- Clue Reveal Button & Hidden Clue Box -->
+          <div class="mt-7 flex flex-col items-center">
+            <button id="btn-reveal-clue" onclick="revealCurrentClue()" class="px-4 py-2 rounded-xl border border-blue-500/40 bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 font-bold text-xs sm:text-sm flex items-center gap-2 transition active:scale-95">
+              <span>💡 Show Clue / Meaning</span>
+              <span class="text-xs opacity-70 font-normal">(Press C)</span>
+            </button>
+
+            <div id="card-clue" class="hidden mt-3 text-sm sm:text-base text-slate-200 max-w-xl bg-slate-950/80 border border-blue-500/30 rounded-2xl px-5 py-3.5 leading-relaxed shadow-inner">
+              Clue goes here
+            </div>
           </div>
         </div>
 
@@ -717,12 +715,25 @@
       const card = deck[currentIndex];
       document.getElementById('card-subcat').textContent = `${card.l} • Card ${currentIndex + 1} of ${deck.length}`;
       document.getElementById('card-word').textContent = card.w;
+
       const clueEl = document.getElementById('card-clue');
-      if (showClues) {
-        clueEl.textContent = `💡 Clue: "${card.d}"`;
+      const btnEl = document.getElementById('btn-reveal-clue');
+      clueEl.textContent = `💡 Clue: "${card.d}"`;
+      clueEl.classList.add('hidden');
+      btnEl.innerHTML = `<span>💡 Show Clue / Meaning</span><span class="text-xs opacity-70 font-normal">(Press C)</span>`;
+    }
+
+    function revealCurrentClue() {
+      if (!gameActive) return;
+      const clueEl = document.getElementById('card-clue');
+      const btnEl = document.getElementById('btn-reveal-clue');
+      const isHidden = clueEl.classList.contains('hidden');
+      if (isHidden) {
         clueEl.classList.remove('hidden');
+        btnEl.innerHTML = `<span>🙈 Hide Clue</span><span class="text-xs opacity-70 font-normal">(Press C)</span>`;
       } else {
         clueEl.classList.add('hidden');
+        btnEl.innerHTML = `<span>💡 Show Clue / Meaning</span><span class="text-xs opacity-70 font-normal">(Press C)</span>`;
       }
     }
 
@@ -833,6 +844,9 @@
       } else if (e.code === 'ArrowDown' || e.code === 'ArrowRight' || e.code === 'Backspace') {
         e.preventDefault();
         handleAction(false);
+      } else if (e.code === 'KeyC' || e.code === 'KeyH') {
+        e.preventDefault();
+        revealCurrentClue();
       }
     });
   </script>
